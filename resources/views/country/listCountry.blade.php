@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Add</title>
+    <title>Title</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,22 +11,28 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-
-<div class="search-form">
-    <div class="search">
-        <h3>Enter a name</h3>
-        <div class="table-form">
-            <form method="post" action="{{route('category.update',$category->id)}}">
-                @csrf
-                <input value="{{$category->category_name}}" type="text" name="category_name" class="textbox" placeholder="Category name:" />
-                <input type="submit" class="form-button btn btn-primary" value="Edit">
-            </form>
-        </div>
-
-    </div>
-</div>
-
-
+<form>
+    <a class="btn btn-success" href="{{route('country.create')}}">ADD</a>
+    <table class="table">
+        <tr>
+            <th>STT</th>
+            <th>NAME CATEGORY</th>
+            <th>ACTION</th>
+        </tr>
+        @forelse($countries as $key=>$country)
+        <tr>
+            <td>{{++$key}}</td>
+            <td>{{$country->country_name}}</td>
+            <td>
+                <a class="btn btn-success" href="{{route('country.edit',$country->id)}}">EDIT</a>
+                <a class="btn btn-danger" href="{{route('country.delete',$country->id)}}">DELETE</a>
+            </td>
+        </tr>
+        @empty
+        <tr>No data</tr>
+        @endforelse
+    </table>
+</form>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

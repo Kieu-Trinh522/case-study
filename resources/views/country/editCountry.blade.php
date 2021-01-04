@@ -16,10 +16,10 @@
     <div class="search">
         <h3>Enter a name</h3>
         <div class="table-form">
-            <form method="post" action="{{route('category.update',$category->id)}}">
+            <form method="post" action="{{route('country.update',$country->id)}}">
                 @csrf
-                <input value="{{$category->category_name}}" type="text" name="category_name" class="textbox" placeholder="Category name:" />
-                <input type="submit" class="form-button btn btn-primary" value="Edit">
+                <input value="{{$country->country_name}}" type="text" name="country_name" class="textbox"  />
+                <input  type="submit" class="form-button btn btn-primary" value="Edit">
             </form>
         </div>
 

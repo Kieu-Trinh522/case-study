@@ -39,14 +39,15 @@ Route::group(['prefix' => 'category'], function () {
     Route::post('/edit/{id}', [CategoryController::class, 'update'])->name('category.update');
     Route::get('/delete/{id}', [CategoryController::class, 'destroy'])->name('category.delete');
 });
-//
-//Route::group(['prefix' => 'country'], function () {
-//    Route::get('country', [CountryController::class, 'index']);
-//    Route::post('country', [CountryController::class, 'store'])->name('country.store');
-//    Route::get('country/{id}/edit', [CountryController::class, 'edit'])->name('country.edit');
-//    Route::post('country/update', [CountryController::class, 'update'])->name('country.update');
-//    Route::get('country/{id}/delete', [CountryController::class, 'destroy'])->name('country.delete');
-//});
+
+Route::group(['prefix' => 'country'], function () {
+    Route::get('/', [CountryController::class, 'index'])->name('country.index');
+    Route::get('/add',[CountryController::class,'create'])->name('country.create');
+    Route::post('/add', [CountryController::class, 'store'])->name('country.store');
+    Route::get('/edit/{id}', [CountryController::class, 'edit'])->name('country.edit');
+    Route::post('/edit/{id}', [CountryController::class, 'update'])->name('country.update');
+    Route::get('/delete/{id}', [CountryController::class, 'destroy'])->name('country.delete');
+});
 //
 //Route::group(['prefix' => 'user'], function () {
 //    Route::post('user/register', [UserController::class, 'store'])->name('user.store');
