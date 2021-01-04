@@ -48,8 +48,10 @@ Route::group(['prefix' => 'country'], function () {
 });
 
 Route::group(['prefix' => 'user'], function () {
+    Route::get('/',[UserController::class, 'index'])->name('user.index');
+
     Route::post('user/register', [UserController::class, 'store'])->name('user.store');
-    Route::post('user/login', [UserController::class, 'authenticate'])->name('user.authenticate');
+//    Route::post('user/login', [UserController::class, 'authenticate'])->name('user.authenticate');
     Route::get('user/logout', [UserController::class, 'logout'])->name('user.logout');
 });
 
