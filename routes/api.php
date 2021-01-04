@@ -23,12 +23,15 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::group(['prefix' => 'playlists'], function () {
-    Route::get('playlist', [PlaylistController::class, 'index']);
-    Route::post('playlist', [PlaylistController::class, 'store'])->name('playlist.store');
-    Route::get('playlist/{id}/edit', [PlaylistController::class, 'edit'])->name('playlist.edit');
-    Route::post('playlist/update', [PlaylistController::class, 'update'])->name('playlist.update');
-    Route::post('playlist/search/{search}', [PlaylistController::class, 'search'])->name('playlist.search');
-    Route::get('playlist/{id}/delete', [PlaylistController::class, 'destroy'])->name('playlist.delete');
+    Route::get('/', [PlaylistController::class, 'index'])->name('playlists.index');
+    Route::get('/create', [PlaylistController::class, 'create'])->name('playlists.create');
+    Route::post('/create', [PlaylistController::class, 'store'])->name('playlists.store');
+    Route::get('/edit/{id}', [PlaylistController::class, 'edit'])->name('playlists.edit');
+    Route::post('/edit/{id}', [PlaylistController::class, 'update'])->name('playlists.update');
+    Route::post('playlist/search/{search}', [PlaylistController::class, 'search'])->name('playlists.search');
+    Route::get('/destroy/{id}', [PlaylistController::class, 'destroy'])->name('playlists.destroy');
+    Route::get('/show/{id}', [PlaylistController::class, 'show'])->name('playlists.show');
+
 });
 
 Route::group(['prefix' => 'category'], function () {
