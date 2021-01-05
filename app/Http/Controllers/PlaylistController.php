@@ -39,9 +39,9 @@ class PlaylistController extends Controller
 
             $filename = $audio->getClientOriginalName();
 
-            $location = public_path('audio/'. $filename);
+            // $location = storage_path('audio/'. $filename);
 
-            $audio->move($location, $filename);
+            $audio->storeAs('public/audio/' , $filename);
 
             $playlist->audio = $filename;
 
