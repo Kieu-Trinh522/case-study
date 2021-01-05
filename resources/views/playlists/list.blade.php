@@ -40,7 +40,7 @@
                                 <td>{{ $playlist->category->category_name }}</td>
                                 <td>{{ $playlist->country->country_name }}</td>
                                 <td>
-                                   <img src="{{ 'storage/' . $playlist->image }}" style="width: 100px">
+                                   <img src="{{asset($playlist->image) }}" height= '100px' width="100px" >
                                 </td>
                                 <td>
                                     <a href="{{ route('playlists.show', $playlist->id) }}">{{ $playlist->audio }}</a>
@@ -51,8 +51,8 @@
                                 </td>
                             </tr>
                         @endforeach
+{{--                    @dd($playlist)--}}
                     </tbody>
-
                 </table>
             </div>
         </div>

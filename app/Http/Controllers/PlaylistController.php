@@ -10,6 +10,7 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
+use function Composer\Autoload\includeFile;
 
 class PlaylistController extends Controller
 {
@@ -18,7 +19,7 @@ class PlaylistController extends Controller
     {
         $playlists = Playlist::paginate(10);
         $category = Category::all();
-        $country  = Country::all();
+        $country = Country::all();
 
         return view('playlists.list', compact('playlists', 'category', 'country'));
     }
@@ -35,24 +36,25 @@ class PlaylistController extends Controller
         $playlist = new Playlist();
         $playlist->fill($request->all());
 
-        if($request->hasFile('audio')) {
+        if ($request->hasFile('audio')) {
             $audio = $request->file('audio');
 
             $filename = $audio->getClientOriginalName();
 
             // $location = storage_path('audio/'. $filename);
 
-            $audio->storeAs('public/audio/' , $filename);
+            $audio->storeAs('public/audio/', $filename);
 
             $playlist->audio = $filename;
 
         }
 
-        if($request->hasFile('image')) {
-
-            $image = $request->file('image');
-            $path = $image->store('images', 'public');
-            $playlist->image = $path;
+        if (!$request->hasFile('img')) {
+            $playlist->image = 'uploads/default.png';
+        } else {
+            $imageName = time() . '.' . $request->img->extension();
+            $request->img->move(public_path('uploads'), $imageName);
+            $playlist->image = 'uploads/' . $imageName;
         }
 
 
@@ -65,7 +67,8 @@ class PlaylistController extends Controller
 
     }
 
-    public function show($id){
+    public function show($id)
+    {
         $playlist = Playlist::findOrFail($id);
 
         return view('playlists.playlist', compact('playlist'));
@@ -75,7 +78,7 @@ class PlaylistController extends Controller
     {
         $playlist = Playlist::findOrFail($id);
         $category = Category::all();
-        $country  = Country::all();
+        $country = Country::all();
 
         return view('playlists.edit', compact('playlist', 'category', 'country'));
     }
@@ -84,23 +87,17 @@ class PlaylistController extends Controller
     {
         $playlist = Playlist::findOrFail($id);
         $playlist->fill($request->all());
-
-        if($request->hasFile('image')) {
-
-            $currentImg = $request->image;
-            if ($currentImg) {
-                Storage::delete('/public/' . $currentImg);
-            }
-
-            $image = $request->file('image');
-            $path  = $image->store('images', 'public');
-            $playlist->image = $path;
+        if (!$request->hasFile('img')) {
+            $playlist->image = 'uploads/default.png';
+        } else {
+            $imageName = time() . '.' . $request->img->extension();
+            $request->img->move(public_path('uploads'), $imageName);
+            $playlist->image = 'uploads/' . $imageName;
         }
-
-        if($request->hasFile('audio')) {
+        if ($request->hasFile('audio')) {
             $currentAudio = $request->audio;
 
-            if($currentAudio) {
+            if ($currentAudio) {
                 Storage::delete('/pubic/' . $currentAudio);
             }
 
@@ -108,7 +105,7 @@ class PlaylistController extends Controller
 
             $filename = $audio->getClientOriginalName();
 
-            $audio->storeAs('public/audio/' , $filename);
+            $audio->storeAs('public/audio/', $filename);
 
             $playlist->audio = $filename;
         }
@@ -116,6 +113,7 @@ class PlaylistController extends Controller
         $playlist->save();
 
         return redirect()->route('playlists.index');
+
     }
 
     public function destroy($id)
@@ -127,9 +125,19 @@ class PlaylistController extends Controller
     }
 
 
+    public function search(Request $request)
+    {
+        $search = $request->input('search');
+        if (!$search) {
+            return redirect()->route('customers.index');
+        }
 
+        $playlist = Playlist::where('name', 'LIKE', '%' . $search . '%')->paginate(5);
 
-
+        $category = Category::all();
+        $country = Country::all();
+        return view('customers.list', compact('customers', 'category', 'country'));
+    }
 
 
 }

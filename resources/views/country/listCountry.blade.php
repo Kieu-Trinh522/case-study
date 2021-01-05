@@ -5,7 +5,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -13,6 +12,7 @@
 <body>
 <form>
     <a class="btn btn-success" href="{{route('country.create')}}">ADD</a>
+    <button class="btn btn-secondary" onclick="window.history.go(-1); return false">Cancel</button>
     <table class="table">
         <tr>
             <th>STT</th>
@@ -20,16 +20,16 @@
             <th>ACTION</th>
         </tr>
         @forelse($countries as $key=>$country)
-        <tr>
-            <td>{{++$key}}</td>
-            <td>{{$country->country_name}}</td>
-            <td>
-                <a class="btn btn-success" href="{{route('country.edit',$country->id)}}">EDIT</a>
-                <a class="btn btn-danger" href="{{route('country.delete',$country->id)}}">DELETE</a>
-            </td>
-        </tr>
+            <tr>
+                <td>{{++$key}}</td>
+                <td>{{$country->country_name}}</td>
+                <td>
+                    <a class="btn btn-success" href="{{route('country.edit',$country->id)}}">EDIT</a>
+                    <a class="btn btn-danger" href="{{route('country.delete',$country->id)}}">DELETE</a>
+                </td>
+            </tr>
         @empty
-        <tr>No data</tr>
+            <tr>No data</tr>
         @endforelse
     </table>
 </form>
