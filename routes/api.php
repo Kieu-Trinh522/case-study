@@ -35,19 +35,21 @@ Route::group(['prefix' => 'playlists'], function () {
 });
 
 Route::group(['prefix' => 'category'], function () {
-    Route::get('category', [CategoryController::class, 'index']);
-    Route::post('category', [CategoryController::class, 'store'])->name('category.store');
-    Route::get('category/{id}/edit', [CategoryController::class, 'edit'])->name('category.edit');
-    Route::post('category/update', [CategoryController::class, 'update'])->name('category.update');
-    Route::get('category/{id}/delete', [CategoryController::class, 'destroy'])->name('category.delete');
+    Route::get('/', [CategoryController::class, 'index'])->name('category.index');
+    Route::get('/create', [CategoryController::class, 'create'])->name('category.create');
+    Route::post('/create', [CategoryController::class, 'store'])->name('category.store');
+    Route::get('/{id}/edit', [CategoryController::class, 'edit'])->name('category.edit');
+    Route::post('/edit/{id}', [CategoryController::class, 'update'])->name('category.update');
+    Route::get('/{id}/delete', [CategoryController::class, 'destroy'])->name('category.destroy');
 });
 
 Route::group(['prefix' => 'country'], function () {
-    Route::get('country', [CountryController::class, 'index']);
-    Route::post('country', [CountryController::class, 'store'])->name('country.store');
-    Route::get('country/{id}/edit', [CountryController::class, 'edit'])->name('country.edit');
-    Route::post('country/update', [CountryController::class, 'update'])->name('country.update');
-    Route::get('country/{id}/delete', [CountryController::class, 'destroy'])->name('country.delete');
+    Route::get('/', [CountryController::class, 'index'])->name('country.index');
+    Route::get('/create', [CountryController::class, 'create'])->name('country.create');
+    Route::post('/create', [CountryController::class, 'store'])->name('country.store');
+    Route::get('/{id}/edit', [CountryController::class, 'edit'])->name('country.edit');
+    Route::post('/edit/{id}', [CountryController::class, 'update'])->name('country.update');
+    Route::get('/{id}/delete', [CountryController::class, 'destroy'])->name('country.delete');
 });
 
 Route::group(['prefix' => 'user'], function () {

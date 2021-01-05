@@ -16,7 +16,7 @@
         <div class="search">
             <h3>Enter a name</h3>
             <div class="table-form">
-                <form method="post" action="{{route('category.create')}}">
+                <form method="post" action="{{route('category.store')}}">
                     @csrf
                     <input type="text" name="category_name" class="textbox" placeholder="Category name:" />
                     <input class="btn btn-success"  type="submit" class="form-button" value="Add">

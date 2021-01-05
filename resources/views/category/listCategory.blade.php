@@ -25,7 +25,7 @@
                 <td>{{$category->category_name}}</td>
                 <td>
                     <a class="btn btn-success" href="{{route('category.edit',$category->id)}}">EDIT</a>
-                    <a class="btn btn-danger" href="{{route('category.delete',$category->id)}}">DELETE</a>
+                    <a class="btn btn-danger" href="{{route('category.destroy',$category->id)}}" onclick="return confirm('Do you delete?')">DELETE</a>
                 </td>
             </tr>
         @empty
