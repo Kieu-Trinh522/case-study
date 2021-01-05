@@ -14,6 +14,6 @@ class Category extends Model
 
     public function playlist()
     {
-        return $this->hasMany(Playlist::class);
+        return $this->hasMany('App\Models\Playlist');
     }
 }
