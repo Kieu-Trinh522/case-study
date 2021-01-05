@@ -128,7 +128,19 @@ class PlaylistController extends Controller
 
 
 
+    public function search(Request $request)
+    {
+        $search = $request->input('search');
+        if (!$search) {
+            return redirect()->route('customers.index');
+        }
 
+        $playlist = Playlist::where('name','LIKE', '%'. $search . '%')->paginate(5);
+
+        $category = Category::all();
+        $country  = Country::all();
+        return view('customers.list', compact('customers', 'category', 'country'));
+    }
 
 
 
