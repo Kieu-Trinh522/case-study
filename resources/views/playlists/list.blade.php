@@ -18,7 +18,7 @@
                         <tr>
                             <th>#</th>
                             <th>Name</th>
-                            <th>Singe</th>
+                            <th>Singer</th>
                             <th>Category</th>
                             <th>Country</th>
                             <th>Image</th>
