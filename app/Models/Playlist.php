@@ -15,7 +15,7 @@ class Playlist extends Model
         'category_id',
         'country_id',
         'image',
-        'audio'
+        'audio',
 
     ];
 

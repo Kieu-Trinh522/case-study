@@ -38,14 +38,14 @@
                                 <td>{{ $playlist->category->category_name }}</td>
                                 <td>{{ $playlist->country->country_name }}</td>
                                 <td>
-                                    <img src="{{ 'storage/' . $playlist->image }}" style="width: 100px">
+                                   <img src="{{ 'storage/' . $playlist->image }}" style="width: 100px">
                                 </td>
                                 <td>
                                     <a href="{{ route('playlists.show', $playlist->id) }}">{{ $playlist->audio }}</a>
                                 </td>
                                 <td>
                                     <a href="{{ route('playlists.edit', $playlist->id) }}" class="btn btn-success">Update</a>
-                                    <a href="{{ route('playlists.destroy', $playlist->id) }}" class="btn btn-danger">Delete</a>
+                                    <a href="{{ route('playlists.destroy', $playlist->id) }}" class="btn btn-danger" onclick="return confirm('Do you delete?')">Delete</a>
                                 </td>
                             </tr>
                         @endforeach
