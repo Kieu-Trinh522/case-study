@@ -9,23 +9,15 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-    public function index()
+public function index()
+{
+    $users = User::all();
+    return view('login.login', compact('users'));
+}
+
+    public function create()
     {
-        return view('login.login');
-    }
-    public function login(Request $request)
-    {
-        $credentials = $request->only('email', 'password');
-
-        if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
-
-            return redirect()->route('user.index');
-        }
-
-        return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
-        ]);
+        return view('login.authenticate');
     }
 
     public function store(Request $request)
@@ -34,24 +26,23 @@ class UserController extends Controller
         $user->fill($request->all());
         $user->password = Hash::make($request->password);
         $user->save();
-        return redirect()->route('users.authenticate');
+        return redirect()->route('user.index');
     }
-//    public function authenticate(Request $request)
-//    {
-//        // $credentials = $request->only('email', 'password');
-//        $credentials = [ 'name' => $request->name,
-//            'email'=> $request->email,
-//            'password' => $request->password  ]
-//
-//        ;
-//        if (Auth::attempt($credentials)) {
-//            $request->session()->regenerate();
-//            return redirect()->route('customers.index');
-//        }
-//        return back()->withErrors([
-//            'email' => 'The provided credentials do not match our records'
-//        ]);
-//    }
+
+    public function authenticate(Request $request)
+    {
+        // $credentials = $request->only('email', 'password');
+        $credentials = ['email' => $request->email,
+            'password' => $request->password];
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            return redirect()->route('playlists.index');
+        }
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records'
+        ]);
+    }
+
     public function logout(Request $request)
     {
         Auth::logout();
@@ -59,4 +50,7 @@ class UserController extends Controller
         $request->session()->regenerateToken();
         return view('users.login');
     }
+
+
+
 }
