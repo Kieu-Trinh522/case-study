@@ -53,10 +53,10 @@ Route::group(['prefix' => 'country'], function () {
 });
 
 Route::group(['prefix' => 'user'], function () {
-    Route::get('/',[UserController::class, 'index'])->name('user.index');
+    Route::get('/index',[UserController::class, 'index'])->name('user.index');
     Route::get('/create',[UserController::class,'create'])->name('user.create');
-    Route::post('/register', [UserController::class, 'store'])->name('user.store');
-    Route::post('/login', [UserController::class, 'authenticate'])->name('user.authenticate');
+    Route::post('/create', [UserController::class, 'store'])->name('user.store');
+    Route::post('/login', [UserController::class, 'authenticate'])->name('user.login');
     Route::get('/logout', [UserController::class, 'logout'])->name('user.logout');
 });
 

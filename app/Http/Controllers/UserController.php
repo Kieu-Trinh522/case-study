@@ -1,23 +1,24 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\User;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller
 {
 public function index()
 {
     $users = User::all();
-    return view('login.login', compact('users'));
+    return view('logins.login', compact('users'));
 }
 
     public function create()
     {
-        return view('login.authenticate');
+        return view('logins.authenticate');
     }
 
     public function store(Request $request)
@@ -25,6 +26,7 @@ public function index()
         $user = new User();
         $user->fill($request->all());
         $user->password = Hash::make($request->password);
+
         $user->save();
         return redirect()->route('user.index');
     }
@@ -33,9 +35,10 @@ public function index()
     {
         // $credentials = $request->only('email', 'password');
         $credentials = ['email' => $request->email,
-            'password' => $request->password];
+            'password' => $request->password,
+        ];
         if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
+            Session::regenerate();
             return redirect()->route('playlists.index');
         }
         return back()->withErrors([
@@ -48,7 +51,7 @@ public function index()
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return view('users.login');
+        return view('user.login');
     }
 
 
