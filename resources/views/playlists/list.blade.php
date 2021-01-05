@@ -11,6 +11,8 @@
             </div>
             <div class="card-header">
                 <a href="{{ route('playlists.create') }}" class="btn btn-primary">Add</a>
+                <a href="{{ route('category.index') }}" class="btn btn-primary">Category</a>
+                <a href="{{ route('country.index') }}" class="btn btn-primary">Country</a>
             </div>
             <div class="table">
                 <table class="table table-striped">

@@ -13,6 +13,7 @@
 <body>
 <form>
     <a class="btn btn-success" href="{{route('country.create')}}">ADD</a>
+    <button class="btn btn-secondary" onclick="window.history.go(-1); return false">Cancel</button>
     <table class="table">
         <tr>
             <th>STT</th>
