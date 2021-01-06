@@ -13,7 +13,8 @@
     <div id="shadowSingerflashPlayer" class="shadowSinger">
         </div>
         <div id="nameSingerflashPlayer" class="nameSinger">
-            <h2><a href="https://www.nhaccuatui.com/nghe-si-le-bao-binh.html" target="_blank">
-    Lê Bảo Bình
-</a></h2>
+            <audio controls>
+                <source src="{{ url('storage/audio/' . $playlist->audio) }}" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
 </div><audio id="mp3flashPlayer" -webkit-playsinline="" playsinline="" class="mp3Tag" preload="auto"></audio></div>
