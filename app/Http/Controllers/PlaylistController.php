@@ -35,7 +35,7 @@ class PlaylistController extends Controller
         $playlist = new Playlist();
         $playlist->fill($request->all());
 
-        if($request->hasFile('audio')) {
+        if($request->file('audio') !== null) {
             $audio = $request->file('audio');
 
             $filename = $audio->getClientOriginalName();
