@@ -7,7 +7,7 @@
     <meta name="description" content=""/>
     <meta name="author" content=""/>
     <title>Dashboard - SB Admin</title>
-    <link href="{{asset('CRUD/startbootstrap-sb-admin-gh-pages/dist/css/styles.css')}}" rel="stylesheet"/>
+    <link href="{{asset('backend/startbootstrap-sb-admin-gh-pages/dist/css/styles.css')}}" rel="stylesheet"/>
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
           crossorigin="anonymous"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"
@@ -15,7 +15,7 @@
 </head>
 <body class="sb-nav-fixed">
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-    <a class="navbar-brand" href="{{asset('CRUD/startbootstrap-sb-admin-gh-pages/dist/index.html')}}">Start
+    <a class="navbar-brand" href="{{asset('backend/startbootstrap-sb-admin-gh-pages/dist/index.html')}}">Start
         Bootstrap</a>
     <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i>
     </button>
@@ -38,7 +38,7 @@
                 <a class="dropdown-item" href="#">Settings</a>
                 <a class="dropdown-item" href="#">Activity Log</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{{asset('CRUD/startbootstrap-sb-admin-gh-pages/dist/login.html')}}">Logout</a>
+                <a class="dropdown-item" href="{{asset('backend/startbootstrap-sb-admin-gh-pages/dist/login.html')}}">Logout</a>
             </div>
         </li>
     </ul>
@@ -49,7 +49,7 @@
             <div class="sb-sidenav-menu">
                 <div class="nav">
                     <div class="sb-sidenav-menu-heading">Core</div>
-                    <a class="nav-link" href="index.html">
+                    <a class="nav-link" href="{{asset('backend/startbootstrap-sb-admin-gh-pages/index.html')}}">
                         <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                         Dashboard
                     </a>
@@ -64,10 +64,10 @@
                          data-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
                             <a class="nav-link"
-                               href="{{asset('CRUD/startbootstrap-sb-admin-gh-pages/dist/layout-static.html')}}">Static
+                               href="{{asset('backend/startbootstrap-sb-admin-gh-pages/dist/layout-static.html')}}">Static
                                 Navigation</a>
                             <a class="nav-link"
-                               href="{{asset('CRUD/startbootstrap-sb-admin-gh-pages/dist/layout-sidenav-light.html')}}">Light
+                               href="{{asset('backend/startbootstrap-sb-admin-gh-pages/dist/layout-sidenav-light.html')}}">Light
                                 Sidenav</a>
                         </nav>
                     </div>
@@ -89,11 +89,11 @@
                                  data-parent="#sidenavAccordionPages">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link"
-                                       href="{{asset('CRUD/startbootstrap-sb-admin-gh-pages/dist/login.html')}}login.html">Login</a>
+                                       href="{{asset('backend/startbootstrap-sb-admin-gh-pages/dist/login.html')}}login.html">Login</a>
                                     <a class="nav-link"
-                                       href="{{asset('CRUD/startbootstrap-sb-admin-gh-pages/dist/register.html')}}register.html">Register</a>
+                                       href="{{asset('backend/startbootstrap-sb-admin-gh-pages/dist/register.html')}}register.html">Register</a>
                                     <a class="nav-link"
-                                       href="{{asset('CRUD/startbootstrap-sb-admin-gh-pages/dist/password.html')}}password.html">Forgot
+                                       href="{{asset('backend/startbootstrap-sb-admin-gh-pages/dist/password.html')}}password.html">Forgot
                                         Password</a>
                                 </nav>
                             </div>
@@ -107,24 +107,24 @@
                                  data-parent="#sidenavAccordionPages">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link"
-                                       href="{{asset('CRUD/startbootstrap-sb-admin-gh-pages/dist/401.html')}}">401
+                                       href="{{asset('backend/startbootstrap-sb-admin-gh-pages/dist/401.html')}}">401
                                         Page</a>
                                     <a class="nav-link"
-                                       href="{{asset('CRUD/startbootstrap-sb-admin-gh-pages/dist/404.html')}}">404
+                                       href="{{asset('backend/startbootstrap-sb-admin-gh-pages/dist/404.html')}}">404
                                         Page</a>
                                     <a class="nav-link"
-                                       href="{{asset('CRUD/startbootstrap-sb-admin-gh-pages/dist/500.html')}}">500
+                                       href="{{asset('backend/startbootstrap-sb-admin-gh-pages/dist/500.html')}}">500
                                         Page</a>
                                 </nav>
                             </div>
                         </nav>
                     </div>
                     <div class="sb-sidenav-menu-heading">Addons</div>
-                    <a class="nav-link" href="{{asset('CRUD/startbootstrap-sb-admin-gh-pages/dist/charts.html')}}">
+                    <a class="nav-link" href="{{asset('backend/startbootstrap-sb-admin-gh-pages/dist/charts.html')}}">
                         <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                         Charts
                     </a>
-                    <a class="nav-link" href="{{asset('CRUD/startbootstrap-sb-admin-gh-pages/dist/tables.html')}}">
+                    <a class="nav-link" href="{{asset('backend/startbootstrap-sb-admin-gh-pages/dist/tables.html')}}">
                         <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                         Tables
                     </a>
@@ -182,33 +182,14 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xl-6">
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <i class="fas fa-chart-area mr-1"></i>
-                                Area Chart Example
-                            </div>
-                            <div class="card-body">
-                                <canvas id="myAreaChart" width="100%" height="40"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6">
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <i class="fas fa-chart-bar mr-1"></i>
-                                Bar Chart Example
-                            </div>
-                            <div class="card-body">
-                                <canvas id="myBarChart" width="100%" height="40"></canvas>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
                 <div class="card mb-4">
                     <div class="card-header">
                         <i class="fas fa-table mr-1"></i>
-                        DataTable Example
+                        List Category
+                        <a class="btn btn-success" href="{{route('category.create')}}">ADD</a>
+                        <button class="btn btn-secondary" onclick="window.history.go(-1); return false">Cancel</button>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -228,13 +209,14 @@
                                 </tr>
                                 </tfoot>
                                 <tbody>
-                                @forelse($countries as $key=>$country)
+                                @forelse($categories as $key=>$category)
                                     <tr>
                                         <td>{{++$key}}</td>
-                                        <td>{{$country->country_name}}</td>
+                                        <td>{{$category->category_name}}</td>
                                         <td>
-                                            <a class="btn btn-success" href="{{route('country.edit',$country->id)}}">EDIT</a>
-                                            <a class="btn btn-danger" href="{{route('country.delete',$country->id)}}">DELETE</a>
+                                            <a class="btn btn-success" href="{{route('category.edit',$category->id)}}">EDIT</a>
+                                            <a class="btn btn-danger" href="{{route('category.destroy',$category->id)}}"
+                                               onclick="return confirm('Do you delete?')">DELETE</a>
                                         </td>
                                     </tr>
                                 @empty
@@ -264,13 +246,13 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
-<script src="{{asset('js/scripts.js')}}"></script>
+<script src="{{asset('backend/startbootstrap-sb-admin-gh-pages/js/scripts.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-<script src="{{asset('CRUD/startbootstrap-sb-admin-gh-pages/dist/assets/demo/chart-area-demo.js')}}"></script>
-<script src="{{asset('CRUD/startbootstrap-sb-admin-gh-pages/dist/assets/demo/chart-bar-demo.js')}}"></script>
+<script src="{{asset('backend/startbootstrap-sb-admin-gh-pages/dist/assets/demo/chart-area-demo.js')}}"></script>
+<script src="{{asset('backend/startbootstrap-sb-admin-gh-pages/dist/assets/demo/chart-bar-demo.js')}}"></script>
 <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
-<script src="{{asset('CRUD/startbootstrap-sb-admin-gh-pages/dist/assets/demo/datatables-demo.js')}}"></script>
+<script src="{{asset('backend/startbootstrap-sb-admin-gh-pages/dist/assets/demo/datatables-demo.js')}}"></script>
 </body>
 </html>
 
