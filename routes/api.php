@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CountryController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PlaylistController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
@@ -28,7 +29,7 @@ Route::group(['prefix' => 'playlists'], function () {
     Route::post('/create', [PlaylistController::class, 'store'])->name('playlists.store');
     Route::get('/edit/{id}', [PlaylistController::class, 'edit'])->name('playlists.edit');
     Route::post('/edit/{id}', [PlaylistController::class, 'update'])->name('playlists.update');
-    Route::post('playlist/search/{search}', [PlaylistController::class, 'search'])->name('playlists.search');
+    Route::post('/search/', [PlaylistController::class, 'search'])->name('playlists.search');
     Route::get('/destroy/{id}', [PlaylistController::class, 'destroy'])->name('playlists.destroy');
     Route::get('/show/{id}', [PlaylistController::class, 'show'])->name('playlists.show');
 
@@ -59,6 +60,7 @@ Route::group(['prefix' => 'user'], function () {
     Route::post('/login', [UserController::class, 'authenticate'])->name('user.login');
     Route::get('/logout', [UserController::class, 'logout'])->name('user.logout');
 });
+Route::get('home',[HomeController::class,'index']);
 
 
 

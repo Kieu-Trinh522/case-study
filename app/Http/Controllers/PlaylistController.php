@@ -132,14 +132,14 @@ class PlaylistController extends Controller
     {
         $search = $request->input('search');
         if (!$search) {
-            return redirect()->route('customers.index');
+            return redirect()->route('playlists.index');
         }
 
-        $playlist = Playlist::where('name','LIKE', '%'. $search . '%')->paginate(5);
+        $playlists = Playlist::where('music_name','LIKE', '%'. $search . '%')->paginate(5);
 
         $category = Category::all();
         $country  = Country::all();
-        return view('customers.list', compact('customers', 'category', 'country'));
+        return view('playlists.list', compact('playlists', 'category', 'country'));
     }
 
 

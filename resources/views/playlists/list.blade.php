@@ -20,12 +20,13 @@
     <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i>
     </button>
     <!-- Navbar Search-->
-    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0"method="post" action="{{ route('playlists.search') }}">
+        @csrf
         <div class="input-group">
-            <input class="form-control" type="text" placeholder="Search for..." aria-label="Search"
+            <input class="form-control" type="text" name="search" placeholder="Search for..." aria-label="Search"
                    aria-describedby="basic-addon2"/>
             <div class="input-group-append">
-                <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
+                <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
             </div>
         </div>
     </form>
@@ -183,7 +184,7 @@
                     <div class="card-header">
                         <i class="fas fa-table mr-1"></i>
                         List Music
-                        <a class="btn btn-success" href="{{route('category.create')}}">ADD</a>
+                        <a class="btn btn-success" href="{{route('playlists.create')}}">ADD</a>
                         <button class="btn btn-secondary" onclick="window.history.go(-1); return false">Cancel</button>
                     </div>
                     <div class="card-body">

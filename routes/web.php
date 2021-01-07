@@ -17,3 +17,11 @@ Route::get('/', function () {
     return view('logins.login');
 });
 
+Route::get('test',function (){
+    return view('layouts.core.master');
+});
+
+Route::get('test2',function (){
+    return view('welcome');
+});
+
