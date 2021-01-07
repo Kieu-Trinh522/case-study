@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AmbumController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\PlaylistController;
@@ -60,7 +61,14 @@ Route::group(['prefix' => 'user'], function () {
     Route::get('/logout', [UserController::class, 'logout'])->name('user.logout');
 });
 
-
+Route::group(['prefix' => 'ambums'], function () {
+    Route::get('/', [AmbumController::class, 'index'])->name('ambums.index');
+    Route::get('/create', [AmbumController::class, 'create'])->name('ambums.create');
+    Route::post('/create', [AmbumController::class, 'store'])->name('ambums.store');
+    Route::get('/edit/{id}', [AmbumController::class, 'edit'])->name('ambums.edit');
+    Route::post('/edit/{id}', [AmbumController::class, 'update'])->name('ambums.update');
+    Route::get('/destroy/{id}', [AmbumController::class, 'destroy'])->name('ambums.destroy');
+});
 
 
 

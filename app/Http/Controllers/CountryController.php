@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Country;
+use App\Models\Playlist;
 use Illuminate\Http\Request;
 
 class CountryController extends Controller
@@ -15,7 +16,8 @@ class CountryController extends Controller
     public function index()
     {
         $countries=Country::all();
-        return view('country.listCountry',compact('countries'));
+        $playlist = Playlist::all();
+        return view('country.listCountry',compact('countries', 'playlist'));
     }
 
     /**

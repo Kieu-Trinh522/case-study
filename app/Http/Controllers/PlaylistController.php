@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ambum;
 use App\Models\Category;
 use App\Models\Country;
 use App\Models\Playlist;
@@ -17,17 +18,19 @@ class PlaylistController extends Controller
     public function index()
     {
         $playlists = Playlist::paginate(10);
-        $category = Category::all();
-        $country  = Country::all();
+        $category  = Category::all();
+        $country   = Country::all();
+        $ambum     = Ambum::all();
 
-        return view('playlists.list', compact('playlists', 'category', 'country'));
+        return view('playlists.list', compact('playlists', 'category', 'country', 'ambum'));
     }
 
     public function create()
     {
         $category = Category::all();
-        $country = Country::all();
-        return view('playlists.create', compact('category', 'country'));
+        $country  = Country::all();
+        $ambum    = Ambum::all();
+        return view('playlists.create', compact('category', 'country', 'ambum'));
     }
 
     public function store(Request $request)
@@ -76,8 +79,9 @@ class PlaylistController extends Controller
         $playlist = Playlist::findOrFail($id);
         $category = Category::all();
         $country  = Country::all();
+        $ambum    = Ambum::all();
 
-        return view('playlists.edit', compact('playlist', 'category', 'country'));
+        return view('playlists.edit', compact('playlist', 'category', 'country', 'ambum'));
     }
 
     public function update(Request $request, $id)
@@ -132,14 +136,15 @@ class PlaylistController extends Controller
     {
         $search = $request->input('search');
         if (!$search) {
-            return redirect()->route('customers.index');
+            return redirect()->route('playlists.index');
         }
 
-        $playlist = Playlist::where('name','LIKE', '%'. $search . '%')->paginate(5);
+        $playlist = Playlist::where('music_name','LIKE', '%'. $search . '%')->paginate(5);
 
         $category = Category::all();
         $country  = Country::all();
-        return view('customers.list', compact('customers', 'category', 'country'));
+        $ambum    = Ambum::all();
+        return view('playlists.list', compact('playlist', 'category', 'country', 'ambum'));
     }
 
 
