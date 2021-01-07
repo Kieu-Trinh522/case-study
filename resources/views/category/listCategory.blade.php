@@ -15,8 +15,7 @@
 </head>
 <body class="sb-nav-fixed">
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-    <a class="navbar-brand" href="{{asset('backend/startbootstrap-sb-admin-gh-pages/dist/index.html')}}">Start
-        Bootstrap</a>
+    <a class="navbar-brand" href="{{route('playlists.index')}}">MusicD2T</a>
     <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i>
     </button>
     <!-- Navbar Search-->
@@ -49,26 +48,24 @@
             <div class="sb-sidenav-menu">
                 <div class="nav">
                     <div class="sb-sidenav-menu-heading">Core</div>
-                    <a class="nav-link" href="{{asset('backend/startbootstrap-sb-admin-gh-pages/index.html')}}">
+                    <a class="nav-link" href="{{route('playlists.index')}}">
                         <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                        Dashboard
+                        Home
                     </a>
-                    <div class="sb-sidenav-menu-heading">Interface</div>
+                    <div class="sb-sidenav-menu-heading">List</div>
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts"
                        aria-expanded="false" aria-controls="collapseLayouts">
                         <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                        Layouts
+                        List Music
                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                     </a>
                     <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
                          data-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
                             <a class="nav-link"
-                               href="{{asset('backend/startbootstrap-sb-admin-gh-pages/dist/layout-static.html')}}">Static
-                                Navigation</a>
+                               href="{{route('category.index')}}">Category</a>
                             <a class="nav-link"
-                               href="{{asset('backend/startbootstrap-sb-admin-gh-pages/dist/layout-sidenav-light.html')}}">Light
-                                Sidenav</a>
+                               href="{{route('country.index')}}">Country</a>
                         </nav>
                     </div>
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
@@ -131,17 +128,17 @@
                 </div>
             </div>
             <div class="sb-sidenav-footer">
-                <div class="small">Logged in as:</div>
-                Start Bootstrap
+                <div class="small">Logged in by:</div>
+                Admin
             </div>
         </nav>
     </div>
     <div id="layoutSidenav_content">
         <main>
             <div class="container-fluid">
-                <h1 class="mt-4">Dashboard</h1>
+                <h1 class="mt-4">Manage Categorylists</h1>
                 <ol class="breadcrumb mb-4">
-                    <li class="breadcrumb-item active">Dashboard</li>
+                    <li class="breadcrumb-item active">MusicD2T</li>
                 </ol>
                 <div class="row">
                     <div class="col-xl-3 col-md-6">
