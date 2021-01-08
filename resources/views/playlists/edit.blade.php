@@ -73,11 +73,7 @@
                     <div class="form-group">
                         <label for="">Audio</label><br>
                         <input type="file" name="audio" class="form-control-file">
-                        <audio>
-                            <source src="{{ url('storage/audio/' . $playlist->audio) }}"
-                                    type="audio/mp3">
 
-                        </audio>
                     </div>
 
                     <button type="submit" class="btn btn-success">Update</button>

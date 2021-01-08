@@ -218,7 +218,7 @@
 {{--                                </tr>--}}
 {{--                                </tfoot>--}}
 {{--                                <tbody>--}}
-{{--                                @foreach($playlists as $key => $playlist)--}}
+{{--                                @foreach($playlists ?? '' as $key => $playlist)--}}
 {{--                                    <tr>--}}
 {{--                                        <td>{{ ++$key }}</td>--}}
 {{--                                        <td>--}}
