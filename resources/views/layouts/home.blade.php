@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 
-<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9 no-js"> <![endif]-->
 <!--[if !IE]><!-->
 <html lang="en">
 <!--<![endif]-->
@@ -22,316 +24,344 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('ponend/js/plugins/swiper/css/swiper.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('ponend/js/plugins/nice_select/nice-select.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('ponend/js/plugins/player/volume.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('ponend/js/plugins/scroll/jquery.mCustomScrollbar.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('ponend/js/plugins/scroll/jquery.mCustomScrollbar.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('ponend/css/style.css') }}">
     <!-- Favicon Link -->
     <link rel="shortcut icon" type="image/png" href="{{ asset('ponend/images/favicon.png') }}">
 </head>
 
 <body>
-	<!----Loader Start---->
-	<div class="ms_loader">
-		<div class="wrap">
-		  <img src="{{ 'storage/images/loader.gif' }}" alt="">
-		</div>
-	</div>
-    <!----Main Wrapper Start---->
-    <div class="ms_main_wrapper">
-        <!---Side Menu Start--->
-        <div class="ms_sidemenu_wrapper">
-            <div class="ms_nav_close">
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
-            </div>
-            <div class="ms_sidemenu_inner">
-                <div class="ms_logo_inner">
-                    <div class="ms_logo">
-                        <a href="index-2.html"><img src="{{ 'storage/images/logo.png' }}" alt="" class="img-fluid"/></a>
-                    </div>
-                    <div class="ms_logo_open">
-                        <a href="index-2.html"><img src="{{ 'storage/images/open_logo.png' }}" alt="" class="img-fluid"/></a>
-                    </div>
+<!----Loader Start---->
+<div class="ms_loader">
+    <div class="wrap">
+        <img src="{{ 'storage/images/loader.gif' }}" alt="">
+    </div>
+</div>
+<!----Main Wrapper Start---->
+<div class="ms_main_wrapper">
+    <!---Side Menu Start--->
+    <div class="ms_sidemenu_wrapper">
+        <div class="ms_nav_close">
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+        </div>
+        <div class="ms_sidemenu_inner">
+            <div class="ms_logo_inner">
+                <div class="ms_logo">
+                    <a href="index-2.html"><img src="{{ 'storage/images/logo.png' }}" alt="" class="img-fluid"/></a>
                 </div>
-                <div class="ms_nav_wrapper">
-                    <ul>
-                        <li><a href="index-2.html" class="active" title="Discover">
+                <div class="ms_logo_open">
+                    <a href="index-2.html"><img src="{{ 'storage/images/open_logo.png' }}" alt=""
+                                                class="img-fluid"/></a>
+                </div>
+            </div>
+            <div class="ms_nav_wrapper">
+                <ul>
+                    <li><a href="index-2.html" class="active" title="Discover">
 						<span class="nav_icon">
 							<span class="icon icon_discover"></span>
 						</span>
-						<span class="nav_text">
+                            <span class="nav_text">
 							discover
 						</span>
-						</a>
-                        </li>
-                        <li><a href="album.html" title="Albums">
+                        </a>
+                    </li>
+                    <li><a href="album.html" title="Albums">
 						<span class="nav_icon">
 							<span class="icon icon_albums"></span>
 						</span>
-						<span class="nav_text">
+                            <span class="nav_text">
 							albums
 						</span>
-						</a>
-                        </li>
-                        <li><a href="artist.html" title="Artists">
+                        </a>
+                    </li>
+                    <li><a href="artist.html" title="Artists">
 						<span class="nav_icon">
 							<span class="icon icon_artists"></span>
 						</span>
-						<span class="nav_text">
+                            <span class="nav_text">
 							artists
 						</span>
-						</a>
-                        </li>
-                        <li><a href="genres.html" title="Genres">
+                        </a>
+                    </li>
+                    <li><a href="genres.html" title="Genres">
 						<span class="nav_icon">
 							<span class="icon icon_genres"></span>
 						</span>
-						<span class="nav_text">
+                            <span class="nav_text">
 							genres
 						</span>
-						</a>
-                        </li>
-                        <li><a href="top_track.html" title="Top Tracks">
+                        </a>
+                    </li>
+                    <li><a href="top_track.html" title="Top Tracks">
 						<span class="nav_icon">
 							<span class="icon icon_tracks"></span>
 						</span>
-						<span class="nav_text">
+                            <span class="nav_text">
 							top tracks
 						</span>
-						</a>
-                        </li>
-                        <li><a href="free_music.html" title="Free Music">
+                        </a>
+                    </li>
+                    <li><a href="free_music.html" title="Free Music">
 						<span class="nav_icon">
 							<span class="icon icon_music"></span>
 						</span>
-						<span class="nav_text">
+                            <span class="nav_text">
 							free music
 						</span>
-						</a>
-                        </li>
-                        <li><a href="stations.html" title="Stations">
+                        </a>
+                    </li>
+                    <li><a href="stations.html" title="Stations">
 						<span class="nav_icon">
 							<span class="icon icon_station"></span>
 						</span>
-						<span class="nav_text">
+                            <span class="nav_text">
 							stations
 						</span>
-						</a>
-                        </li>
-                    </ul>
-                    <ul class="nav_downloads">
-                        <li><a href="download.html" title="Downloads">
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav_downloads">
+                    <li><a href="download.html" title="Downloads">
 						<span class="nav_icon">
 							<span class="icon icon_download"></span>
 						</span>
-						<span class="nav_text">
+                            <span class="nav_text">
 							downloads
 						</span>
-						</a>
-                        </li>
-                        <li><a href="purchase.html" title="Purchased">
+                        </a>
+                    </li>
+                    <li><a href="purchase.html" title="Purchased">
 						<span class="nav_icon">
 							<span class="icon icon_purchased"></span>
 						</span>
-						<span class="nav_text">
+                            <span class="nav_text">
 							purchased
 						</span>
-						</a>
-                        </li>
-                        <li><a href="favourite.html" title="Favourites">
+                        </a>
+                    </li>
+                    <li><a href="favourite.html" title="Favourites">
 						<span class="nav_icon">
 							<span class="icon icon_favourite"></span>
 						</span>
-						<span class="nav_text">
+                            <span class="nav_text">
 							favourites
 						</span>
-						</a>
-                        </li>
-                        <li><a href="history.html" title="History">
+                        </a>
+                    </li>
+                    <li><a href="history.html" title="History">
 						<span class="nav_icon">
 							<span class="icon icon_history"></span>
 						</span>
-						<span class="nav_text">
+                            <span class="nav_text">
 							history
 						</span>
-						</a>
-                        </li>
-                    </ul>
-                    <ul class="nav_playlist">
-                        <li><a href="feature_playlist.html" title="Featured Playlist">
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav_playlist">
+                    <li><a href="feature_playlist.html" title="Featured Playlist">
 						<span class="nav_icon">
 							<span class="icon icon_fe_playlist"></span>
 						</span>
-						<span class="nav_text">
+                            <span class="nav_text">
 							featured playlist
 						</span>
-						</a>
-                        </li>
-                        <li><a href="add_playlist.html" title="Create Playlist">
+                        </a>
+                    </li>
+                    <li><a href="add_playlist.html" title="Create Playlist">
 						<span class="nav_icon">
 							<span class="icon icon_c_playlist"></span>
 						</span>
-						<span class="nav_text">
+                            <span class="nav_text">
 							create playlist
 						</span>
-						</a>
-                        </li>
-                    </ul>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!---Main Content Start--->
+    <div class="ms_content_wrapper padder_top80">
+        <!---Header--->
+        <div class="ms_header">
+            <div class="ms_top_left">
+                <div class="ms_top_search">
+                    <input type="text" class="form-control" placeholder="Search Music Here..">
+                    <span class="search_icon">
+							<img src="{{ 'storage/images/search.svg' }}" alt="">
+						</span>
+                </div>
+                <div class="ms_top_trend">
+                    <span><a href="#" class="ms_color">Trending Songs :</a></span> <span class="top_marquee"><a
+                            href="#">Dream your moments, Until I Met You, Gimme Some Courage, Dark Alley (+8 More)</a></span>
+                </div>
+            </div>
+            <div class="ms_top_right">
+                <div class="ms_top_lang">
+                    <span data-toggle="modal" data-target="#lang_modal">languages <img
+                            src="{{ 'storage/images/lang.svg' }}" alt=""></span>
+                </div>
+                <div class="ms_top_btn">
+                    <a href="javascript:;" class="ms_btn reg_btn" data-toggle="modal" data-target="#myModal"><span>register</span></a>
+                    <a href="javascript:;" class="ms_btn login_btn" data-toggle="modal" data-target="#myModal1"><span>login</span></a>
                 </div>
             </div>
         </div>
-        <!---Main Content Start--->
-        <div class="ms_content_wrapper padder_top80">
-            <!---Header--->
-            <div class="ms_header">
-                <div class="ms_top_left">
-                    <div class="ms_top_search">
-                        <input type="text" class="form-control" placeholder="Search Music Here..">
-                        <span class="search_icon">
-							<img src="{{ 'storage/images/search.svg' }}" alt="">
-						</span>
-                    </div>
-                    <div class="ms_top_trend">
-                        <span><a href="#"  class="ms_color">Trending Songs :</a></span> <span class="top_marquee"><a href="#">Dream your moments, Until I Met You, Gimme Some Courage, Dark Alley (+8 More)</a></span>
-                    </div>
-                </div>
-                <div class="ms_top_right">
-                    <div class="ms_top_lang">
-                        <span data-toggle="modal" data-target="#lang_modal">languages <img src="{{ 'storage/images/lang.svg' }}" alt=""></span>
-                    </div>
-                    <div class="ms_top_btn">
-                        <a href="javascript:;" class="ms_btn reg_btn" data-toggle="modal" data-target="#myModal"><span>register</span></a>
-                        <a href="javascript:;" class="ms_btn login_btn" data-toggle="modal" data-target="#myModal1"><span>login</span></a>
-                    </div>
-                </div>
-            </div>
-            <!---Banner--->
-            <div class="ms-banner">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12">
-                            <div class="ms_banner_img">
-                                <img src="{{ 'storage/images/banner.png' }}" alt="" class="img-fluid">
-                            </div>
-                            <div class="ms_banner_text">
-                                <h1>This Month’s</h1>
-                                <h1 class="ms_color">Record Breaking Albums !</h1>
-                                <p>Dream your moments, Until I Met You, Gimme Some Courage, Dark Alley, One More Of A Stranger, Endless<br> Things, The Heartbeat Stops, Walking Promises, Desired Games and many more...</p>
-                                <div class="ms_banner_btn">
-                                    <a href="#" class="ms_btn">Listen Now</a>
-                                    <a href="#" class="ms_btn">Add To Queue</a>
-                                </div>
+        <!---Banner--->
+        <div class="ms-banner">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="ms_banner_img">
+                            <img src="{{ 'storage/images/banner.png' }}" alt="" class="img-fluid">
+                        </div>
+                        <div class="ms_banner_text">
+                            <h1>This Month’s</h1>
+                            <h1 class="ms_color">Record Breaking Albums !</h1>
+                            <p>Dream your moments, Until I Met You, Gimme Some Courage, Dark Alley, One More Of A
+                                Stranger, Endless<br> Things, The Heartbeat Stops, Walking Promises, Desired Games and
+                                many more...</p>
+                            <div class="ms_banner_btn">
+                                <a href="#" class="ms_btn">Listen Now</a>
+                                <a href="#" class="ms_btn">Add To Queue</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!---Recently Played Music--->
-            <div class="ms_rcnt_slider">
-                <div class="ms_heading">
-                    <h1>Recently Played</h1>
-                    <span class="veiw_all"><a href="#">view more</a></span>
-                </div>
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="ms_rcnt_box">
-                                <div class="ms_rcnt_box_img">
-                                    <img src="{{ 'storage/images/r_music1.jpg' }}" alt="">
-                                    <div class="ms_main_overlay">
-                                        <div class="ms_box_overlay"></div>
-                                        <div class="ms_more_icon">
-                                            <img src="{{ 'storage/images/more.svg' }}" alt="">
-                                        </div>
-                                        <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
-                                        </ul>
-                                        <div class="ms_play_icon">
-                                            <img src="{{ 'storage/images/play.svg' }}" alt="">
-                                        </div>
+        </div>
+        <!---Recently Played Music--->
+        <div class="ms_rcnt_slider">
+            <div class="ms_heading">
+                <h1>Recently Played</h1>
+                <span class="veiw_all"><a href="#">view more</a></span>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="ms_rcnt_box">
+                            <div class="ms_rcnt_box_img">
+                                <img src="{{ 'storage/images/r_music1.jpg' }}" alt="">
+                                <div class="ms_main_overlay">
+                                    <div class="ms_box_overlay"></div>
+                                    <div class="ms_more_icon">
+                                        <img src="{{ 'storage/images/more.svg' }}" alt="">
+                                    </div>
+                                    <ul class="more_option">
+                                        <li><a href="#"><span class="opt_icon"><span
+                                                        class="icon icon_fav"></span></span>Add To Favourites</a></li>
+                                        <li><a href="#"><span class="opt_icon"><span
+                                                        class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                        <li><a href="#"><span class="opt_icon"><span
+                                                        class="icon icon_dwn"></span></span>Download Now</a></li>
+                                        <li><a href="#"><span class="opt_icon"><span
+                                                        class="icon icon_playlst"></span></span>Add To Playlist</a></li>
+                                        <li><a href="#"><span class="opt_icon"><span
+                                                        class="icon icon_share"></span></span>Share</a></li>
+                                    </ul>
+                                    <div class="ms_play_icon">
+                                        <img src="{{ 'storage/images/play.svg' }}" alt="">
                                     </div>
                                 </div>
-                                <div class="ms_rcnt_box_text">
-                                    <h3><a href="#">Dream Your Moments (Duet)</a></h3>
-                                    <p>Ava Cornish & Brian Hill</p>
-                                </div>
+                            </div>
+                            <div class="ms_rcnt_box_text">
+                                <h3><a href="#">Dream Your Moments (Duet)</a></h3>
+                                <p>Ava Cornish & Brian Hill</p>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="ms_rcnt_box">
-                                <div class="ms_rcnt_box_img">
-                                    <img src="{{ 'storage/images/r_music2.jpg' }}" alt="">
-                                    <div class="ms_main_overlay">
-                                        <div class="ms_box_overlay"></div>
-                                        <div class="ms_more_icon">
-                                            <img src="{{ 'storage/images/more.svg' }}" alt="">
-                                        </div>
-                                        <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
-                                        </ul>
-                                        <div class="ms_play_icon">
-                                            <img src="{{ 'storage/images/play.svg' }}" alt="">
-                                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="ms_rcnt_box">
+                            <div class="ms_rcnt_box_img">
+                                <img src="{{ 'storage/images/r_music2.jpg' }}" alt="">
+                                <div class="ms_main_overlay">
+                                    <div class="ms_box_overlay"></div>
+                                    <div class="ms_more_icon">
+                                        <img src="{{ 'storage/images/more.svg' }}" alt="">
+                                    </div>
+                                    <ul class="more_option">
+                                        <li><a href="#"><span class="opt_icon"><span
+                                                        class="icon icon_fav"></span></span>Add To Favourites</a></li>
+                                        <li><a href="#"><span class="opt_icon"><span
+                                                        class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                        <li><a href="#"><span class="opt_icon"><span
+                                                        class="icon icon_dwn"></span></span>Download Now</a></li>
+                                        <li><a href="#"><span class="opt_icon"><span
+                                                        class="icon icon_playlst"></span></span>Add To Playlist</a></li>
+                                        <li><a href="#"><span class="opt_icon"><span
+                                                        class="icon icon_share"></span></span>Share</a></li>
+                                    </ul>
+                                    <div class="ms_play_icon">
+                                        <img src="{{ 'storage/images/play.svg' }}" alt="">
                                     </div>
                                 </div>
-                                <div class="ms_rcnt_box_text">
-                                    <h3><a href="#">Until I Met You</a></h3>
-                                    <p>Ava Cornish & Brian Hill</p>
-                                </div>
+                            </div>
+                            <div class="ms_rcnt_box_text">
+                                <h3><a href="#">Until I Met You</a></h3>
+                                <p>Ava Cornish & Brian Hill</p>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="ms_rcnt_box">
-                                <div class="ms_rcnt_box_img">
-                                    <img src="{{ 'storage/images/music/r_music3.jpg' }}" alt="">
-                                    <div class="ms_main_overlay">
-                                        <div class="ms_box_overlay"></div>
-                                        <div class="ms_more_icon">
-                                            <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
-                                        </div>
-                                        <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
-                                        </ul>
-                                        <div class="ms_play_icon">
-                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
-                                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="ms_rcnt_box">
+                            <div class="ms_rcnt_box_img">
+                                <img src="{{ 'storage/images/music/r_music3.jpg' }}" alt="">
+                                <div class="ms_main_overlay">
+                                    <div class="ms_box_overlay"></div>
+                                    <div class="ms_more_icon">
+                                        <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
+                                    </div>
+                                    <ul class="more_option">
+                                        <li><a href="#"><span class="opt_icon"><span
+                                                        class="icon icon_fav"></span></span>Add To Favourites</a></li>
+                                        <li><a href="#"><span class="opt_icon"><span
+                                                        class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                        <li><a href="#"><span class="opt_icon"><span
+                                                        class="icon icon_dwn"></span></span>Download Now</a></li>
+                                        <li><a href="#"><span class="opt_icon"><span
+                                                        class="icon icon_playlst"></span></span>Add To Playlist</a></li>
+                                        <li><a href="#"><span class="opt_icon"><span
+                                                        class="icon icon_share"></span></span>Share</a></li>
+                                    </ul>
+                                    <div class="ms_play_icon">
+                                        <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                     </div>
                                 </div>
-                                <div class="ms_rcnt_box_text">
-                                    <h3><a href="#">Gimme Some Courage</a></h3>
-                                    <p>Ava Cornish & Brian Hill</p>
-                                </div>
+                            </div>
+                            <div class="ms_rcnt_box_text">
+                                <h3><a href="#">Gimme Some Courage</a></h3>
+                                <p>Ava Cornish & Brian Hill</p>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="ms_rcnt_box">
-                                <div class="ms_rcnt_box_img">
-                                    <img src="{{ 'storage/images/music/r_music4.jpg' }}" alt="">
-                                    <div class="ms_main_overlay">
-                                        <div class="ms_box_overlay"></div>
-                                        <div class="ms_more_icon">
-                                            <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
-                                        </div>
-                                        <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            section                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="ms_rcnt_box">
+                            <div class="ms_rcnt_box_img">
+                                <img src="{{ 'storage/images/music/r_music4.jpg' }}" alt="">
+                                <div class="ms_main_overlay">
+                                    <div class="ms_box_overlay"></div>
+                                    <div class="ms_more_icon">
+                                        <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
+                                    </div>
+                                    <ul class="more_option">
+                                        <li><a href="#"><span class="opt_icon"><span
+                                                        class="icon icon_fav"></span></span>Add To Favourites</a></li>
+                                        <li><a href="#"><span class="opt_icon"><span
+                                                        class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                        <li><a href="#"><span class="opt_icon"><span
+                                                        class="icon icon_dwn"></span></span>Download Now</a></li>
+                                        <li><a href="#"><span class="opt_icon"><span
+                                                        class="icon icon_playlst"></span></span>Add To Playlist</a></li>
+                                        section
+                                    </ul>
+                                </div>
+
                                 <div class="ms_rcnt_box_text">
                                     <h3><a href="#">Dark Alley Acoustic</a></h3>
                                     <p>Ava Cornish & Brian Hill</p>
                                 </div>
+
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -344,11 +374,18 @@
                                             <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
                                             <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
@@ -371,11 +408,18 @@
                                             <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
                                             <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
@@ -398,11 +442,18 @@
                                             <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
                                             <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
@@ -425,11 +476,18 @@
                                             <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
                                             <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
@@ -452,11 +510,18 @@
                                             <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
                                             <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
@@ -479,11 +544,18 @@
                                             <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
                                             <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
@@ -534,11 +606,18 @@
                                             <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
                                             <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
@@ -560,11 +639,18 @@
                                             <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
                                             <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
@@ -586,11 +672,18 @@
                                             <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
                                             <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
@@ -612,11 +705,18 @@
                                             <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
                                             <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
@@ -638,11 +738,18 @@
                                             <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
                                             <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
@@ -664,11 +771,18 @@
                                             <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
                                             <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
@@ -690,11 +804,18 @@
                                             <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
                                             <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
@@ -716,11 +837,18 @@
                                             <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
                                             <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
@@ -742,11 +870,18 @@
                                             <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
                                             <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
@@ -761,21 +896,28 @@
                         <div class="swiper-slide">
                             <div class="ms_rcnt_box">
                                 <div class="ms_rcnt_box_img">
-                                    <img src="images/featured/song4.jpg" alt="">
+                                    <img src="{{ 'storage/images/featured/song4.jpg' }}" alt="">
                                     <div class="ms_main_overlay">
                                         <div class="ms_box_overlay"></div>
                                         <div class="ms_more_icon">
-                                            <img src="images/svg/more.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -790,16 +932,16 @@
                 <div class="swiper-button-next1 slider_nav_next"></div>
                 <div class="swiper-button-prev1 slider_nav_prev"></div>
             </div>
-			<!----Add Section Start---->
-			<div class="ms_advr_wrapper">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12">
-							<a href="#"><img src="images/adv.jpg" alt="" class="img-fluid"/></a>
-						</div>
-					</div>
-				</div>
-			</div>
+            <!----Add Section Start---->
+            <div class="ms_advr_wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <a href="#"><img src="{{ 'storage/images/adv.jpg' }}" alt="" class="img-fluid"/></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!----New Releases Section Start---->
             <div class="ms_releases_wrapper">
                 <div class="ms_heading">
@@ -814,11 +956,11 @@
                                 <div class="w_top_song">
                                     <span class="slider_dot"></span>
                                     <div class="w_tp_song_img">
-                                        <img src="images/weekly/song1.jpg" alt="">
+                                        <img src="{{ 'storage/images/weekly/song1.jpg' }}" alt="">
                                         <div class="ms_song_overlay">
                                         </div>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                     </div>
                                     <div class="w_tp_song_name">
@@ -836,11 +978,11 @@
                                 <div class="w_top_song">
                                     <span class="slider_dot"></span>
                                     <div class="w_tp_song_img">
-                                        <img src="images/weekly/song2.jpg" alt="">
+                                        <img src="{{ 'storage/images/weekly/song2.jpg' }}" alt="">
                                         <div class="ms_song_overlay">
                                         </div>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                     </div>
                                     <div class="w_tp_song_name">
@@ -858,11 +1000,11 @@
                                 <div class="w_top_song">
                                     <span class="slider_dot"></span>
                                     <div class="w_tp_song_img">
-                                        <img src="images/weekly/song3.jpg" alt="">
+                                        <img src="{{ 'storage/images/weekly/song3.jpg' }}" alt="">
                                         <div class="ms_song_overlay">
                                         </div>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                     </div>
                                     <div class="w_tp_song_name">
@@ -880,11 +1022,11 @@
                                 <div class="w_top_song">
                                     <span class="slider_dot"></span>
                                     <div class="w_tp_song_img">
-                                        <img src="images/weekly/song4.jpg" alt="">
+                                        <img src="{{ 'storage/images/weekly/song4.jpg' }}" alt="">
                                         <div class="ms_song_overlay">
                                         </div>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                     </div>
                                     <div class="w_tp_song_name">
@@ -902,11 +1044,11 @@
                                 <div class="w_top_song">
                                     <span class="slider_dot"></span>
                                     <div class="w_tp_song_img">
-                                        <img src="images/weekly/song5.jpg" alt="">
+                                        <img src="{{ 'storage/images/weekly/song5.jpg' }}" alt="">
                                         <div class="ms_song_overlay">
                                         </div>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                     </div>
                                     <div class="w_tp_song_name">
@@ -936,21 +1078,28 @@
                         <div class="swiper-slide">
                             <div class="ms_rcnt_box">
                                 <div class="ms_rcnt_box_img">
-                                    <img src="images/album/album1.jpg" alt="">
+                                    <img src="{{ 'storage/images/album/album1.jpg' }}" alt="">
                                     <div class="ms_main_overlay">
                                         <div class="ms_box_overlay"></div>
                                         <div class="ms_more_icon">
-                                            <img src="images/svg/more.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -963,21 +1112,28 @@
                         <div class="swiper-slide">
                             <div class="ms_rcnt_box">
                                 <div class="ms_rcnt_box_img">
-                                    <img src="images/album/album2.jpg" alt="">
+                                    <img src="{{ 'storage/images/album/album2.jpg' }}" alt="">
                                     <div class="ms_main_overlay">
                                         <div class="ms_box_overlay"></div>
                                         <div class="ms_more_icon">
-                                            <img src="images/svg/more.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -990,21 +1146,28 @@
                         <div class="swiper-slide">
                             <div class="ms_rcnt_box">
                                 <div class="ms_rcnt_box_img">
-                                    <img src="images/album/album3.jpg" alt="">
+                                    <img src="{{ 'storage/images/album/album3.jpg' }}" alt="">
                                     <div class="ms_main_overlay">
                                         <div class="ms_box_overlay"></div>
                                         <div class="ms_more_icon">
-                                            <img src="images/svg/more.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -1017,21 +1180,28 @@
                         <div class="swiper-slide">
                             <div class="ms_rcnt_box">
                                 <div class="ms_rcnt_box_img">
-                                    <img src="images/album/album4.jpg" alt="">
+                                    <img src="{{ 'storage/images/album/album4.jpg' }}" alt="">
                                     <div class="ms_main_overlay">
                                         <div class="ms_box_overlay"></div>
                                         <div class="ms_more_icon">
-                                            <img src="images/svg/more.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -1044,21 +1214,28 @@
                         <div class="swiper-slide">
                             <div class="ms_rcnt_box">
                                 <div class="ms_rcnt_box_img">
-                                    <img src="images/album/album5.jpg" alt="">
+                                    <img src="{{ 'storage/images/album/album5.jpg' }}" alt="">
                                     <div class="ms_main_overlay">
                                         <div class="ms_box_overlay"></div>
                                         <div class="ms_more_icon">
-                                            <img src="images/svg/more.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -1071,21 +1248,28 @@
                         <div class="swiper-slide">
                             <div class="ms_rcnt_box">
                                 <div class="ms_rcnt_box_img">
-                                    <img src="images/album/album6.jpg" alt="">
+                                    <img src="{{ 'storage/images/album/album6.jpg' }}" alt="">
                                     <div class="ms_main_overlay">
                                         <div class="ms_box_overlay"></div>
                                         <div class="ms_more_icon">
-                                            <img src="images/svg/more.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -1098,21 +1282,28 @@
                         <div class="swiper-slide">
                             <div class="ms_rcnt_box">
                                 <div class="ms_rcnt_box_img">
-                                    <img src="images/album/album1.jpg" alt="">
+                                    <img src="{{ 'storage/images/album/album1.jpg' }}" alt="">
                                     <div class="ms_main_overlay">
                                         <div class="ms_box_overlay"></div>
                                         <div class="ms_more_icon">
-                                            <img src="images/svg/more.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -1125,21 +1316,28 @@
                         <div class="swiper-slide">
                             <div class="ms_rcnt_box">
                                 <div class="ms_rcnt_box_img">
-                                    <img src="images/album/album2.jpg" alt="">
+                                    <img src="{{ 'storage/images/album/album2.jpg' }}" alt="">
                                     <div class="ms_main_overlay">
                                         <div class="ms_box_overlay"></div>
                                         <div class="ms_more_icon">
-                                            <img src="images/svg/more.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -1152,21 +1350,28 @@
                         <div class="swiper-slide">
                             <div class="ms_rcnt_box">
                                 <div class="ms_rcnt_box_img">
-                                    <img src="images/album/album3.jpg" alt="">
+                                    <img src="{{ 'storage/images/album/album3.jpg' }}" alt="">
                                     <div class="ms_main_overlay">
                                         <div class="ms_box_overlay"></div>
                                         <div class="ms_more_icon">
-                                            <img src="images/svg/more.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -1179,21 +1384,28 @@
                         <div class="swiper-slide">
                             <div class="ms_rcnt_box">
                                 <div class="ms_rcnt_box_img">
-                                    <img src="images/album/album4.jpg" alt="">
+                                    <img src="{{ 'storage/images/album/album4.jpg' }}" alt="">
                                     <div class="ms_main_overlay">
                                         <div class="ms_box_overlay"></div>
                                         <div class="ms_more_icon">
-                                            <img src="images/svg/more.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -1220,11 +1432,11 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="ms_genres_box">
-                            <img src="images/genrs/img1.jpg" alt="" class="img-fluid" />
+                            <img src="{{ 'storage/images/genrs/img1.jpg' }}" alt="" class="img-fluid"/>
                             <div class="ms_main_overlay">
                                 <div class="ms_box_overlay"></div>
                                 <div class="ms_play_icon">
-                                    <img src="images/svg/play.svg" alt="">
+                                    <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                 </div>
                                 <div class="ovrly_text_div">
                                     <span class="ovrly_text1"><a href="#">romantic</a></span>
@@ -1243,11 +1455,11 @@
                         <div class="row">
                             <div class="col-lg-4">
                                 <div class="ms_genres_box">
-                                    <img src="images/genrs/img2.jpg" alt="" class="img-fluid" />
+                                    <img src="{{ 'storage/images/genrs/img2.jpg' }}" alt="" class="img-fluid"/>
                                     <div class="ms_main_overlay">
                                         <div class="ms_box_overlay"></div>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                         <div class="ovrly_text_div">
                                             <span class="ovrly_text1"><a href="#">Classical</a></span>
@@ -1262,11 +1474,11 @@
                             </div>
                             <div class="col-lg-8">
                                 <div class="ms_genres_box">
-                                    <img src="images/genrs/img3.jpg" alt="" class="img-fluid" />
+                                    <img src="{{ 'storage/images/genrs/img3.jpg' }}" alt="" class="img-fluid"/>
                                     <div class="ms_main_overlay">
                                         <div class="ms_box_overlay"></div>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                         <div class="ovrly_text_div">
                                             <span class="ovrly_text1"><a href="#">hip hop</a></span>
@@ -1281,11 +1493,11 @@
                             </div>
                             <div class="col-lg-8">
                                 <div class="ms_genres_box">
-                                    <img src="images/genrs/img5.jpg" alt="" class="img-fluid" />
+                                    <img src="{{ 'storage/images/genrs/img5.jpg' }}" alt="" class="img-fluid"/>
                                     <div class="ms_main_overlay">
                                         <div class="ms_box_overlay"></div>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                         <div class="ovrly_text_div">
                                             <span class="ovrly_text1"><a href="#">dancing</a></span>
@@ -1300,11 +1512,11 @@
                             </div>
                             <div class="col-lg-4">
                                 <div class="ms_genres_box">
-                                    <img src="images/genrs/img6.jpg" alt="" class="img-fluid" />
+                                    <img src="{{ 'storage/images/genrs/img6.jpg' }}" alt="" class="img-fluid"/>
                                     <div class="ms_main_overlay">
                                         <div class="ms_box_overlay"></div>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                         <div class="ovrly_text_div">
                                             <span class="ovrly_text1"><a href="#">EDM</a></span>
@@ -1321,11 +1533,11 @@
                     </div>
                     <div class="col-lg-2">
                         <div class="ms_genres_box">
-                            <img src="images/genrs/img4.jpg" alt="" class="img-fluid" />
+                            <img src="{{ 'storage/images/genrs/img4.jpg' }}" alt="" class="img-fluid"/>
                             <div class="ms_main_overlay">
                                 <div class="ms_box_overlay"></div>
                                 <div class="ms_play_icon">
-                                    <img src="images/svg/play.svg" alt="">
+                                    <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                 </div>
                                 <div class="ovrly_text_div">
                                     <span class="ovrly_text1"><a href="#">rock</a></span>
@@ -1340,16 +1552,16 @@
                     </div>
                 </div>
             </div>
-			<!----Add Section Start---->
-			<div class="ms_advr_wrapper ms_advr2">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12">
-							<a href="#"><img src="images/adv1.jpg" alt="" class="img-fluid"/></a>
-						</div>
-					</div>
-				</div>
-			</div>
+            <!----Add Section Start---->
+            <div class="ms_advr_wrapper ms_advr2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <a href="#"><img src="{{ 'storage/images/adv1.jpg' }}" alt="" class="img-fluid"/></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!----Live Radio Section Start---->
             <div class="ms_radio_wrapper">
                 <div class="ms_heading">
@@ -1361,21 +1573,28 @@
                         <div class="swiper-slide">
                             <div class="ms_rcnt_box">
                                 <div class="ms_rcnt_box_img">
-                                    <img src="images/radio/img1.jpg" alt="">
+                                    <img src="{{ 'storage/images/radio/img1.jpg' }}" alt="">
                                     <div class="ms_main_overlay">
                                         <div class="ms_box_overlay"></div>
                                         <div class="ms_more_icon">
-                                            <img src="images/svg/more.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -1387,21 +1606,28 @@
                         <div class="swiper-slide">
                             <div class="ms_rcnt_box">
                                 <div class="ms_rcnt_box_img">
-                                    <img src="images/radio/img2.jpg" alt="">
+                                    <img src="{{ 'storage/images/radio/img2.jpg' }}" alt="">
                                     <div class="ms_main_overlay">
                                         <div class="ms_box_overlay"></div>
                                         <div class="ms_more_icon">
-                                            <img src="images/svg/more.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -1413,21 +1639,28 @@
                         <div class="swiper-slide">
                             <div class="ms_rcnt_box">
                                 <div class="ms_rcnt_box_img">
-                                    <img src="images/radio/img3.jpg" alt="">
+                                    <img src="{{ 'storage/images/radio/img3.jpg' }}" alt="">
                                     <div class="ms_main_overlay">
                                         <div class="ms_box_overlay"></div>
                                         <div class="ms_more_icon">
-                                            <img src="images/svg/more.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -1439,21 +1672,28 @@
                         <div class="swiper-slide">
                             <div class="ms_rcnt_box">
                                 <div class="ms_rcnt_box_img">
-                                    <img src="images/radio/img4.jpg" alt="">
+                                    <img src="{{ 'storage/images/radio/img4.jpg' }}" alt="">
                                     <div class="ms_main_overlay">
                                         <div class="ms_box_overlay"></div>
                                         <div class="ms_more_icon">
-                                            <img src="images/svg/more.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -1465,21 +1705,28 @@
                         <div class="swiper-slide">
                             <div class="ms_rcnt_box">
                                 <div class="ms_rcnt_box_img">
-                                    <img src="images/radio/img5.jpg" alt="">
+                                    <img src="{{ 'storage/images/radio/img5.jpg' }}" alt="">
                                     <div class="ms_main_overlay">
                                         <div class="ms_box_overlay"></div>
                                         <div class="ms_more_icon">
-                                            <img src="images/svg/more.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -1491,21 +1738,28 @@
                         <div class="swiper-slide">
                             <div class="ms_rcnt_box">
                                 <div class="ms_rcnt_box_img">
-                                    <img src="images/radio/img6.jpg" alt="">
+                                    <img src="{{ 'storage/images/radio/img6.jpg' }}" alt="">
                                     <div class="ms_main_overlay">
                                         <div class="ms_box_overlay"></div>
                                         <div class="ms_more_icon">
-                                            <img src="images/svg/more.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -1517,21 +1771,28 @@
                         <div class="swiper-slide">
                             <div class="ms_rcnt_box">
                                 <div class="ms_rcnt_box_img">
-                                    <img src="images/radio/img1.jpg" alt="">
+                                    <img src="{{ 'storage/images/radio/img1.jpg' }}" alt="">
                                     <div class="ms_main_overlay">
                                         <div class="ms_box_overlay"></div>
                                         <div class="ms_more_icon">
-                                            <img src="images/svg/more.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -1543,21 +1804,28 @@
                         <div class="swiper-slide">
                             <div class="ms_rcnt_box">
                                 <div class="ms_rcnt_box_img">
-                                    <img src="images/radio/img2.jpg" alt="">
+                                    <img src="{{ 'storage/images/radio/img2.jpg' }}" alt="">
                                     <div class="ms_main_overlay">
                                         <div class="ms_box_overlay"></div>
                                         <div class="ms_more_icon">
-                                            <img src="images/svg/more.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -1569,21 +1837,28 @@
                         <div class="swiper-slide">
                             <div class="ms_rcnt_box">
                                 <div class="ms_rcnt_box_img">
-                                    <img src="images/radio/img3.jpg" alt="">
+                                    <img src="{{ 'storage/images/radio/img3.jpg' }}" alt="">
                                     <div class="ms_main_overlay">
                                         <div class="ms_box_overlay"></div>
                                         <div class="ms_more_icon">
-                                            <img src="images/svg/more.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -1595,21 +1870,28 @@
                         <div class="swiper-slide">
                             <div class="ms_rcnt_box">
                                 <div class="ms_rcnt_box_img">
-                                    <img src="images/radio/img4.jpg" alt="">
+                                    <img src="{{ 'storage/images/radio/img4.jpg' }}" alt="">
                                     <div class="ms_main_overlay">
                                         <div class="ms_box_overlay"></div>
                                         <div class="ms_more_icon">
-                                            <img src="images/svg/more.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/more.svg' }}" alt="">
                                         </div>
                                         <ul class="more_option">
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
-                                            <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_fav"></span></span>Add To Favourites</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_dwn"></span></span>Download Now</a></li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_playlst"></span></span>Add To Playlist</a>
+                                            </li>
+                                            <li><a href="#"><span class="opt_icon"><span
+                                                            class="icon icon_share"></span></span>Share</a></li>
                                         </ul>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -1629,23 +1911,30 @@
         <!----Footer Start---->
         <div class="ms_footer_wrapper">
             <div class="ms_footer_logo">
-                <a href="index-2.html"><img src="images/open_logo.png" alt=""></a>
+                <a href="index-2.html"><img src="{{ 'storage/images/open_logo.png' }}" alt=""></a>
             </div>
             <div class="ms_footer_inner">
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
                         <div class="footer_box">
                             <h1 class="footer_title">miraculous music station</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor.</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="footer_box footer_app">
                             <h1 class="footer_title">Download our App</h1>
-                            <p>Go Mobile with our app.<br> Listen to your favourite songs at just one click. Download Now !</p>
-                            <a href="#" class="foo_app_btn"><img src="images/google_play.jpg" alt="" class="img-fluid"></a>
-                            <a href="#" class="foo_app_btn"><img src="images/app_store.jpg" alt="" class="img-fluid"></a>
-                            <a href="#" class="foo_app_btn"><img src="images/windows.jpg" alt="" class="img-fluid"></a>
+                            <p>Go Mobile with our app.<br> Listen to your favourite songs at just one click. Download
+                                Now !
+                            </p>
+                            <a href="#" class="foo_app_btn"><img src="{{ 'storage/images/google_play.jpg' }}" alt="" class="img-fluid"></a>
+                            <a href="#" class="foo_app_btn"><img src="{{ 'storage/images/app_store.jpg' }}" alt=""
+                                                                 class="img-fluid"></a>
+                            <a href="#" class="foo_app_btn"><img src="{{ 'storage/images/windows.jpg' }}" alt="" class="img-fluid"></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -1671,7 +1960,7 @@
                             <ul class="foo_con_info">
                                 <li>
                                     <div class="foo_con_icon">
-                                        <img src="images/svg/phone.svg" alt="">
+                                        <img src="{{ 'storage/images/svg/phone.svg' }}" alt="">
                                     </div>
                                     <div class="foo_con_data">
                                         <span class="con-title">Call us :</span>
@@ -1680,7 +1969,7 @@
                                 </li>
                                 <li>
                                     <div class="foo_con_icon">
-                                        <img src="images/svg/message.svg" alt="">
+                                        <img src="{{ 'storage/images/svg/message.svg' }}" alt="">
                                     </div>
                                     <div class="foo_con_data">
                                         <span class="con-title">email us :</span>
@@ -1689,7 +1978,7 @@
                                 </li>
                                 <li>
                                     <div class="foo_con_icon">
-                                        <img src="images/svg/add.svg" alt="">
+                                        <img src="{{ 'storage/images/svg/add.svg' }}" alt="">
                                     </div>
                                     <div class="foo_con_data">
                                         <span class="con-title">walk in :</span>
@@ -1720,9 +2009,9 @@
         </div>
         <!----Audio Player Section---->
         <div class="ms_player_wrapper">
-			<div class="ms_player_close">
-				<i class="fa fa-angle-up" aria-hidden="true"></i>
-			</div>
+            <div class="ms_player_close">
+                <i class="fa fa-angle-up" aria-hidden="true"></i>
+            </div>
             <div class="player_mid">
                 <div class="audio-player">
                     <div id="jquery_jplayer_1" class="jp-jplayer"></div>
@@ -1740,28 +2029,36 @@
                             </div>
                             <div class="play_song_options">
                                 <ul>
-                                    <li><a href="#"><span class="song_optn_icon"><i class="ms_icon icon_download"></i></span>download now</a></li>
-                                    <li><a href="#"><span class="song_optn_icon"><i class="ms_icon icon_fav"></i></span>Add To Favourites</a></li>
-                                    <li><a href="#"><span class="song_optn_icon"><i class="ms_icon icon_playlist"></i></span>Add To Playlist</a></li>
-                                    <li><a href="#"><span class="song_optn_icon"><i class="ms_icon icon_share"></i></span>Share</a></li>
+                                    <li><a href="#"><span class="song_optn_icon"><i
+                                                    class="ms_icon icon_download"></i></span>download now</a></li>
+                                    <li><a href="#"><span class="song_optn_icon"><i class="ms_icon icon_fav"></i></span>Add
+                                            To Favourites</a></li>
+                                    <li><a href="#"><span class="song_optn_icon"><i
+                                                    class="ms_icon icon_playlist"></i></span>Add To Playlist</a></li>
+                                    <li><a href="#"><span class="song_optn_icon"><i
+                                                    class="ms_icon icon_share"></i></span>Share</a>
+                                    </li>
                                 </ul>
                             </div>
                             <span class="play-left-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
                         </div>
                         <!----Right Queue---->
                         <div class="jp_queue_wrapper">
-                            <span class="que_text" id="myPlaylistQueue"><i class="fa fa-angle-up" aria-hidden="true"></i> queue</span>
+                            <span class="que_text" id="myPlaylistQueue"><i class="fa fa-angle-up"
+                                                                           aria-hidden="true"></i> queue</span>
                             <div id="playlist-wrap" class="jp-playlist">
-								<div class="jp_queue_cls"><i class="fa fa-times" aria-hidden="true"></i></div>
+                                <div class="jp_queue_cls"><i class="fa fa-times" aria-hidden="true"></i></div>
                                 <h2>queue</h2>
-								<div class="jp_queue_list_inner">
-									<ul>
-										<li>&nbsp;</li>
-									</ul>
-								</div>
+                                <div class="jp_queue_list_inner">
+                                    <ul>
+                                        <li>&nbsp;</li>
+                                    </ul>
+                                </div>
                                 <div class="jp_queue_btn">
-                                    <a href="javascript:;" class="ms_clear" data-toggle="modal" data-target="#clear_modal">clear</a>
-                                    <a href="clear_modal.html" class="ms_save" data-toggle="modal" data-target="#save_modal">save</a>
+                                    <a href="javascript:;" class="ms_clear" data-toggle="modal"
+                                       data-target="#clear_modal">clear</a>
+                                    <a href="clear_modal.html" class="ms_save" data-toggle="modal"
+                                       data-target="#save_modal">save</a>
                                 </div>
                             </div>
                         </div>
@@ -1769,14 +2066,14 @@
                             <div class="jp-gui jp-interface flex-wrap">
                                 <div class="jp-controls flex-item">
                                     <button class="jp-previous" tabindex="0">
-					<i class="ms_play_control"></i>
-				</button>
+                                        <i class="ms_play_control"></i>
+                                    </button>
                                     <button class="jp-play" tabindex="0">
-					<i class="ms_play_control"></i>
-				</button>
+                                        <i class="ms_play_control"></i>
+                                    </button>
                                     <button class="jp-next" tabindex="0">
-					<i class="ms_play_control"></i>
-				</button>
+                                        <i class="ms_play_control"></i>
+                                    </button>
                                 </div>
                                 <div class="jp-progress-container flex-item">
                                     <div class="jp-time-holder">
@@ -1800,7 +2097,7 @@
                                                     <div class="knob d3"><span></span></div>
                                                     <div class="handle"></div>
                                                     <div class="round">
-                                                        <img src="images/svg/volume.svg" alt="">
+                                                        <img src="{{ 'storage/images/svg/volume.svg' }}" alt="">
                                                     </div>
                                                 </div>
                                             </div>
@@ -1810,17 +2107,19 @@
                                 </div>
                                 <div class="jp-toggles flex-item">
                                     <button class="jp-shuffle" tabindex="0" title="Shuffle">
-									<i class="ms_play_control"></i></button>
-									<button class="jp-repeat" tabindex="0" title="Repeat"><i class="ms_play_control"></i></button>
+                                        <i class="ms_play_control"></i></button>
+                                    <button class="jp-repeat" tabindex="0" title="Repeat"><i
+                                            class="ms_play_control"></i>
+                                    </button>
                                 </div>
                                 <div class="jp_quality_optn custom_select">
                                     <select>
-						<option>quality</option>
-						<option value="1">HD</option>
-						<option value="2">High</option>
-						<option value="3">medium</option>
-						<option value="4">low</option>
-					</select>
+                                        <option>quality</option>
+                                        <option value="1">HD</option>
+                                        <option value="2">High</option>
+                                        <option value="3">medium</option>
+                                        <option value="4">low</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -1838,11 +2137,11 @@
                 <!-- Modal content-->
                 <div class="modal-content">
                     <button type="button" class="close" data-dismiss="modal">
-						<i class="fa_icon form_close"></i>
-					</button>
+                        <i class="fa_icon form_close"></i>
+                    </button>
                     <div class="modal-body">
                         <div class="ms_register_img">
-                            <img src="images/register_img.png" alt="" class="img-fluid" />
+                            <img src="{{ 'storage/images/register_img.png' }}" alt="" class="img-fluid"/>
                         </div>
                         <div class="ms_register_form">
                             <h2>Register / Sign Up</h2>
@@ -1871,7 +2170,8 @@
 						</span>
                             </div>
                             <a href="#" class="ms_btn">register now</a>
-                            <p>Already Have An Account? <a href="#myModal1" data-toggle="modal" class="ms_modal hideCurrentModel">login here</a></p>
+                            <p>Already Have An Account? <a href="#myModal1" data-toggle="modal"
+                                                           class="ms_modal hideCurrentModel">login here</a></p>
                         </div>
                     </div>
                 </div>
@@ -1883,11 +2183,11 @@
                 <!-- Modal content-->
                 <div class="modal-content">
                     <button type="button" class="close" data-dismiss="modal">
-						<i class="fa_icon form_close"></i>
-					</button>
+                        <i class="fa_icon form_close"></i>
+                    </button>
                     <div class="modal-body">
                         <div class="ms_register_img">
-                            <img src="images/register_img.png" alt="" class="img-fluid" />
+                            <img src="{{ 'storage/images/register_img.png' }}" alt="" class="img-fluid"/>
                         </div>
                         <div class="ms_register_form">
                             <h2>login / Sign in</h2>
@@ -1905,15 +2205,16 @@
                             </div>
                             <div class="remember_checkbox">
                                 <label>Keep me signed in
-							<input type="checkbox">
-							<span class="checkmark"></span>
-						</label>
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
                             </div>
                             <a href="profile.html" class="ms_btn" target="_blank">login now</a>
                             <div class="popup_forgot">
                                 <a href="#">Forgot Password ?</a>
                             </div>
-                            <p>Don't Have An Account? <a href="#myModal" data-toggle="modal" class="ms_modal1 hideCurrentModel">register here</a></p>
+                            <p>Don't Have An Account? <a href="#myModal" data-toggle="modal"
+                                                         class="ms_modal1 hideCurrentModel">register here</a></p>
                         </div>
                     </div>
                 </div>
@@ -1927,81 +2228,81 @@
                 <!-- Modal content-->
                 <div class="modal-content">
                     <button type="button" class="close" data-dismiss="modal">
-						<i class="fa_icon form_close"></i>
-					</button>
+                        <i class="fa_icon form_close"></i>
+                    </button>
                     <div class="modal-body">
                         <h1>language selection</h1>
                         <p>Please select the language(s) of the music you listen to.</p>
                         <ul class="lang_list">
                             <li>
                                 <label class="lang_check_label">
-							English
-							<input type="checkbox" name="check">
-							<span class="label-text"></span>
-							</label>
+                                    English
+                                    <input type="checkbox" name="check">
+                                    <span class="label-text"></span>
+                                </label>
                             </li>
                             <li>
                                 <label class="lang_check_label">
-							hindi
-							<input type="checkbox" name="check">
-							<span class="label-text"></span>
-							</label>
+                                    hindi
+                                    <input type="checkbox" name="check">
+                                    <span class="label-text"></span>
+                                </label>
                             </li>
                             <li>
                                 <label class="lang_check_label">
-							punjabi
-							<input type="checkbox" name="check">
-							<span class="label-text"></span>
-							</label>
+                                    punjabi
+                                    <input type="checkbox" name="check">
+                                    <span class="label-text"></span>
+                                </label>
                             </li>
                             <li>
                                 <label class="lang_check_label">
-							French
-							<input type="checkbox" name="check">
-							<span class="label-text"></span>
-							</label>
+                                    French
+                                    <input type="checkbox" name="check">
+                                    <span class="label-text"></span>
+                                </label>
                             </li>
                             <li>
                                 <label class="lang_check_label">
-							 German
-							<input type="checkbox" name="check">
-							<span class="label-text"></span>
-							</label>
+                                    German
+                                    <input type="checkbox" name="check">
+                                    <span class="label-text"></span>
+                                </label>
                             </li>
                             <li>
                                 <label class="lang_check_label">
-							Spanish
-							<input type="checkbox" name="check">
-							<span class="label-text"></span>
-							</label>
+                                    Spanish
+                                    <input type="checkbox" name="check">
+                                    <span class="label-text"></span>
+                                </label>
                             </li>
                             <li>
                                 <label class="lang_check_label">
-							Chinese
-							<input type="checkbox" name="check">
-							<span class="label-text"></span>
-							</label>
+                                    Chinese
+                                    <input type="checkbox" name="check">
+                                    <span class="label-text"></span>
+                                </label>
                             </li>
                             <li>
                                 <label class="lang_check_label">
-							Japanese
-							<input type="checkbox" name="check">
-							<span class="label-text"></span>
-							</label>
+                                    Japanese
+                                    <input type="checkbox" name="check">
+                                    <span class="label-text"></span>
+                                </label>
                             </li>
                             <li>
                                 <label class="lang_check_label">
-							Arabic
-							<input type="checkbox" name="check">
-							<span class="label-text"></span>
-							</label>
+                                    Arabic
+                                    <input type="checkbox" name="check">
+                                    <span class="label-text"></span>
+                                </label>
                             </li>
                             <li>
                                 <label class="lang_check_label">
-							 Italian
-							<input type="checkbox" name="check">
-							<span class="label-text"></span>
-							</label>
+                                    Italian
+                                    <input type="checkbox" name="check">
+                                    <span class="label-text"></span>
+                                </label>
                             </li>
                         </ul>
                         <div class="ms_lang_btn">
@@ -2012,60 +2313,62 @@
             </div>
         </div>
     </div>
-	<!----Queue Clear Model ---->
-	<div class="ms_clear_modal">
-		<div id="clear_modal" class="modal  centered-modal" role="dialog">
+    <!----Queue Clear Model ---->
+    <div class="ms_clear_modal">
+        <div id="clear_modal" class="modal  centered-modal" role="dialog">
             <div class="modal-dialog">
                 <!-- Modal content-->
                 <div class="modal-content">
                     <button type="button" class="close" data-dismiss="modal">
-						<i class="fa_icon form_close"></i>
-					</button>
+                        <i class="fa_icon form_close"></i>
+                    </button>
                     <div class="modal-body">
-						<h1>Are you sure you want to clear your queue?</h1>
-						<div class="clr_modal_btn">
-							<a href="#">clear all</a>
-							<a href="#">cancel</a>
-						</div>
+                        <h1>Are you sure you want to clear your queue?</h1>
+                        <div class="clr_modal_btn">
+                            <a href="#">clear all</a>
+                            <a href="#">cancel</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-	</div>
-	<!----Queue Save Modal---->
-	<div class="ms_save_modal">
-		<div id="save_modal" class="modal  centered-modal" role="dialog">
+    </div>
+    <!----Queue Save Modal---->
+    <div class="ms_save_modal">
+        <div id="save_modal" class="modal  centered-modal" role="dialog">
             <div class="modal-dialog">
                 <!-- Modal content-->
                 <div class="modal-content">
                     <button type="button" class="close" data-dismiss="modal">
-						<i class="fa_icon form_close"></i>
-					</button>
+                        <i class="fa_icon form_close"></i>
+                    </button>
                     <div class="modal-body">
-						<h1>Log in to start sharing your music!</h1>
-						<div class="save_modal_btn">
-							<a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i> continue with google </a>
-							<a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i> continue with facebook</a>
-						</div>
-						<div class="ms_save_email">
-							<h3>or use your email</h3>
-							<div class="save_input_group">
-								<input type="text" placeholder="Enter Your Name" class="form-control">
-							</div>
-							<div class="save_input_group">
+                        <h1>Log in to start sharing your music!</h1>
+                        <div class="save_modal_btn">
+                            <a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i> continue with google
+                            </a>
+                            <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i> continue with facebook</a>
+                        </div>
+                        <div class="ms_save_email">
+                            <h3>or use your email</h3>
+                            <div class="save_input_group">
+                                <input type="text" placeholder="Enter Your Name" class="form-control">
+                            </div>
+                            <div class="save_input_group">
                                 <input type="password" placeholder="Enter Password" class="form-control">
                             </div>
-							<button class="save_btn">Log in</button>
-						</div>
-						<div class="ms_dnt_have">
-						    <span>Dont't have an account ?</span>
-							<a href="javascript:;" class="hideCurrentModel" data-toggle="modal" data-target="#myModal">Register Now</a>
-						</div>
+                            <button class="save_btn">Log in</button>
+                        </div>
+                        <div class="ms_dnt_have">
+                            <span>Dont't have an account ?</span>
+                            <a href="javascript:;" class="hideCurrentModel" data-toggle="modal" data-target="#myModal">Register
+                                Now</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-	</div>
+    </div>
     <!--Main js file Style-->
     <script type="text/javascript" src="{{ asset('ponend/js/jquery.js') }}"></script>
     <script type="text/javascript" src="{{ asset('ponend/js/bootstrap.min.js') }}"></script>
@@ -2074,9 +2377,11 @@
     <script type="text/javascript" src="{{ asset('ponend/js/plugins/player/jquery.jplayer.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('ponend/js/plugins/player/audio-player.js') }}"></script>
     <script type="text/javascript" src="{{ asset('ponend/js/plugins/player/volume.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('ponend/js/plugins/nice_select/jquery.nice-select.min.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('ponend/js/plugins/scroll/jquery.mCustomScrollbar.js') }}"></script>
+    <script type="text/javascript"
+            src="{{ asset('ponend/js/plugins/nice_select/jquery.nice-select.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('ponend/js/plugins/scroll/jquery.mCustomScrollbar.js') }}"></script>
     <script type="text/javascript" src="{{ asset('ponend/js/custom.js') }}"></script>
+</div>
 </body>
 
 </html>

@@ -34,4 +34,9 @@ class Playlist extends Model
     {
         return $this->belongsTo('App\Models\Ambum');
     }
+
+    public function singer()
+    {
+        return $this->belongsTo('App\Models\Singer');
+    }
 }

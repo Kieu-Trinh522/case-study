@@ -67,7 +67,8 @@
                                href="{{route('category.index')}}">Category</a>
                             <a class="nav-link"
                                href="{{route('country.index')}}">Country</a>
-                               <a class="nav-link" href="{{ route('ambums.index') }}">Ambum</a>
+                               <a class="nav-link" href="{{ route('ambums.index') }}">Album</a>
+                               <a class="nav-link" href="{{ route('singer.index') }}">Singer</a>
                         </nav>
                     </div>
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
