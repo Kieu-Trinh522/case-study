@@ -19,7 +19,7 @@
                     <input type="text" name="singer" value="{{ $playlist->singer }}" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="">category</label>
+                    <label for="">Category</label>
                     <select class="form-control" name="category_id">
                         @foreach($category as $value)
                             <option @if($playlist->category_id == $value->id)
@@ -42,7 +42,7 @@
                 </div>
                 <div class="form-group">
                     <label for="">Ambum</label>
-                    <select class="form-control" name="country_id">
+                    <select class="form-control-" name="country_id">
                         @foreach($ambum as $value)
                             <option @if($playlist->ambum_id == $value->id)
                                 {{ "selected" }}
@@ -53,7 +53,7 @@
                 </div>
                 <div class="form-group">
                     <label for="">Image</label><br>
-                    <input type="file" name="image" class="form-control-file">
+                    <input type="file" name="image" value="{{ $playlist->image }}" class="form-control-file">
                 </div>
                 <div class="form-group">
                     <label for="">Audio</label><br>

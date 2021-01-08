@@ -21,7 +21,7 @@
                                 <tr>
                                     <th>STT</th>
                                     <th>Name Country</th>
-                                    <th>Number Of Country</th>
+                                    <th>Number Of Songs</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>

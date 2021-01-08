@@ -30,7 +30,7 @@
                         <tr>
                             <td>{{ ++$key }}</td>
                             <td>
-                                {{ $ambum->name }}
+                                {{ $ambum->name_ambum }}
 
                             </td>
                             <td>{{ $ambum->singer_ambum }}</td>

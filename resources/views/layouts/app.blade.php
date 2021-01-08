@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -20,15 +20,26 @@
     <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i>
     </button>
     <!-- Navbar Search-->
-    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0"
+    method="POST" action="{{ route('playlists.search') }}" enctype="multipart/form-data">
+    @csrf
         <div class="input-group">
-            <input class="form-control" type="text" placeholder="Search for..." aria-label="Search"
+            <input class="form-control" type="search" name="search" placeholder="Search for..." aria-label="Search"
                    aria-describedby="basic-addon2"/>
             <div class="input-group-append">
-                <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
+                <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
             </div>
         </div>
     </form>
+    <select name="change-language" onchange="location = this.value;" title="Change Language">
+        <option value="{!! route('user.change-language', ['vi']) !!}" {{ (app()->getLocale() == 'vi') ? ' selected' : '' }} title="Change to Vietnamese">
+            Vietnamese
+        </option>
+        <option value="{!! route('user.change-language', ['en']) !!}" {{ (app()->getLocale() == 'en') ? ' selected' : '' }} title="Change to English">
+            English
+        </option>
+    </select>
+
     <!-- Navbar-->
     <ul class="navbar-nav ml-auto ml-md-0">
         <li class="nav-item dropdown">
@@ -39,6 +50,7 @@
                 <a class="dropdown-item" href="#">Activity Log</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{{ route('user.logout') }}">Logout</a>
+
             </div>
         </li>
     </ul>
@@ -64,10 +76,10 @@
                          data-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
                             <a class="nav-link"
-                               href="{{route('category.index')}}">Category</a>
+                               href="{{route('category.index')}}">{!! __('messages.category') !!}</a>
                             <a class="nav-link"
-                               href="{{route('country.index')}}">Country</a>
-                               <a class="nav-link" href="{{ route('ambums.index') }}">Ambum</a>
+                               href="{{route('country.index')}}">{!! __('messages.country') !!}</a>
+                               <a class="nav-link" href="{{ route('ambums.index') }}">{!! __('messages.album') !!}</a>
                         </nav>
                     </div>
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"

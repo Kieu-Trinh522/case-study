@@ -4,7 +4,7 @@ namespace App\Http;
 
 use App\Http\Middleware\AuthUser;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
-use Locale;
+use App\Http\Middleware\Locale;
 
 class Kernel extends HttpKernel
 {

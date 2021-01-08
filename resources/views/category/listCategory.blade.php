@@ -21,7 +21,7 @@
                                 <tr>
                                     <th>STT</th>
                                     <th>Name Category</th>
-                                    <th>Number Of Category</th>
+                                    <th>Number Of Songs</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
