@@ -1,11 +1,12 @@
-@extends('layouts.crud')
+@extends('layouts.app')
 
-@section('title', 'Create Music')
+@section('title', 'Create Playlist')
 
 @section('content')
 
+
     <div class="container">
-        <div class="card">
+        <div >
 
             <div class="form-group">
                 <form method="POST" action="{{ route('playlists.store') }}" enctype="multipart/form-data">

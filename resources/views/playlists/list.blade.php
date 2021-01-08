@@ -329,7 +329,7 @@
                     <td>{{ $playlist->country->country_name }}</td>
                     <td>{{ $playlist->ambum->name_ambum }}</td>
                     <td>
-                        <img src="{{ url('storage/' . $playlist->image) }}" height="100px"
+                        <img  src="{{ url('storage/' . $playlist->image) }}" height="100px"
                              width="100px">
                     </td>
                     <td>

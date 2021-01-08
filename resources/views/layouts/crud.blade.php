@@ -37,9 +37,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <body>
 	<!-- title -->
 	<h1>
-		<span>V</span>alidator
-		<span>S</span>ignup
-		<span>F</span>orm
+		<span>L</span>ogin
+
 	</h1>
 	<!-- //title -->
 	<!-- content -->
