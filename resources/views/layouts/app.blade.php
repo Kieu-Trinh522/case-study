@@ -38,7 +38,7 @@
                 <a class="dropdown-item" href="#">Settings</a>
                 <a class="dropdown-item" href="#">Activity Log</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{{asset('backend/startbootstrap-sb-admin-gh-pages/dist/login.html')}}">Logout</a>
+                <a class="dropdown-item" href="{{ route('user.logout') }}">Logout</a>
             </div>
         </li>
     </ul>
