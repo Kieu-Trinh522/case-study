@@ -3,7 +3,7 @@
 @section('title', 'Country')
 
 @section('content')
-                </div>
+
                 <div class="card mb-4">
                     <div class="card-header">
                         <i class="fas fa-table mr-1"></i>

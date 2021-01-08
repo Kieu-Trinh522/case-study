@@ -16,4 +16,9 @@ class Country extends Model
     {
         return $this->hasMany('App\Models\Playlist');
     }
+
+    public function singer()
+    {
+        return $this->hasMany('App\Models\Singer');
+    }
 }

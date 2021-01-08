@@ -6,6 +6,7 @@ use App\Http\Controllers\CountryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PlaylistController;
 use App\Http\Controllers\PonendController;
+use App\Http\Controllers\SingerController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -80,5 +81,12 @@ Route::group(['prefix' => 'ponend'], function () {
     Route::get('/ambum', [PonendController::class, 'ambum'])->name('ponend.ambum');
     Route::get('/song', [PonendController::class, 'song'])->name('ponend.song');
 });
-
+Route::group(['prefix'=>'singer'],function (){
+    Route::get('/',[SingerController::class,'index'])->name('singer.index');
+    Route::get('/create',[SingerController::class,'create'])->name('singer.create');
+    Route::post('/create',[SingerController::class,'store'])->name('singer.store');
+    Route::get('/edit/{id}',[SingerController::class,'edit'])->name('singer.edit');
+    Route::post('/edit/{id}',[SingerController::class,'update'])->name('singer.update');
+    Route::post('/delete',[SingerController::class,'destroy'])->name('singer.destroy');
+});
 
