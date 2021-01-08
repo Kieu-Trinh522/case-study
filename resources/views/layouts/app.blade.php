@@ -38,7 +38,7 @@
                 <a class="dropdown-item" href="#">Settings</a>
                 <a class="dropdown-item" href="#">Activity Log</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{{asset('backend/startbootstrap-sb-admin-gh-pages/dist/login.html')}}">Logout</a>
+                <a class="dropdown-item" href="{{ route('user.logout') }}">Logout</a>
             </div>
         </li>
     </ul>
@@ -67,7 +67,8 @@
                                href="{{route('category.index')}}">Category</a>
                             <a class="nav-link"
                                href="{{route('country.index')}}">Country</a>
-                               <a class="nav-link" href="{{ route('ambums.index') }}">Ambum</a>
+                               <a class="nav-link" href="{{ route('ambums.index') }}">Album</a>
+                               <a class="nav-link" href="{{ route('singer.index') }}">Singer</a>
                         </nav>
                     </div>
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
