@@ -16,7 +16,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">DOB</label>
-                        <input type="text" name="dob"  class="form-control">
+                        <input type="date" name="dob"  class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="">Country</label>

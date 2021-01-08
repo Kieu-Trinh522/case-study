@@ -1,11 +1,12 @@
-@extends('layouts.crud')
+@extends('layouts.app')
 
-@section('title', 'Create Music')
+@section('title', 'Create Playlist')
 
 @section('content')
 
+
     <div class="container">
-        <div class="card">
+        <div >
 
             <div class="form-group">
                 <form method="POST" action="{{ route('playlists.store') }}" enctype="multipart/form-data">
@@ -16,7 +17,11 @@
                     </div>
                     <div class="form-group">
                         <label for="">Singer</label>
-                        <input type="text" name="singer" class="form-control">
+                        <select name="category_id" class="form-control">
+                            @foreach($singer as $value)
+                                <option value="{{ $value->id }}">{{ $value->singer_name }}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="">CAtegory</label>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -21,10 +21,10 @@
     </button>
     <!-- Navbar Search-->
     <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0"
-    method="POST" action="{{ route('playlists.search') }}" enctype="multipart/form-data">
-    @csrf
+    method="post" action="{{ route('playlists.search') }}" enctype="multipart/form-data">
+        @csrf
         <div class="input-group">
-            <input class="form-control" type="search" name="search" placeholder="Search for..." aria-label="Search"
+            <input class="form-control" type="text" placeholder="Search for..." aria-label="Search"
                    aria-describedby="basic-addon2"/>
             <div class="input-group-append">
                 <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
@@ -78,14 +78,12 @@
                             <a class="nav-link"
                                href="{{route('category.index')}}">{!! __('messages.category') !!}</a>
                             <a class="nav-link"
-<<<<<<< HEAD
                                href="{{route('country.index')}}">{!! __('messages.country') !!}</a>
-                               <a class="nav-link" href="{{ route('ambums.index') }}">{!! __('messages.album') !!}</a>
-=======
-                               href="{{route('country.index')}}">Country</a>
-                               <a class="nav-link" href="{{ route('ambums.index') }}">Album</a>
-                               <a class="nav-link" href="{{ route('singer.index') }}">Singer</a>
->>>>>>> d893d7b3fef085c6e1766c0c6501ddda4a3aa4e4
+                               <a class="nav-link"
+                                  href="{{ route('ambums.index') }}">{!! __('messages.album') !!}</a>
+                            <a class="nav-link"
+                               href="{{route('singer.index')}}">{!! __('messages.singer') !!}</a>
+
                         </nav>
                     </div>
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
