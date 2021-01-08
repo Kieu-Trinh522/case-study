@@ -3,6 +3,7 @@
 use App\Http\Controllers\AmbumController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\PlaylistController;
+use App\Http\Controllers\SingerController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\CategoryController;
@@ -23,8 +24,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PonendController::class, 'index']);
 
+<<<<<<< HEAD
 Route::group(['middleware' => 'locale'], function () {
     Route::get('change-languge/{language}', [LanguageController::class, 'changeLanguage'])->name('user.change-language');
+=======
+
+Route::get('test',function (){
+    return view('layouts.core.master');
+});
+
+Route::get('test2',function (){
+    return view('welcome');
+});
+>>>>>>> d893d7b3fef085c6e1766c0c6501ddda4a3aa4e4
 
 Route::middleware('AuthUser')->group(function () {
 
@@ -74,6 +86,15 @@ Route::middleware('AuthUser')->group(function () {
         Route::get('/ambum', [PonendController::class, 'ambum'])->name('ponend.ambum');
         Route::get('/song', [PonendController::class, 'song'])->name('ponend.song');
     });
+
+    Route::group(['prefix'=>'singer'],function (){
+        Route::get('/',[SingerController::class,'index'])->name('singer.index');
+        Route::get('/create',[SingerController::class,'create'])->name('singer.create');
+        Route::post('/create',[SingerController::class,'store'])->name('singer.store');
+        Route::get('/edit/{id}',[SingerController::class,'edit'])->name('singer.edit');
+        Route::post('/edit/{id}',[SingerController::class,'update'])->name('singer.update');
+        Route::post('/delete',[SingerController::class,'destroy'])->name('singer.destroy');
+    });
 });
     Route::group(['prefix' => 'user'], function () {
         Route::get('/index', [UserController::class, 'index'])->name('user.index');
@@ -83,4 +104,5 @@ Route::middleware('AuthUser')->group(function () {
         Route::get('/logout', [UserController::class, 'logout'])->name('user.logout');
     });
 });
+
 

@@ -37,7 +37,7 @@
                         {{ $playlist->music_name }}
 
                     </td>
-                    <td>{{ $playlist->singer }}</td>
+                    <td>{{ $playlist->singer->singer_name }}</td>
                     <td>{{ $playlist->category->category_name }}</td>
                     <td>{{ $playlist->country->country_name }}</td>
                     <td>{{ $playlist->ambum->name_ambum }}</td>

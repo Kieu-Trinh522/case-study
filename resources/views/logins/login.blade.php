@@ -5,9 +5,6 @@
 @section('content')
 
 
-
-
-
 <form method="POST" action="{{ route('user.login') }}" enctype="multipart/form-data">
     @csrf
     <div class="form-group">

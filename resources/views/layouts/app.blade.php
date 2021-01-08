@@ -78,8 +78,14 @@
                             <a class="nav-link"
                                href="{{route('category.index')}}">{!! __('messages.category') !!}</a>
                             <a class="nav-link"
+<<<<<<< HEAD
                                href="{{route('country.index')}}">{!! __('messages.country') !!}</a>
                                <a class="nav-link" href="{{ route('ambums.index') }}">{!! __('messages.album') !!}</a>
+=======
+                               href="{{route('country.index')}}">Country</a>
+                               <a class="nav-link" href="{{ route('ambums.index') }}">Album</a>
+                               <a class="nav-link" href="{{ route('singer.index') }}">Singer</a>
+>>>>>>> d893d7b3fef085c6e1766c0c6501ddda4a3aa4e4
                         </nav>
                     </div>
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
