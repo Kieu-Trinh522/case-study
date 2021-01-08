@@ -4,6 +4,7 @@ use App\Http\Controllers\AmbumController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\PlaylistController;
+use App\Http\Controllers\PonendController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -70,5 +71,12 @@ Route::group(['prefix' => 'ambums'], function () {
     Route::get('/destroy/{id}', [AmbumController::class, 'destroy'])->name('ambums.destroy');
 });
 
+Route::group(['prefix' => 'ponend'], function () {
+    Route::get('/home', [PonendController::class, 'index'])->name('ponend.index');
+    Route::get('/category', [PonendController::class, 'category'])->name('ponend.category');
+    Route::get('/country', [PonendController::class, 'country'])->name('ponend.country');
+    Route::get('/ambum', [PonendController::class, 'ambum'])->name('ponend.ambum');
+    Route::get('/song', [PonendController::class, 'song'])->name('ponend.song');
+});
 
 

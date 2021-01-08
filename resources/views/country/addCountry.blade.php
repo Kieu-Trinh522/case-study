@@ -2,32 +2,21 @@
 @section('title', 'Create Country')
 
 @section('content')
-<h1 class="header-w3ls">
-    Add Country</h1>
-<div class="appointment-w3">
-    <form method="post" action="{{route('country.create')}}">
-        @csrf
-        <div class="personal">
 
-            <div class="main">
-                <div class="form-left-w3l">
-
-                    <input  type="text" class="top-up" name="country_name" required="">
+<div class="container">
+    <div class="card">
+        <div class="form-group">
+            <form method="POST" action="{{ route('country.store') }}" enctype="multipart/form-data">
+                @csrf
+                <div class="form-group">
+                    <label>name</label>
+                    <input type="text" name="country_name" class="form-control">
                 </div>
-
-            </div>
-
+                <button type="submit" class="btn btn-primary">Add New</button>
+                <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">cancel</button>
+            </form>
         </div>
-        <div class="information">
-
-        </div>
-
-
-        <div >
-            <input class="btn btn-success" type="submit" value="ADD">
-            <a class=" btn btn-success" href="{{route('country.index')}}">Back</a>
-        </div>
-    </form>
+    </div>
 </div>
 
 @endsection

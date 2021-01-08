@@ -2,30 +2,21 @@
 
 @section('title', 'Update Category')
 @section('content')
-<h1 class="header-w3ls">
-    Edit Category</h1>
-<div class="appointment-w3">
-    <form method="post" action="{{route('category.update',$category->id)}}">
-        @csrf
-        <div class="personal">
 
-            <div class="main">
-                <div class="form-left-w3l">
-
-                    <input value="{{$category->category_name}}" type="text" class="top-up" name="category_name" required="">
+<div class="container">
+    <div class="card">
+        <div class="form-group">
+            <form method="POST" action="{{ route('category.store') }}" enctype="multipart/form-data">
+                @csrf
+                <div class="form-group">
+                    <label>name</label>
+                    <input type="text" name="category_name" value="{{ $category->category_name }}" class="form-control">
                 </div>
-
-            </div>
-
+                <button type="submit" class="btn btn-primary">Add New</button>
+                <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">cancel</button>
+            </form>
         </div>
-        
-
-
-        <div >
-            <input class="btn btn-success" type="submit" value="EDIT">
-            <a class=" btn btn-success" href="{{route('category.index')}}">Back</a>
-        </div>
-    </form>
+    </div>
 </div>
 
 
