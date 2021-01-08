@@ -11,7 +11,7 @@ class Playlist extends Model
 
     protected $fillable = [
         'music_name',
-        'singer',
+        'singer_id',
         'category_id',
         'country_id',
         'ambum_id',

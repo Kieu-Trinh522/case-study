@@ -24,21 +24,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PonendController::class, 'index']);
 
-<<<<<<< HEAD
+
 Route::group(['middleware' => 'locale'], function () {
     Route::get('change-languge/{language}', [LanguageController::class, 'changeLanguage'])->name('user.change-language');
-=======
 
-Route::get('test',function (){
-    return view('layouts.core.master');
-});
 
-Route::get('test2',function (){
-    return view('welcome');
-});
->>>>>>> d893d7b3fef085c6e1766c0c6501ddda4a3aa4e4
-
-Route::middleware('AuthUser')->group(function () {
+Route::middleware('AuthUser', 'locale')->group(function () {
 
     Route::group(['prefix' => 'playlists'], function () {
         Route::get('/', [PlaylistController::class, 'index'])->name('playlists.index');

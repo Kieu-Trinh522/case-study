@@ -15,8 +15,8 @@
                         <input type="text" name="singer_name" value="{{ $singer->singer_name }}" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="">Singer</label>
-                        <input type="text" name="dob" value="{{ $singer->dob }}" class="form-control">
+                        <label for="">Dob</label>
+                        <input type="date" name="dob" value="{{ $singer->dob }}" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="">Country</label>
