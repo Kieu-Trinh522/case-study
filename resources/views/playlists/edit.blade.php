@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.crud')
 
 @section('title', 'Edit palylist')
 
@@ -6,9 +6,7 @@
 
 <div class="container">
     <div class="card">
-        <div class="card-header">
-            Edit Playlist
-        </div>
+
         <div class="form-group">
             <form method="POST" action="{{ route('playlists.update', $playlist->id) }}" enctype="multipart/form-data">
                 @csrf
@@ -39,6 +37,17 @@
                                 {{ "selected" }}
                             @endif
                             value="{{ $value->id }}">{{ $value->country_name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="">Ambum</label>
+                    <select class="form-control" name="country_id">
+                        @foreach($ambum as $value)
+                            <option @if($playlist->ambum_id == $value->id)
+                                {{ "selected" }}
+                            @endif
+                            value="{{ $value->id }}">{{ $value->name_ambum }}</option>
                         @endforeach
                     </select>
                 </div>

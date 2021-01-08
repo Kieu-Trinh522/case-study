@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddFileMusicToPlaylistTable extends Migration
+class CreateAmbumsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class AddFileMusicToPlaylistTable extends Migration
      */
     public function up()
     {
-        Schema::table('playlist', function (Blueprint $table) {
-            $table->string('fileMusic')->after('image');
+        Schema::create('ambums', function (Blueprint $table) {
+            $table->id();
+            $table->string('name_ambum');
+            $table->string('singer_ambum');
+            $table->string('image');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +29,6 @@ class AddFileMusicToPlaylistTable extends Migration
      */
     public function down()
     {
-        Schema::table('playlist', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('ambums');
     }
 }

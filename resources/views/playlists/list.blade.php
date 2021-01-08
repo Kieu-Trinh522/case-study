@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -197,6 +198,7 @@
                                     <th>Singer</th>
                                     <th>Category</th>
                                     <th>Country</th>
+                                    <th>Album</th>
                                     <th>Image</th>
                                     <th>Audio</th>
                                     <th>Action</th>
@@ -209,6 +211,7 @@
                                     <th>Singer</th>
                                     <th>Category</th>
                                     <th>Country</th>
+                                    <th>Album</th>
                                     <th>Image</th>
                                     <th>Audio</th>
                                     <th>Action</th>
@@ -225,6 +228,7 @@
                                         <td>{{ $playlist->singer }}</td>
                                         <td>{{ $playlist->category->category_name }}</td>
                                         <td>{{ $playlist->country->country_name }}</td>
+                                        <td>{{$playlist->ambum->name_ambum}}</td>
                                         <td>
                                             <img src="{{ url('storage/' . $playlist->image) }}" height="100px"
                                                  width="100px">
@@ -279,115 +283,77 @@
 <script src="{{asset('backend/startbootstrap-sb-admin-gh-pages/dist/assets/demo/datatables-demo.js')}}"></script>
 </body>
 </html>
+=======
+>>>>>>> b853cc53fd59eca858f09578f46798295eed702d
 
-{{--<!doctype html>--}}
-{{--<html lang="en">--}}
-{{--<head>--}}
-{{--    <title>Title</title>--}}
-{{--    <!-- Required meta tags -->--}}
-{{--    <meta charset="utf-8">--}}
-{{--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">--}}
-{{--    <!-- Bootstrap CSS -->--}}
-{{--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"--}}
-{{--          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">--}}
-{{--</head>--}}
-{{--<body>--}}
-{{--<form>--}}
-{{--    <a class="btn btn-success" href="{{route('category.create')}}">ADD</a>--}}
-{{--    <button class="btn btn-secondary" onclick="window.history.go(-1); return false">Cancel</button>--}}
-{{--    <table class="table">--}}
-{{--        <tr>--}}
-{{--            <th>STT</th>--}}
-{{--            <th>NAME CATEGORY</th>--}}
-{{--            <th>ACTION</th>--}}
-{{--        </tr>--}}
-{{--        @forelse($categories as $key=>$category)--}}
-{{--            <tr>--}}
-{{--                <td>{{++$key}}</td>--}}
-{{--                <td>{{$category->category_name}}</td>--}}
-{{--                <td>--}}
-{{--                    <a class="btn btn-success" href="{{route('category.edit',$category->id)}}">EDIT</a>--}}
-{{--                    <a class="btn btn-danger" href="{{route('category.destroy',$category->id)}}" onclick="return confirm('Do you delete?')">DELETE</a>--}}
-{{--                </td>--}}
-{{--            </tr>--}}
-{{--        @empty--}}
-{{--            <tr>No data</tr>--}}
-{{--        @endforelse--}}
-{{--    </table>--}}
-{{--</form>--}}
-{{--<!-- Optional JavaScript -->--}}
-{{--<!-- jQuery first, then Popper.js, then Bootstrap JS -->--}}
-{{--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"--}}
-{{--        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"--}}
-{{--        crossorigin="anonymous"></script>--}}
-{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"--}}
-{{--        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"--}}
-{{--        crossorigin="anonymous"></script>--}}
-{{--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"--}}
-{{--        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"--}}
-{{--        crossorigin="anonymous"></script>--}}
-{{--</body>--}}
-{{--</html>--}}
+@extends('layouts.app')
 
-{{--@extends('layouts.app')--}}
+@section('title', 'Playlist Music')
 
-{{--@section('title', 'list music')--}}
+@section('content')
 
-{{--@section('content')--}}
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-table mr-1"></i>
+        List Music
+        <a class="btn btn-success" href="{{route('playlists.create')}}">ADD</a>
+        <button class="btn btn-secondary" onclick="window.history.go(-1); return false">Cancel</button>
+    </div>
+<div class="card-body">
+    <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+            <tr>
+                <th>STT</th>
+                <th>Name music</th>
+                <th>Singer</th>
+                <th>Category</th>
+                <th>Country</th>
+                <th>Ambum</th>
+                <th>Image</th>
+                <th>Audio</th>
+                <th>Action</th>
+            </tr>
+            </thead>
 
-{{--    <div class="container">--}}
-{{--        <div class="card">--}}
-{{--            <div class="card-header">--}}
-{{--                List Mucsic--}}
-{{--            </div>--}}
-{{--            <div class="card-header">--}}
-{{--                <a href="{{ route('playlists.create') }}" class="btn btn-primary">Add</a>--}}
-{{--                <a href="{{ route('category.index') }}" class="btn btn-primary">Category</a>--}}
-{{--                <a href="{{ route('country.index') }}" class="btn btn-primary">Country</a>--}}
-{{--            </div>--}}
-{{--            <div class="table">--}}
-{{--                <table class="table table-striped">--}}
-{{--                    <thead>--}}
-{{--                        <tr>--}}
-{{--                            <th>#</th>--}}
-{{--                            <th>Name</th>--}}
-{{--                            <th>Singer</th>--}}
-{{--                            <th>Category</th>--}}
-{{--                            <th>Country</th>--}}
-{{--                            <th>Image</th>--}}
-{{--                            <th>Audio</th>--}}
-{{--                            <th>Action</th>--}}
-{{--                        </tr>--}}
-{{--                    </thead>--}}
-{{--                    <tbody>--}}
-{{--                        @foreach($playlists as $key => $playlist)--}}
-{{--                            <tr>--}}
-{{--                                <td>{{ ++$key }}</td>--}}
-{{--                                <td>--}}
-{{--                                    {{ $playlist->music_name }}--}}
+            <tbody>
+            @foreach($playlists as $key => $playlist)
+                <tr>
+                    <td>{{ ++$key }}</td>
+                    <td>
+                        {{ $playlist->music_name }}
 
-{{--                                </td>--}}
-{{--                                <td>{{ $playlist->singer }}</td>--}}
-{{--                                <td>{{ $playlist->category->category_name }}</td>--}}
-{{--                                <td>{{ $playlist->country->country_name }}</td>--}}
-{{--                                <td>--}}
-{{--                                   <img src="{{ url('storage/' . $playlist->image) }}" style="width: 100px">--}}
-{{--                                </td>--}}
-{{--                                <td>--}}
-{{--                                    <a href="{{ route('playlists.show', $playlist->id) }}">{{ $playlist->audio }}</a>--}}
-{{--                                </td>--}}
-{{--                                <td>--}}
-{{--                                    <a href="{{ route('playlists.edit', $playlist->id) }}" class="btn btn-success">Update</a>--}}
-{{--                                    <a href="{{ route('playlists.destroy', $playlist->id) }}" class="btn btn-danger" onclick="return confirm('Do you delete?')">Delete</a>--}}
-{{--                                </td>--}}
-{{--                            </tr>--}}
-{{--                        @endforeach--}}
-{{--                    </tbody>--}}
+                    </td>
+                    <td>{{ $playlist->singer }}</td>
+                    <td>{{ $playlist->category->category_name }}</td>
+                    <td>{{ $playlist->country->country_name }}</td>
+                    <td>{{ $playlist->ambum->name_ambum }}</td>
+                    <td>
+                        <img src="{{ url('storage/' . $playlist->image) }}" height="100px"
+                             width="100px">
+                    </td>
+                    <td>
 
-{{--                </table>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
+                        <audio controls>
+                            <source src="{{ url('storage/audio/' . $playlist->audio) }}"
+                                    type="audio/mp3">
+                            Your browser does not support the audio element.
+                            </audio>
+                    </td>
+                    <td>
+                        <a href="{{ route('playlists.edit', $playlist->id) }}"
+                           class="btn btn-success">Update</a>
+                        <a href="{{ route('playlists.destroy', $playlist->id) }}"
+                           class="btn btn-danger"
+                           onclick="return confirm('Do you delete?')">Delete</a>
+                    </td>
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
 
 
-{{--@endsection--}}
+@endsection

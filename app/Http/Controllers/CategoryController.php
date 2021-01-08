@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Playlist;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -15,7 +16,8 @@ class CategoryController extends Controller
     public function index()
     {
         $categories=Category::all();
-        return view('category.listCategory',compact('categories'));
+        $playlist = Playlist::all();
+        return view('category.listCategory',compact('categories', 'playlist'));
     }
 
     /**

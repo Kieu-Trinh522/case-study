@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.crud')
 
 @section('title', 'Create Music')
 
@@ -6,9 +6,7 @@
 
     <div class="container">
         <div class="card">
-            <div class="card-header">
-                Create Music
-            </div>
+
             <div class="form-group">
                 <form method="POST" action="{{ route('playlists.store') }}" enctype="multipart/form-data">
                     @csrf
@@ -36,6 +34,14 @@
                                 @endforeach
                         </select>
                         </div>
+                        <div class="form-group">
+                            <label for="">Ambum</label>
+                            <select name="ambum_id" class="form-control">
+                                    @foreach($ambum as $value)
+                                    <option value="{{ $value->id }}">{{ $value->name_ambum }}</option>
+                                    @endforeach
+                            </select>
+                            </div>
                         <div class="form-group">
                             <label for="">Image</label><br>
                             <input type="file" name="image" class="form-control-file">
