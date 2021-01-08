@@ -24,13 +24,22 @@
     method="post" action="{{ route('playlists.search') }}" enctype="multipart/form-data">
         @csrf
         <div class="input-group">
-            <input class="form-control" type="search" name="search" placeholder="Search for..." aria-label="Search"
+            <input class="form-control" type="text" placeholder="Search for..." aria-label="Search"
                    aria-describedby="basic-addon2"/>
             <div class="input-group-append">
                 <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
             </div>
         </div>
     </form>
+    <select name="change-language" onchange="location = this.value;" title="Change Language">
+        <option value="{!! route('user.change-language', ['vi']) !!}" {{ (app()->getLocale() == 'vi') ? ' selected' : '' }} title="Change to Vietnamese">
+            Vietnamese
+        </option>
+        <option value="{!! route('user.change-language', ['en']) !!}" {{ (app()->getLocale() == 'en') ? ' selected' : '' }} title="Change to English">
+            English
+        </option>
+    </select>
+
     <!-- Navbar-->
     <ul class="navbar-nav ml-auto ml-md-0">
         <li class="nav-item dropdown">
@@ -41,6 +50,7 @@
                 <a class="dropdown-item" href="#">Activity Log</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{{ route('user.logout') }}">Logout</a>
+
             </div>
         </li>
     </ul>
@@ -66,11 +76,14 @@
                          data-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
                             <a class="nav-link"
-                               href="{{route('category.index')}}">Category</a>
+                               href="{{route('category.index')}}">{!! __('messages.category') !!}</a>
                             <a class="nav-link"
-                               href="{{route('country.index')}}">Country</a>
-                               <a class="nav-link" href="{{ route('ambums.index') }}">Album</a>
-                               <a class="nav-link" href="{{ route('singer.index') }}">Singer</a>
+                               href="{{route('country.index')}}">{!! __('messages.country') !!}</a>
+                               <a class="nav-link"
+                                  href="{{ route('ambums.index') }}">{!! __('messages.album') !!}</a>
+                            <a class="nav-link"
+                               href="{{route('singer.index')}}">{!! __('messages.singer') !!}</a>
+
                         </nav>
                     </div>
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"

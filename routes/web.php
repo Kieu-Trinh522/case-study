@@ -20,7 +20,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
 Route::get('/', [PonendController::class, 'index']);
+
+
+Route::group(['middleware' => 'locale'], function () {
+    Route::get('change-languge/{language}', [LanguageController::class, 'changeLanguage'])->name('user.change-language');
 
 
 Route::get('test',function (){
@@ -30,6 +36,7 @@ Route::get('test',function (){
 Route::get('test2',function (){
     return view('welcome');
 });
+
 
 Route::middleware('AuthUser')->group(function () {
 
@@ -96,6 +103,6 @@ Route::middleware('AuthUser')->group(function () {
         Route::post('/login', [UserController::class, 'authenticate'])->name('user.login');
         Route::get('/logout', [UserController::class, 'logout'])->name('user.logout');
     });
-
+});
 
 

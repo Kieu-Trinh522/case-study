@@ -122,7 +122,7 @@ class PlaylistController extends Controller
         }
 
         $playlist->save();
-
+        Session::flash('success', 'Upload with success');
         return redirect()->route('playlists.index');
     }
 
@@ -141,7 +141,10 @@ class PlaylistController extends Controller
         if (!$search) {
             return redirect()->route('playlists.index');
         }
-        $playlist = Playlist::where('music_name', 'LIKE', '%' . $search . '%')->paginate(5);
+
+        $playlist = Playlist::where('music_name', 'LIKE', '%'. $search . '%')
+            ->paginate(5);
+
         $category = Category::all();
         $country = Country::all();
         $ambum = Ambum::all();
