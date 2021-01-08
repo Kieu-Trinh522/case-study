@@ -51,7 +51,7 @@ public function index()
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return view('user.login');
+        return view('logins.login');
     }
 
 
