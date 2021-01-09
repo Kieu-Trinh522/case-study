@@ -25,7 +25,7 @@
             </select>
         </div>
         <div class="form-group">
-<<<<<<< HEAD
+
             <form method="POST" action="{{ route('playlists.update', $playlist->id) }}" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
@@ -44,18 +44,11 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="">Category</label>
-                    <select class="form-control" name="category_id">
-                        @foreach($category as $value)
-                            <option @if($playlist->category_id == $value->id)
-                                {{ "selected" }}
-=======
             <label for="">Category</label>
             <select class="form-control" name="category_id">
                 @foreach($category as $value)
                     <option @if($playlist->category_id == $value->id)
                             {{ "selected" }}
->>>>>>> 6d7e2e9634cfbeaa30dbf8f53c1ba39e573061ae
                             @endif
                             value="{{ $value->id }}">{{ $value->category_name }}</option>
                 @endforeach
@@ -69,7 +62,6 @@
                             {{ "selected" }}
                             @endif
                             value="{{ $value->id }}">{{ $value->country_name }}</option>
-<<<<<<< HEAD
                         @endforeach
                     </select>
                 </div>
@@ -79,18 +71,7 @@
                         @foreach($ambum as $value)
                             <option @if($playlist->ambum_id == $value->id)
                                 {{ "selected" }}
-=======
-                @endforeach
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="">Ambum</label>
-            <select class="form-control-" name="country_id">
-                @foreach($ambum as $value)
-                    <option @if($playlist->ambum_id == $value->id)
-                            {{ "selected" }}
->>>>>>> 6d7e2e9634cfbeaa30dbf8f53c1ba39e573061ae
-                            @endif
+                          @endif
                             value="{{ $value->id }}">{{ $value->name_ambum }}</option>
                 @endforeach
             </select>
