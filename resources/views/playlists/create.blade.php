@@ -17,19 +17,12 @@
                     </div>
                     <div class="form-group">
                         <label for="">Singer</label>
-<<<<<<< HEAD
                     <select name="singer_id" class="form-control">
                             @foreach($singer as $value)
                             <option id="option" value="{{ $value->id }}">{{ $value->singer_name }}</option>
                             @endforeach
                     </select>
-=======
-                        <select name="category_id" class="form-control">
-                            @foreach($singer as $value)
-                                <option value="{{ $value->id }}">{{ $value->singer_name }}</option>
-                            @endforeach
-                        </select>
->>>>>>> 6d7e2e9634cfbeaa30dbf8f53c1ba39e573061ae
+
                     </div>
                     <div class="form-group">
                         <label for="">Category</label>
