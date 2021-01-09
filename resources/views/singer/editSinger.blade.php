@@ -15,8 +15,12 @@
                         <input type="text" name="singer_name" value="{{ $singer->singer_name }}" class="form-control">
                     </div>
                     <div class="form-group">
+<<<<<<< HEAD
+                        <label for="">Dob</label>
+=======
                         <label for="">Singer</label>
-                        <input type="text" name="dob" value="{{ $singer->dob }}" class="form-control">
+>>>>>>> 6d7e2e9634cfbeaa30dbf8f53c1ba39e573061ae
+                        <input type="date" name="dob" value="{{ $singer->dob }}" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="">Country</label>
@@ -40,6 +44,9 @@
                     <div class="form-group">
                         <label for="">Image</label><br>
                         <input type="file" name="image" class="form-control-file">
+                        <br>
+                        <br>
+                        <img src="{{url('storage/' . $singer->image)}}" width="150px" height="150px" class="img-fluid img-thumbnail">
                     </div>
 
 

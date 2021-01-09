@@ -19,7 +19,10 @@
                 </div>
                 <div class="form-group">
                     <label for="">Image</label><br>
-                    <input type="file" name="image" value="{{ $ambum->image }}" class="form-control-file">
+                    <input type="file" name="image"  class="form-control-file">
+                    <br>
+                    <br>
+                    <img src="{{url('storage/' . $ambum->image)}}" width="150px" height="150px" class="img-fluid img-thumbnail">
                 </div>
                 <button type="submit" class="btn btn-success">Update</button>
                 <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">Cancel</button>
