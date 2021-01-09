@@ -24,8 +24,22 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PonendController::class, 'index']);
 
+<<<<<<< HEAD
+=======
+
+Route::group(['middleware' => 'locale'], function () {
+    Route::get('change-languge/{language}', [LanguageController::class, 'changeLanguage'])->name('user.change-language');
+
+>>>>>>> 6d7e2e9634cfbeaa30dbf8f53c1ba39e573061ae
 
 
+<<<<<<< HEAD
+=======
+Route::get('test2',function (){
+    return view('welcome');
+});
+
+>>>>>>> 6d7e2e9634cfbeaa30dbf8f53c1ba39e573061ae
 
 
 Route::middleware(['AuthUser', 'locale'])->group(function () {
