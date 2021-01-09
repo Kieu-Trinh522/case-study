@@ -7,9 +7,11 @@ use Illuminate\Support\Facades\Session;
 
 class LanguageController extends Controller
 {
-    public function changeLanguage($language)
+    public function changeLanguage(Request $request)
     {
-        Session::put('website_language', $language);
-        return redirect()->back();
+
+        $locale = $request->language;
+        Session::put('language', $locale);
+        return back();
     }
 }

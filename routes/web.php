@@ -25,11 +25,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PonendController::class, 'index']);
 
 
-Route::group(['middleware' => 'locale'], function () {
-    Route::get('change-languge/{language}', [LanguageController::class, 'changeLanguage'])->name('user.change-language');
 
 
-Route::middleware('AuthUser', 'locale')->group(function () {
+
+Route::middleware(['AuthUser', 'locale'])->group(function () {
+
+Route::post('change-language', [LanguageController::class, 'changeLanguage'])->name('user.change-language');
 
     Route::group(['prefix' => 'playlists'], function () {
         Route::get('/', [PlaylistController::class, 'index'])->name('playlists.index');
@@ -94,6 +95,6 @@ Route::middleware('AuthUser', 'locale')->group(function () {
         Route::post('/login', [UserController::class, 'authenticate'])->name('user.login');
         Route::get('/logout', [UserController::class, 'logout'])->name('user.logout');
     });
-});
+
 
 

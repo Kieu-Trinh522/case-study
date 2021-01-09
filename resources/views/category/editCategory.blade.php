@@ -6,7 +6,7 @@
 <div class="container">
     <div class="card">
         <div class="form-group">
-            <form method="POST" action="{{ route('category.store') }}" enctype="multipart/form-data">
+            <form method="POST" action="{{ route('category.update', $category->id) }}" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <label>name</label>

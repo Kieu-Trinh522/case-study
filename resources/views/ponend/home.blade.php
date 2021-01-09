@@ -40,9 +40,23 @@
             <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
         </ul>
     </div>
+
 </div>
 @endforeach
 
+{{-- <ul class="pagination">
+    <li class="paginate_button page-item previous disabled" id="dataTable_previous">
+        <a href="#" aria-controls="dataTable" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>
+    </li>
+    <li class="paginate_button page-item active"><a href="#" aria-controls="dataTable" data-dt-idx="1" tabindex="0" class="page-link">1</a>
+    </li>
+    <li class="paginate_button page-item next disabled" id="dataTable_next">
+        <a href="#" aria-controls="dataTable" data-dt-idx="2" tabindex="0" class="page-link">Next</a>
+    </li>
+</ul> --}}
+<div class="col-12 pagination" style="font-size:20px; width:30px; height:100px; text-align: right!important;">
+    {{ $playlists->links("pagination::bootstrap-4") }}
+</div>
 
 
 
@@ -51,3 +65,6 @@
 
 
 @endsection
+
+
+

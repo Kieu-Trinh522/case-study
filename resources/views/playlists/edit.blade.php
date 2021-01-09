@@ -16,7 +16,14 @@
                 </div>
                 <div class="form-group">
                     <label for="">Singer</label>
-                    <input type="text" name="singer" value="{{ $playlist->singer }}" class="form-control">
+                    <select class="form-control" name="singer_id">
+                        @foreach($singer as $value)
+                            <option @if($playlist->singer_id == $value->id)
+                                {{ "selected" }}
+                            @endif
+                            value="{{ $value->id }}">{{ $value->singer_name }}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="">Category</label>
@@ -41,7 +48,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="">Ambum</label>
+                    <label for="">Album</label>
                     <select class="form-control-" name="country_id">
                         @foreach($ambum as $value)
                             <option @if($playlist->ambum_id == $value->id)
