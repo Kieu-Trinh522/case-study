@@ -46,7 +46,7 @@
                 </div>
                 <div class="form-group">
                     <label for="">Album</label>
-                    <select class="form-control-" name="country_id">
+                    <select class="form-control" name="ambum_id">
                         @foreach($ambum as $value)
                             <option @if($playlist->ambum_id == $value->id)
                                 {{ "selected" }}
