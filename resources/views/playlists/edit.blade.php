@@ -5,27 +5,6 @@
 @section('content')
 
 
-
-
-    <form method="POST" action="{{ route('playlists.update', $playlist->id) }}" enctype="multipart/form-data">
-        @csrf
-        <div class="form-group">
-            <label for="">Name</label>
-            <input type="text" name="music_name" value="{{ $playlist->music_name }}" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="">Singer</label>
-            <select class="form-control" name="category_id">
-                @foreach($singer as $value)
-                    <option @if($playlist->singer_id == $value->id)
-                            {{ "selected" }}
-                            @endif
-                            value="{{ $value->id }}">{{ $value->singer_name }}</option>
-                @endforeach
-            </select>
-        </div>
-        <div class="form-group">
-
             <form method="POST" action="{{ route('playlists.update', $playlist->id) }}" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
@@ -87,5 +66,5 @@
 
         <button class="btn btn-primary" type="submit">{{ __('messages.update') }}</button>
         <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">Cancel</button>
-
+            </form>
 @endsection
