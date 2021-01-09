@@ -24,21 +24,27 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PonendController::class, 'index']);
 
+<<<<<<< HEAD
+=======
 
 Route::group(['middleware' => 'locale'], function () {
     Route::get('change-languge/{language}', [LanguageController::class, 'changeLanguage'])->name('user.change-language');
 
+>>>>>>> 6d7e2e9634cfbeaa30dbf8f53c1ba39e573061ae
 
-Route::get('test',function (){
-    return view('layouts.core.master');
-});
 
+<<<<<<< HEAD
+=======
 Route::get('test2',function (){
     return view('welcome');
 });
 
+>>>>>>> 6d7e2e9634cfbeaa30dbf8f53c1ba39e573061ae
 
-Route::middleware('AuthUser')->group(function () {
+
+Route::middleware(['AuthUser', 'locale'])->group(function () {
+
+Route::post('change-language', [LanguageController::class, 'changeLanguage'])->name('user.change-language');
 
     Route::group(['prefix' => 'playlists'], function () {
         Route::get('/', [PlaylistController::class, 'index'])->name('playlists.index');
@@ -103,6 +109,6 @@ Route::middleware('AuthUser')->group(function () {
         Route::post('/login', [UserController::class, 'authenticate'])->name('user.login');
         Route::get('/logout', [UserController::class, 'logout'])->name('user.logout');
     });
-});
+
 
 

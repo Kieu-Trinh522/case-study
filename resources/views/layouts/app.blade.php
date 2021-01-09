@@ -31,15 +31,26 @@
             </div>
         </div>
     </form>
-    <select name="change-language" onchange="location = this.value;" title="Change Language">
-        <option value="{!! route('user.change-language', ['vi']) !!}" {{ (app()->getLocale() == 'vi') ? ' selected' : '' }} title="Change to Vietnamese">
-            Vietnamese
-        </option>
-        <option value="{!! route('user.change-language', ['en']) !!}" {{ (app()->getLocale() == 'en') ? ' selected' : '' }} title="Change to English">
-            English
-        </option>
-    </select>
+    <div>
+   <form method="POST" action="{{ route('user.change-language') }}">
+        @csrf
+        <select name="language" class="form-control" onchange="this.form.submit()">
 
+            <option
+            @if(\Illuminate\Support\Facades\App::getLocale() == 'en')
+            selected
+
+            @endif
+            value="en">EN</option>
+            <option
+            @if(\Illuminate\Support\Facades\App::getLocale() == 'vi')
+            selected
+
+            @endif
+            value="vi">VI</option>
+        </select>
+   </form>
+    </div>
     <!-- Navbar-->
     <ul class="navbar-nav ml-auto ml-md-0">
         <li class="nav-item dropdown">
@@ -78,12 +89,19 @@
                             <a class="nav-link"
                                href="{{route('category.index')}}">{!! __('messages.category') !!}</a>
                             <a class="nav-link"
+<<<<<<< HEAD
+
+                               href="{{route('country.index')}}">{!! __('messages.country') !!}</a>
+                               <a class="nav-link" href="{{ route('ambums.index') }}">{!! __('messages.album') !!}</a>
+                               <a class="nav-link" href="{{ route('singer.index') }}">{{ __('messages.singer') }}</a>
+=======
                                href="{{route('country.index')}}">{!! __('messages.country') !!}</a>
                                <a class="nav-link"
                                   href="{{ route('ambums.index') }}">{!! __('messages.album') !!}</a>
                             <a class="nav-link"
                                href="{{route('singer.index')}}">{!! __('messages.singer') !!}</a>
 
+>>>>>>> 6d7e2e9634cfbeaa30dbf8f53c1ba39e573061ae
                         </nav>
                     </div>
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
@@ -153,7 +171,7 @@
     </div>
     <div id="layoutSidenav_content">
         <main>
-            <div class="container-fluid">
+            <div class="container">
                 <h1 class="mt-4">Manage playlists</h1>
                 <ol class="breadcrumb mb-4">
                     <li class="breadcrumb-item active">MusicD2T</li>
