@@ -142,6 +142,7 @@ class PlaylistController extends Controller
             return redirect()->route('playlists.index');
         }
 
+
         $playlists = Playlist::where('music_name','LIKE', '%'. $search . '%')->paginate(5);
 
         $category = Category::all();

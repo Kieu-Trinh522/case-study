@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ambum;
 use App\Models\Category;
+use App\Models\Country;
 use App\Models\Playlist;
+use App\Models\Singer;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -94,4 +97,22 @@ class CategoryController extends Controller
         $category->delete();
         return redirect()->route('category.index');
     }
+
+//    public function search(Request $request)
+//    {
+//        $search = $request->input('search');
+//        if (!$search) {
+//            return redirect()->route('category.index');
+//        }
+//        $categories = Category::where('category_name','LIKE', '%'. $search . '%')->paginate(5);
+//
+//        $playlists = Playlist::all();
+//        $country = Country::all();
+//        $ambum = Ambum::all();
+//        $singer=Singer::all();
+//        return view('category.listCategory', compact('playlists', 'categories', 'country', 'ambum','singer'));
+//
+//    }
+
+
 }

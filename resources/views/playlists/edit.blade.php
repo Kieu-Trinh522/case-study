@@ -5,6 +5,7 @@
 @section('content')
 
 
+
             <form method="POST" action="{{ route('playlists.update', $playlist->id) }}" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
@@ -64,7 +65,9 @@
             <input type="file" name="audio" class="form-control-file">
         </div>
 
-        <button class="btn btn-primary" type="submit">{{ __('messages.update') }}</button>
-        <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">Cancel</button>
+                <button class="btn btn-primary" type="submit">{{ __('messages.update') }}</button>
+                <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">Cancel</button>
             </form>
+
+
 @endsection
