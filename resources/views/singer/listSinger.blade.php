@@ -3,6 +3,20 @@
 
 @section('title', 'Singer')
 
+@section('search')
+<form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0"
+method="post" action="{{ route('singer.search') }}" enctype="multipart/form-data">
+    @csrf
+    <div class="input-group">
+        <input class="form-control" type="search" name="search" placeholder="Search for..." aria-label="Search"
+               aria-describedby="basic-addon2"/>
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+</form>
+@endsection
+
 @section('content')
 
     <div class="card mb-4">
@@ -18,13 +32,13 @@
                     <thead>
                     <tr>
                         <th>STT</th>
-                        <th>Name Singer</th>
-                        <th>Dob</th>
-                        <th>Country</th>
-                        <th>gender</th>
-                        <th>description</th>
-                        <th>Image</th>
-                        <th>Action</th>
+                        <th>{{ __('messages.singers') }}</th>
+                        <th>{{ __('messages.dob') }}</th>
+                        <th>{{ __('messages.country') }}</th>
+                        <th>{{ __('messages.gender') }}</th>
+                        <th>{{ __('messages.desc') }}</th>
+                        <th>{{ __('messages.image') }}</th>
+                        <th>{{ __('messages.action') }}</th>
                     </tr>
                     </thead>
 

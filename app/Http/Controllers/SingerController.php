@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ambum;
 use App\Models\Country;
+use App\Models\Playlist;
 use App\Models\Singer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -19,7 +21,8 @@ class SingerController extends Controller
     {
         $singers=Singer::all();
         $country=Country::all();
-        return view('singer.listSinger',compact('singers','country'));
+        $playlist = Playlist::all();
+        return view('singer.listSinger',compact('singers','country', 'playlist'));
     }
 
     /**
@@ -117,5 +120,21 @@ class SingerController extends Controller
         $singer=Singer::findOrFail($id);
         $singer->delete();
         return redirect()->route('singer.index');
+    }
+
+    public function search(Request $request)
+    {
+        $search = $request->input('search');
+        if (!$search) {
+            return redirect()->route('singer.index');
+        }
+
+        $playlists = Playlist::all();
+        $country  = Country::all();
+        $singers   = Singer::where('singer_name','LIKE', '%'. $search . '%')->paginate(5);
+        $ambum = Ambum::all();
+        Session::flash('search_result', true);
+        return view('singer.listSinger', compact('playlists','country', 'ambum','singers'));
+
     }
 }

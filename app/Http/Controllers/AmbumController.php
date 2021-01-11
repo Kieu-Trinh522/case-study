@@ -79,4 +79,17 @@ class AmbumController extends Controller
 
         return redirect()->route('ambums.index');
     }
+
+    public function search(Request $request)
+    {
+        $search = $request->input('search');
+        if (!$search) {
+            return redirect()->route('ambums.index');
+        }
+
+        $playlists = Playlist::all();
+        $ambums    = Ambum::where('name_ambum','LIKE', '%'. $search . '%')->paginate(5);
+        return view('ambums.list', compact('playlists','ambums'));
+
+    }
 }

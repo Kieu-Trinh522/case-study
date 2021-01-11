@@ -58,6 +58,7 @@ use Illuminate\Support\Facades\Route;
             Route::get('/{id}/edit', [CategoryController::class, 'edit'])->name('category.edit');
             Route::post('/edit/{id}', [CategoryController::class, 'update'])->name('category.update');
             Route::get('/{id}/delete', [CategoryController::class, 'destroy'])->name('category.destroy');
+            Route::post('/search', [CategoryController::class, 'search'])->name('category.search');
         });
 
         Route::group(['prefix' => 'country'], function () {
@@ -67,6 +68,7 @@ use Illuminate\Support\Facades\Route;
             Route::get('/{id}/edit', [CountryController::class, 'edit'])->name('country.edit');
             Route::post('/edit/{id}', [CountryController::class, 'update'])->name('country.update');
             Route::get('/{id}/delete', [CountryController::class, 'destroy'])->name('country.delete');
+            Route::post('/search', [CountryController::class, 'search'])->name('country.search');
         });
 
 
@@ -77,6 +79,7 @@ use Illuminate\Support\Facades\Route;
             Route::get('/edit/{id}', [AmbumController::class, 'edit'])->name('ambums.edit');
             Route::post('/edit/{id}', [AmbumController::class, 'update'])->name('ambums.update');
             Route::get('/destroy/{id}', [AmbumController::class, 'destroy'])->name('ambums.destroy');
+            Route::post('/search', [AmbumController::class, 'search'])->name('ambums.search');
         });
 
         Route::group(['prefix' => 'singer'], function () {
@@ -86,6 +89,7 @@ use Illuminate\Support\Facades\Route;
             Route::get('/edit/{id}', [SingerController::class, 'edit'])->name('singer.edit');
             Route::post('/edit/{id}', [SingerController::class, 'update'])->name('singer.update');
             Route::post('/delete', [SingerController::class, 'destroy'])->name('singer.destroy');
+            Route::post('/search', [SingerController::class, 'search'])->name('singer.search');
         });
 
     });
