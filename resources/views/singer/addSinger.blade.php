@@ -1,4 +1,4 @@
-@extends('layouts.crud')
+@extends('layouts.app')
 
 @section('title', 'Create Singer')
 

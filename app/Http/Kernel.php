@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\AdminMiddleware;
 use App\Http\Middleware\AuthUser;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 use App\Http\Middleware\Locale;
@@ -66,5 +67,6 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'AuthUser' => AuthUser::class,
         'locale'   => Locale::class,
+        'AdminMiddleware' => AdminMiddleware::class,
     ];
 }
