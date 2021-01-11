@@ -12,8 +12,8 @@
                     </div>
                     <div class="card-header">
                         <i class="fas fa-table mr-1"></i>
-                        <a class="btn btn-success" href="{{route('category.create')}}">Add New</a>
-                        <button class="btn btn-secondary" onclick="window.history.go(-1); return false">Cancel</button>
+                        <a class="btn btn-success" href="{{route('category.create')}}">{{ __('messages.add') }}</a>
+                        <button class="btn btn-secondary" onclick="window.history.go(-1); return false">{{ __('messages.cancel') }}</button>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -21,9 +21,9 @@
                                 <thead>
                                 <tr>
                                     <th>STT</th>
-                                    <th>Name Category</th>
-                                    <th>Number Of Songs</th>
-                                    <th>Action</th>
+                                    <th>{{ __('messages.name_category') }}</th>
+                                    <th>{{ __('messages.number') }}</th>
+                                    <th>{{ __('messages.action') }}</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -33,9 +33,9 @@
                                         <td>{{$category->category_name}}</td>
                                         <td>{{ count($category->playlist) }}</td>
                                         <td>
-                                            <a class="btn btn-success" href="{{route('category.edit',$category->id)}}">Update</a>
+                                            <a class="btn btn-success" href="{{route('category.edit',$category->id)}}">{{ __('messages.update') }}</a>
                                             <a class="btn btn-danger" href="{{route('category.destroy',$category->id)}}"
-                                               onclick="return confirm('Do you delete?')">Delete</a>
+                                               onclick="return confirm('Do you delete?')">{{ __('messages.delete') }}</a>
                                         </td>
                                     </tr>
                                 @empty

@@ -10,7 +10,7 @@
             Ambum
         </div>
         <div class="card-header">
-            <a href="{{ route('ambums.create') }}" class="btn btn-primary">Add</a>
+            <a href="{{ route('ambums.create') }}" class="btn btn-primary">{{ __('messages.add') }}</a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -18,11 +18,11 @@
                     <thead>
                     <tr>
                         <th>STT</th>
-                        <th>Name</th>
-                        <th>Singer Ambum</th>
-                        <th>Image</th>
-                        <th>Number Of Ambum </th>
-                        <th>Action</th>
+                        <th>{{ __('messages.music_name') }}</th>
+                        <th>{{ __('messages.singer_album') }}</th>
+                        <th>{{ __('messages.image') }}</th>
+                        <th>{{ __('messages.number_album') }}</th>
+                        <th>{{ __('messages.action') }}</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -41,10 +41,10 @@
                             <td>{{ count($ambum->playlist) }}</td>
                             <td>
                                 <a href="{{ route('ambums.edit', $ambum->id) }}"
-                                   class="btn btn-success">Update</a>
+                                   class="btn btn-success">{{ __('messages.update') }}</a>
                                 <a href="{{ route('ambums.destroy', $ambum->id) }}"
                                    class="btn btn-danger"
-                                   onclick="return confirm('Do you delete?')">Delete</a>
+                                   onclick="return confirm('Do you delete?')">{{ __('messages.delete') }}</a>
                             </td>
                         </tr>
                     @endforeach

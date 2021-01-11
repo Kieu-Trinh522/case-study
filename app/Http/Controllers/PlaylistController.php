@@ -143,12 +143,19 @@ class PlaylistController extends Controller
         }
 
 
-        $playlists = Playlist::where('music_name','LIKE', '%'. $search . '%')->paginate(5);
+        $playlists = DB::table('playlists')
+        ->where('music_name','LIKE', '%'. $search . '%')
+        ->orWhere('category_id', 'LIKE', '%' . $search . '%')
+        ->orWhere('country_id', 'LIKE', '%' . $search . '%')
+        ->orWhere('singer_id', 'LIKE', '%' . $search . '%')
+        ->orWhere('ambum_id', 'LIKE', '%' . $search . '%')
+        ->paginate(5);
 
         $category = Category::all();
         $country  = Country::all();
         $ambum    = Ambum::all();
         $singer   = Singer::all();
+        Session::flash('search_result', true);
         return view('playlists.list', compact('playlists', 'category', 'country', 'ambum','singer'));
 
     }

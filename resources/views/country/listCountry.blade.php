@@ -11,8 +11,8 @@
                         List Country
                         <div>
 
-                            <a class="btn btn-success" href="{{route('country.create')}}">Add New</a>
-                            <button class="btn btn-secondary" onclick="window.history.go(-1); return false">Cancel</button></div>
+                            <a class="btn btn-success" href="{{route('country.create')}}">{{ __('messages.add') }}</a>
+                            <button class="btn btn-secondary" onclick="window.history.go(-1); return false">{{ __('messages.cancel') }}</button></div>
                     </div>
 
                     <div class="card-body">
@@ -21,9 +21,9 @@
                                 <thead>
                                 <tr>
                                     <th>STT</th>
-                                    <th>Name Country</th>
-                                    <th>Number Of Songs</th>
-                                    <th>Action</th>
+                                    <th>{{ __('messages.name_country') }}</th>
+                                    <th>{{ __('messages.number') }}</th>
+                                    <th>{{ __('messages.action') }}</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -33,8 +33,8 @@
                                         <td>{{$country->country_name}}</td>
                                         <td>{{ count($country->playlist) }}</td>
                                         <td>
-                                            <a class="btn btn-success" href="{{route('country.edit',$country->id)}}">Update</a>
-                                            <a class="btn btn-danger" href="{{route('country.delete',$country->id)}}" onclick="return confirm('Do you Delete ?')">Delete</a>
+                                            <a class="btn btn-success" href="{{route('country.edit',$country->id)}}">{{ __('messages.update') }}</a>
+                                            <a class="btn btn-danger" href="{{route('country.delete',$country->id)}}" onclick="return confirm('Do you Delete ?')">{{ __('messages.delete') }}</a>
                                         </td>
                                     </tr>
                                 @empty
