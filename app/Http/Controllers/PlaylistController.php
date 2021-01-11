@@ -143,9 +143,7 @@ class PlaylistController extends Controller
 
         $playlists = Playlist::where('music_name', 'LIKE', '%'. $search . '%')
             ->paginate(5);
-
-
-        return view('playlists.list', compact('playlists', 'category', 'country', 'ambum','singer'));
+        $category=Category::all();
         $country  = Country::all();
         $ambum    = Ambum::all();
         $singer   = Singer::all();
