@@ -18,7 +18,11 @@ return [
     'number_album' => 'Số Lượng Album',
     'name_country' => 'Quốc Gia',
     'name_album'   => 'Album',
-    'singer_album' => 'Ca Sĩ Album'
+    'singer_album' => 'Ca Sĩ Album',
+    'singers'       => 'Tên Ca Sĩ',
+    'dob'          => 'Ngày Sinh',
+    'gender'       => 'Giới Tính',
+    'desc'         => 'Tiểu Sử'
 ];
 
 

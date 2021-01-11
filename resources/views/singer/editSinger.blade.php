@@ -1,4 +1,4 @@
-@extends('layouts.crud')
+@extends('layouts.app')
 
 @section('title', 'Edit singer')
 
@@ -43,10 +43,14 @@
                     </div>
                     <div class="form-group">
                         <label for="">Image</label><br>
-                        <input type="file" name="image" class="form-control-file">
+                        <input id="image-input" type="file" name="image" class="form-control-file">
                         <br>
                         <br>
+                        <div id="singer-image">
+                            <br>
+                            <br>
                         <img src="{{url('storage/' . $singer->image)}}" width="150px" height="150px" class="img-fluid img-thumbnail">
+                        </div>
                     </div>
 
 
@@ -59,10 +63,6 @@
             </div>
         </div>
     </div>
-
-
-
-
 
 
 

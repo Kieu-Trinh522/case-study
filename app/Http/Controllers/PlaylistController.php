@@ -41,7 +41,7 @@ class PlaylistController extends Controller
         $playlist = new Playlist();
         $playlist->fill($request->all());
 
-        if ($request->file('audio') !== null) {
+        if ($request->hasFile('audio')) {
             $audio = $request->file('audio');
 
             $filename = $audio->getClientOriginalName();
@@ -71,8 +71,7 @@ class PlaylistController extends Controller
 
     }
 
-    public function show($id)
-    {
+    public function show($id){
         $playlist = Playlist::findOrFail($id);
 
         return view('playlists.playlist', compact('playlist'));
@@ -142,14 +141,7 @@ class PlaylistController extends Controller
             return redirect()->route('playlists.index');
         }
 
-
-        $playlists = DB::table('playlists')
-        ->where('music_name','LIKE', '%'. $search . '%')
-        ->orWhere('category_id', 'LIKE', '%' . $search . '%')
-        ->orWhere('country_id', 'LIKE', '%' . $search . '%')
-        ->orWhere('singer_id', 'LIKE', '%' . $search . '%')
-        ->orWhere('ambum_id', 'LIKE', '%' . $search . '%')
-        ->paginate(5);
+        $playlists = Playlist::where('music_name','LIKE', '%'. $search . '%')->paginate(5);
 
         $category = Category::all();
         $country  = Country::all();

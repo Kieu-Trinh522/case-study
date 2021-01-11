@@ -18,7 +18,11 @@ return [
     'number_album' => 'Number Of Album',
     'name_country' => 'Country',
     'name_album'   => 'Album',
-    'singer_album' => 'Singer Album'
+    'singer_album' => 'Singer Album',
+    'singer'       => 'Name Singer',
+    'dob'          => 'Dob',
+    'gender'       => 'Gender',
+    'desc'          => 'Description',
 ];
 
 

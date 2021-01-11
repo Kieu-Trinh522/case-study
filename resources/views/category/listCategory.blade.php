@@ -3,6 +3,21 @@
 
 @section('title', 'Category')
 
+@section('search')
+<form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0"
+method="post" action="{{ route('category.search') }}" enctype="multipart/form-data">
+    @csrf
+    <div class="input-group">
+        <input class="form-control" type="search" name="search" placeholder="Search for..." aria-label="Search"
+               aria-describedby="basic-addon2"/>
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+</form>
+
+@endsection
+
 @section('content')
 
 <div class="card mb-4">

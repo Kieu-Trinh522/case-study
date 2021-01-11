@@ -58,11 +58,19 @@
         </div>
         <div class="form-group">
             <label for="">Image</label><br>
-            <input type="file" name="image" value="{{ $playlist->image }}" class="form-control-file">
+            <br>
+            <br>
+            <img src="{{url('storage/' . $playlist->image)}}" width="150px" height="150px" class="img-fluid img-thumbnail">
+{{--            <input type="file" name="image" value="{{ $playlist->image }}" class="form-control-file">--}}
         </div>
         <div class="form-group">
             <label for="">Audio</label><br>
-            <input type="file" name="audio" class="form-control-file">
+            <audio controls>
+                <source src="{{ url('storage/audio/' . $playlist->audio) }}"
+                        type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+{{--            <input type="file" name="audio" class="form-control-file">--}}
         </div>
 
                 <button class="btn btn-primary" type="submit">{{ __('messages.update') }}</button>

@@ -12,6 +12,7 @@
           crossorigin="anonymous"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"
             crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 <body class="sb-nav-fixed">
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -20,17 +21,18 @@
     <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i>
     </button>
     <!-- Navbar Search-->
-    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0"
+    {{-- <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0"
     method="post" action="{{ route('playlists.search') }}" enctype="multipart/form-data">
         @csrf
         <div class="input-group">
-            <input class="form-control" type="text" placeholder="Search for..." aria-label="Search"
+            <input class="form-control" type="search" name="search" placeholder="Search for..." aria-label="Search"
                    aria-describedby="basic-addon2"/>
             <div class="input-group-append">
                 <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
             </div>
         </div>
-    </form>
+    </form> --}}
+    @yield('search')
     <div>
    <form method="POST" action="{{ route('user.change-language') }}">
         @csrf
@@ -95,6 +97,8 @@
                                   href="{{ route('ambums.index') }}">{!! __('messages.album') !!}</a>
                             <a class="nav-link"
                                href="{{route('singer.index')}}">{!! __('messages.singer') !!}</a>
+                            <a class="nav-link"
+                               href="{{route('user.show')}}">Users</a>
 
 
                         </nav>
@@ -226,7 +230,6 @@
         </footer>
     </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
 <script src="{{asset('backend/startbootstrap-sb-admin-gh-pages/js/scripts.js')}}"></script>
