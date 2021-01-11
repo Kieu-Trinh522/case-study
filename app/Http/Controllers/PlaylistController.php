@@ -41,7 +41,7 @@ class PlaylistController extends Controller
         $playlist = new Playlist();
         $playlist->fill($request->all());
 
-        if ($request->file('audio') !== null) {
+        if ($request->hasFile('audio')) {
             $audio = $request->file('audio');
 
             $filename = $audio->getClientOriginalName();
@@ -71,8 +71,7 @@ class PlaylistController extends Controller
 
     }
 
-    public function show($id)
-    {
+    public function show($id){
         $playlist = Playlist::findOrFail($id);
 
         return view('playlists.playlist', compact('playlist'));
