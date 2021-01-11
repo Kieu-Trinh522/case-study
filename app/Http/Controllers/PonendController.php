@@ -2,24 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Singer;
 use Illuminate\Http\Request;
 use App\Models\Ambum;
 use App\Models\Category;
 use App\Models\Country;
 use App\Models\Playlist;
+use App\Models\Singer;
 
 class PonendController extends Controller
 {
     public function index()
     {
-        $playlists = Playlist::paginate(10);
+        $playlists = Playlist::paginate(5);
         $category  = Category::all();
         $country   = Country::all();
-        $ambum     = Ambum::all();
+        $ambums    = Ambum::all();
+        $singers   = Singer::all();
         // dd($ambums);
 
-        return view('ponend.home', compact('playlists', 'category', 'country', 'ambum'));
+        return view('ponend.home', compact('playlists', 'category', 'country', 'ambums', 'singers'));
     }
 
     public function category()
@@ -48,7 +49,18 @@ class PonendController extends Controller
 
     public function singer()
     {
-        $singers=Singer::all();
-        return view('ponend.singer',compact('singers'));
+        $singers = Singer::all();
+        return view('ponend.singer', compact('singers'));
     }
+
+    public function ponend()
+    {
+        $ambums = Ambum::all();
+        $singers = Singer::all();
+        return view('layouts.home', compact('ambums', 'singers'));
+    }
+
+
+
+
 }

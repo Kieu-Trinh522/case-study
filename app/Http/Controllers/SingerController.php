@@ -29,7 +29,8 @@ class SingerController extends Controller
      */
     public function create()
     {
-        return view('singer.addSinger');
+        $country = Country::all();
+        return view('singer.addSinger', compact('country'));
     }
 
     /**

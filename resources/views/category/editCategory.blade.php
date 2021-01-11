@@ -4,7 +4,6 @@
 
 @section('content')
 
-
     <div class="container">
         <form method="POST" action="{{ route('category.update',$category->id) }}" enctype="multipart/form-data">
             @csrf
@@ -13,25 +12,9 @@
                 <input type="text" name="category_name" value="{{ $category->category_name }}"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
             </div>
             <button type="submit" class="btn btn-primary">Edit</button>
-            <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">cancel</button>
+            <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">Cancel</button>
         </form>
+
     </div>
-{{--<div class="container">--}}
-{{--    <div >--}}
-{{--        <div class="form-group">--}}
-{{--            <form method="POST" action="{{ route('category.store') }}" enctype="multipart/form-data">--}}
-{{--                @csrf--}}
-{{--                <div class="form-group">--}}
-{{--                    <label ><h3  >name</h3></label>--}}
-{{--                    <input type="text" name="category_name" value="{{ $category->category_name }}" class="form-control">--}}
-{{--                </div>--}}
-{{--                <button type="submit" class="btn btn-primary">Add New</button>--}}
-{{--                <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">cancel</button>--}}
-{{--            </form>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</div>--}}
-
-
 
 @endsection

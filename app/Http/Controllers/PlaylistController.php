@@ -19,16 +19,20 @@ class PlaylistController extends Controller
     public function index()
     {
         $playlists = Playlist::paginate(10);
+        $category  = Category::all();
+        $country   = Country::all();
+        $ambum     = Ambum::all();
+        $singer    = Singer::all();
 
-        return view('playlists.list', compact('playlists'));
+        return view('playlists.list', compact('playlists', 'category', 'country', 'ambum', 'singer'));
     }
 
     public function create()
     {
         $category = Category::all();
-        $country = Country::all();
-        $ambum = Ambum::all();
-        $singer=Singer::all();
+        $country  = Country::all();
+        $ambum    = Ambum::all();
+        $singer   = Singer::all();
         return view('playlists.create', compact('category', 'country', 'ambum','singer'));
     }
 
@@ -78,9 +82,9 @@ class PlaylistController extends Controller
     {
         $playlist = Playlist::findOrFail($id);
         $category = Category::all();
-        $country = Country::all();
-        $ambum = Ambum::all();
-        $singer=Singer::all();
+        $country  = Country::all();
+        $ambum    = Ambum::all();
+        $singer   = Singer::all();
         return view('playlists.edit', compact('playlist', 'category', 'country', 'ambum','singer'));
     }
 
@@ -141,10 +145,11 @@ class PlaylistController extends Controller
         $playlists = Playlist::where('music_name', 'LIKE', '%'. $search . '%')
             ->paginate(5);
 
-        $category = Category::all();
-        $country = Country::all();
-        $ambum = Ambum::all();
-        $singer=Singer::all();
+
+        return view('playlists.list', compact('playlists', 'category', 'country', 'ambum','singer'));
+        $country  = Country::all();
+        $ambum    = Ambum::all();
+        $singer   = Singer::all();
         return view('playlists.list', compact('playlists', 'category', 'country', 'ambum','singer'));
 
     }

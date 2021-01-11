@@ -33,6 +33,12 @@ Route::group(['middleware' => 'locale'], function () {
     Route::get('test2', function () {
         return view('welcome');
     });
+Route::get('/', [PonendController::class, 'index']);
+
+
+Route::get('test2',function (){
+    return view('welcome');
+});
 
 
     Route::middleware('AuthUser','AdminMiddleware')->group(function () {

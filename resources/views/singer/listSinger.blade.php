@@ -9,7 +9,7 @@
         <div class="card-header">
             <i class="fas fa-table mr-1"></i>
             List Music
-            <a class="btn btn-success" href="#">ADD</a>
+            <a class="btn btn-success" href="{{ route('singer.create') }}">ADD</a>
             <button class="btn btn-secondary" onclick="window.history.go(-1); return false">Cancel</button>
         </div>
         <div class="card-body">

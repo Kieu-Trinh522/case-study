@@ -304,7 +304,9 @@ h1 span {
     line-height: 1.9;
     text-align: center;
 }
-
+.form-group option[id="option"],
+.form-group input[type="file"],
+.form-group input[type="date"],
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group input[type="password"],
