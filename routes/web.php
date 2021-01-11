@@ -22,8 +22,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::group(['middleware' => 'locale'], function () {
-    Route::get('change-languge/{language}', [LanguageController::class, 'changeLanguage'])->name('user.change-language');
 
 
     Route::get('test', function () {
@@ -33,15 +31,14 @@ Route::group(['middleware' => 'locale'], function () {
     Route::get('test2', function () {
         return view('welcome');
     });
-Route::get('/', [PonendController::class, 'index']);
 
 
-Route::get('test2',function (){
-    return view('welcome');
-});
 
 
-    Route::middleware('AuthUser','AdminMiddleware')->group(function () {
+
+
+    Route::middleware('AuthUser','AdminMiddleware','locale')->group(function () {
+        Route::post('change-language', [LanguageController::class, 'changeLanguage'])->name('user.change-language');
 
         Route::group(['prefix' => 'playlists'], function () {
             Route::get('/', [PlaylistController::class, 'index'])->name('playlists.index');
@@ -102,7 +99,7 @@ Route::get('test2',function (){
         Route::get('/edit/{id}', [UserController::class, 'edit'])->name('user.edit');
         Route::post('/edit/{id}', [UserController::class, 'update'])->name('user.update');
     });
-});
+
 
 Route::get('/', [PonendController::class, 'index'])->name('ponend.index');
 
