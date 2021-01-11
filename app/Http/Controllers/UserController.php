@@ -10,6 +10,12 @@ use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller
 {
+    public function show()
+    {
+      $users=User::all();
+      return view('logins.listUser',compact('users'));
+    }
+
 public function index()
 {
     $users = User::all();
@@ -26,7 +32,7 @@ public function index()
         $user = new User();
         $user->fill($request->all());
         $user->password = Hash::make($request->password);
-
+        $user->level = "User";
         $user->save();
         return redirect()->route('user.index');
     }
@@ -39,7 +45,8 @@ public function index()
         ];
         if (Auth::attempt($credentials)) {
             Session::regenerate();
-            return redirect()->route('playlists.index');
+            Session::push('login',true);
+            return redirect()->route('ponend.index');
         }
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records'
@@ -54,6 +61,17 @@ public function index()
         return view('logins.login');
     }
 
+    public function edit($id)
+    {
+        $user=User::find($id);
+        return view('logins.editUser',compact('user'));
+    }
 
-
+    public function update(Request $request, $id)
+    {
+        $user=User::findOrFail($id);
+        $user->level=$request->level;
+        $user->save();
+        return redirect()->route('user.show');
+    }
 }

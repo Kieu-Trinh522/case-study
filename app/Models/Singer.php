@@ -24,6 +24,6 @@ class Singer extends Model
 
     public function playlist()
     {
-        return $this->hasMany('App\Models\playlist');
+        return $this->hasMany('App\Models\playlist','singer_id','id');
     }
 }

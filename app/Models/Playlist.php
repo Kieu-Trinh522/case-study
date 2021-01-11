@@ -37,6 +37,6 @@ class Playlist extends Model
 
     public function singer()
     {
-        return $this->belongsTo('App\Models\Singer');
+        return $this->belongsTo(Singer::class,'singer_id','id');
     }
 }

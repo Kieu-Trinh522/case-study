@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Singer;
 use Illuminate\Http\Request;
 use App\Models\Ambum;
 use App\Models\Category;
@@ -45,6 +46,9 @@ class PonendController extends Controller
         return view('ponend.song', compact('songs'));
     }
 
-
-
+    public function singer()
+    {
+        $singers=Singer::all();
+        return view('ponend.singer',compact('singers'));
+    }
 }
