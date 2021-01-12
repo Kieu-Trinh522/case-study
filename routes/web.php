@@ -108,12 +108,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PonendController::class, 'index'])->name('ponend.index');
 
 Route::middleware('AuthUser')->group(function (){
-    Route::group(['prefix' => 'ponend'], function () {
-        Route::get('/category', [PonendController::class, 'category'])->name('ponend.category');
-        Route::get('/country', [PonendController::class, 'country'])->name('ponend.country');
-        Route::get('/ambum', [PonendController::class, 'ambum'])->name('ponend.ambum');
-        Route::get('/song', [PonendController::class, 'song'])->name('ponend.song');
-        Route::get('/singer', [PonendController::class, 'singer'])->name('ponend.singer');
+    Route::group(['prefix' => 'pontend'], function () {
+        Route::get('/home', [PonendController::class, 'index'])->name('pontend.index');
+        Route::get('/categories', [PonendController::class, 'categories'])->name('pontend.categories');
+        Route::get('/countries', [PonendController::class, 'countries'])->name('pontend.country');
+        Route::get('/singer/{id}', [PonendController::class, 'singer'])->name('pontend.singer');
+        Route::get('/ambum/{id}', [PonendController::class, 'ambum'])->name('pontend.ambum');
+        Route::get('/play/{id}', [PonendController::class, 'play'])->name('pontend.play');
+        Route::get('/song', [PonendController::class, 'song'])->name('pontend.song');
     });
 });
 
