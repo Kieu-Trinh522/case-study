@@ -27,7 +27,7 @@
                                                 </div>
                                             </div>
                                             <div class="w_tp_song_name">
-                                                <h3><a href="#">{{ $playlist->music_name }}</a></h3>
+                                                <h3><a href="{{ route('pontend.play', $playlist->id) }}">{{ $playlist->music_name }}</a></h3>
                                                 <p>Ava Cornish</p>
                                             </div>
                                         </div>

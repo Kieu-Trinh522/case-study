@@ -19,7 +19,7 @@ method="post" action="{{ route('playlists.search') }}" enctype="multipart/form-d
 
 @section('content')
 
-<div class="card mb-4">
+<div class="container-fluid">
     <div class="card-header">
         <i class="fas fa-table mr-1"></i>
         List Music
@@ -27,8 +27,8 @@ method="post" action="{{ route('playlists.search') }}" enctype="multipart/form-d
         <button class="btn btn-secondary" onclick="window.history.go(-1); return false">{{ __('messages.cancel') }}</button>
     </div>
 <div class="card-body">
-    <div class="table-responsive">
-        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+    <div class="table">
+        <table class="table table-striped">
             <thead>
             <tr>
                 <th>STT</th>
@@ -40,6 +40,7 @@ method="post" action="{{ route('playlists.search') }}" enctype="multipart/form-d
                 <th>{!! __('messages.image') !!}</th>
                 <th>{!! __('messages.audio') !!}</th>
                 <th>{!! __('messages.action') !!}</th>
+                <th></th>
             </tr>
             </thead>
 
@@ -71,6 +72,8 @@ method="post" action="{{ route('playlists.search') }}" enctype="multipart/form-d
                     <td>
                         <a href="{{ route('playlists.edit', $playlist->id) }}"
                            class="btn btn-success">{!! __('messages.update') !!}</a>
+                    </td>
+                    <td>
                         <a href="{{ route('playlists.destroy', $playlist->id) }}"
                            class="btn btn-danger"
                            onclick="return confirm('Do you delete?')">{!! __('messages.delete') !!}</a>
@@ -83,6 +86,8 @@ method="post" action="{{ route('playlists.search') }}" enctype="multipart/form-d
 
 </div>
 </div>
-
+<div class="col-12 pagination" style="font-size:20px; width:30px; height:100px; text-align: right!important;">
+    {{ $playlists->links("pagination::bootstrap-4") }}
+</div>
 
 @endsection

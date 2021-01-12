@@ -18,7 +18,7 @@ class PlaylistController extends Controller
 
     public function index()
     {
-        $playlists = Playlist::paginate(10);
+        $playlists = Playlist::paginate(5);
         $category  = Category::all();
         $country   = Country::all();
         $ambum     = Ambum::all();
