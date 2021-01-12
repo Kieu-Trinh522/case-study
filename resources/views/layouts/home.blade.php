@@ -56,7 +56,7 @@
             </div>
             <div class="ms_nav_wrapper">
                 <ul>
-                    <li><a href="index-2.html" class="active" title="Discover">
+                    <li><a href="{{asset('ponend/index-2.html')}}" class="active" title="Discover">
 						<span class="nav_icon">
 							<span class="icon icon_discover"></span>
 						</span>
@@ -65,7 +65,7 @@
 						</span>
                         </a>
                     </li>
-                    <li><a href="album.html" title="Albums">
+                    <li><a href="{{asset('ponend/album.html')}}" title="Albums">
 						<span class="nav_icon">
 							<span class="icon icon_albums"></span>
 						</span>
@@ -187,10 +187,17 @@
         <div class="ms_header">
             <div class="ms_top_left">
                 <div class="ms_top_search">
-                    <input type="text" class="form-control" placeholder="Search Music Here..">
-                    <span class="search_icon">
-							<img src="{{ 'storage/images/search.svg' }}" alt="">
-						</span>
+                    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0"
+                          method="post" action="{{ route('pontend.search') }}" enctype="multipart/form-data">
+                        @csrf
+                        <div class="input-group">
+                            <input class="form-control" type="search" name="search" placeholder="Search for..." aria-label="Search"
+                                   aria-describedby="basic-addon2"/>
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <div class="ms_top_trend">
                     <span><a href="#" class="ms_color">Trending Songs :</a></span> <span class="top_marquee"><a
@@ -241,7 +248,7 @@
         <div class="ms_rcnt_slider">
             <div class="ms_featured_slider">
                 <div class="ms_heading">
-                    <h1>Featured Artists</h1>
+                    <h1>Featured Albums</h1>
                     <span class="veiw_all"><a href="#">view more</a></span>
                 </div>
                 <div class="ms_feature_slider swiper-container">
@@ -277,7 +284,7 @@
                                     </div>
                                 </div>
                                 <div class="ms_rcnt_box_text">
-                                    <h3><a href="#">{{ $ambum->name_ambum }}</a></h3>
+                                    <h3><a href="{{route('pontend.ambum',$ambum->id)}}">{{ $ambum->name_ambum }}</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -297,7 +304,7 @@
                                 <h1>weekly top 15</h1>
                             </div>
                         </div>
-                        
+
                         @yield('content')
 
                     </div>
@@ -341,7 +348,7 @@
                                     </div>
                                 </div>
                                 <div class="ms_rcnt_box_text">
-                                    <h3><a href="#">{{ $singer->singer_name }}</a></h3>
+                                    <h3><a href="{{route('pontend.singer', $singer->id)}}">{{ $singer->singer_name }}</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -371,120 +378,44 @@
                     <h1>New Releases</h1>
                     <span class="veiw_all"><a href="#">view more</a></span>
                 </div>
+
                 <div class="ms_release_slider swiper-container">
-                    <div class="ms_divider"></div>
+
+                    @foreach($categories as $category)
                     <div class="swiper-wrapper">
+
                         <div class="swiper-slide">
+
                             <div class="ms_release_box">
+
                                 <div class="w_top_song">
+
                                     <span class="slider_dot"></span>
+
                                     <div class="w_tp_song_img">
                                         <img src="{{ 'storage/images/weekly/song1.jpg' }}" alt="">
                                         <div class="ms_song_overlay">
                                         </div>
-                                        <div class="ms_play_icon">
-                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
-                                        </div>
                                     </div>
+
                                     <div class="w_tp_song_name">
-                                        <h3><a href="#">Dark Alley Acoustic</a></h3>
-                                        <p>Ava Cornish</p>
+                                        <h3><a href="{{route('pontend.category',$category->id)}}">{{$category->category_name}}</a></h3>
+
                                     </div>
+
                                 </div>
                                 <div class="weekly_right">
                                     <span class="w_song_time">5:10</span>
                                 </div>
+
                             </div>
+
                         </div>
-                        <div class="swiper-slide">
-                            <div class="ms_release_box">
-                                <div class="w_top_song">
-                                    <span class="slider_dot"></span>
-                                    <div class="w_tp_song_img">
-                                        <img src="{{ 'storage/images/weekly/song2.jpg' }}" alt="">
-                                        <div class="ms_song_overlay">
-                                        </div>
-                                        <div class="ms_play_icon">
-                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="w_tp_song_name">
-                                        <h3><a href="#">Dark Alley Acoustic</a></h3>
-                                        <p>Ava Cornish</p>
-                                    </div>
-                                </div>
-                                <div class="weekly_right">
-                                    <span class="w_song_time">5:10</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="ms_release_box">
-                                <div class="w_top_song">
-                                    <span class="slider_dot"></span>
-                                    <div class="w_tp_song_img">
-                                        <img src="{{ 'storage/images/weekly/song3.jpg' }}" alt="">
-                                        <div class="ms_song_overlay">
-                                        </div>
-                                        <div class="ms_play_icon">
-                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="w_tp_song_name">
-                                        <h3><a href="#">Dark Alley Acoustic</a></h3>
-                                        <p>Ava Cornish</p>
-                                    </div>
-                                </div>
-                                <div class="weekly_right">
-                                    <span class="w_song_time">5:10</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="ms_release_box">
-                                <div class="w_top_song">
-                                    <span class="slider_dot"></span>
-                                    <div class="w_tp_song_img">
-                                        <img src="{{ 'storage/images/weekly/song4.jpg' }}" alt="">
-                                        <div class="ms_song_overlay">
-                                        </div>
-                                        <div class="ms_play_icon">
-                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="w_tp_song_name">
-                                        <h3><a href="#">Dark Alley Acoustic</a></h3>
-                                        <p>Ava Cornish</p>
-                                    </div>
-                                </div>
-                                <div class="weekly_right">
-                                    <span class="w_song_time">5:10</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="ms_release_box">
-                                <div class="w_top_song">
-                                    <span class="slider_dot"></span>
-                                    <div class="w_tp_song_img">
-                                        <img src="{{ 'storage/images/weekly/song5.jpg' }}" alt="">
-                                        <div class="ms_song_overlay">
-                                        </div>
-                                        <div class="ms_play_icon">
-                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="w_tp_song_name">
-                                        <h3><a href="#">Dark Alley Acoustic</a></h3>
-                                        <p>Ava Cornish</p>
-                                    </div>
-                                </div>
-                                <div class="weekly_right">
-                                    <span class="w_song_time">5:10</span>
-                                </div>
-                            </div>
-                        </div>
+
+
                     </div>
+                    @endforeach
+
                 </div>
                 <!-- Add Arrows -->
                 <div class="swiper-button-next2 slider_nav_next"></div>
@@ -845,136 +776,136 @@
                 <div class="swiper-button-prev3 slider_nav_prev"></div>
             </div>
             <!----Top Genres Section Start---->
-            <div class="ms_genres_wrapper">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="ms_heading">
-                            <h1>Top Genres</h1>
-                            <span class="veiw_all"><a href="#">view more</a></span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ms_genres_box">
-                            <img src="{{ 'storage/images/genrs/img1.jpg' }}" alt="" class="img-fluid"/>
-                            <div class="ms_main_overlay">
-                                <div class="ms_box_overlay"></div>
-                                <div class="ms_play_icon">
-                                    <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
-                                </div>
-                                <div class="ovrly_text_div">
-                                    <span class="ovrly_text1"><a href="#">romantic</a></span>
-                                    <span class="ovrly_text2"><a href="#">view song</a></span>
-                                </div>
-                            </div>
-                            <div class="ms_box_overlay_on">
-                                <div class="ovrly_text_div">
-                                    <span class="ovrly_text1"><a href="#">romantic</a></span>
-                                    <span class="ovrly_text2"><a href="#">view song</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="ms_genres_box">
-                                    <img src="{{ 'storage/images/genrs/img2.jpg' }}" alt="" class="img-fluid"/>
-                                    <div class="ms_main_overlay">
-                                        <div class="ms_box_overlay"></div>
-                                        <div class="ms_play_icon">
-                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
-                                        </div>
-                                        <div class="ovrly_text_div">
-                                            <span class="ovrly_text1"><a href="#">Classical</a></span>
-                                        </div>
-                                    </div>
-                                    <div class="ms_box_overlay_on">
-                                        <div class="ovrly_text_div">
-                                            <span class="ovrly_text1"><a href="#">Classical</a></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="ms_genres_box">
-                                    <img src="{{ 'storage/images/genrs/img3.jpg' }}" alt="" class="img-fluid"/>
-                                    <div class="ms_main_overlay">
-                                        <div class="ms_box_overlay"></div>
-                                        <div class="ms_play_icon">
-                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
-                                        </div>
-                                        <div class="ovrly_text_div">
-                                            <span class="ovrly_text1"><a href="#">hip hop</a></span>
-                                        </div>
-                                    </div>
-                                    <div class="ms_box_overlay_on">
-                                        <div class="ovrly_text_div">
-                                            <span class="ovrly_text1"><a href="#">hip hop</a></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="ms_genres_box">
-                                    <img src="{{ 'storage/images/genrs/img5.jpg' }}" alt="" class="img-fluid"/>
-                                    <div class="ms_main_overlay">
-                                        <div class="ms_box_overlay"></div>
-                                        <div class="ms_play_icon">
-                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
-                                        </div>
-                                        <div class="ovrly_text_div">
-                                            <span class="ovrly_text1"><a href="#">dancing</a></span>
-                                        </div>
-                                    </div>
-                                    <div class="ms_box_overlay_on">
-                                        <div class="ovrly_text_div">
-                                            <span class="ovrly_text1"><a href="#">dancing</a></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="ms_genres_box">
-                                    <img src="{{ 'storage/images/genrs/img6.jpg' }}" alt="" class="img-fluid"/>
-                                    <div class="ms_main_overlay">
-                                        <div class="ms_box_overlay"></div>
-                                        <div class="ms_play_icon">
-                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
-                                        </div>
-                                        <div class="ovrly_text_div">
-                                            <span class="ovrly_text1"><a href="#">EDM</a></span>
-                                        </div>
-                                    </div>
-                                    <div class="ms_box_overlay_on">
-                                        <div class="ovrly_text_div">
-                                            <span class="ovrly_text1"><a href="#">EDM</a></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2">
-                        <div class="ms_genres_box">
-                            <img src="{{ 'storage/images/genrs/img4.jpg' }}" alt="" class="img-fluid"/>
-                            <div class="ms_main_overlay">
-                                <div class="ms_box_overlay"></div>
-                                <div class="ms_play_icon">
-                                    <img src="{{ 'storage/images/svg/play.svg' }}" alt="">
-                                </div>
-                                <div class="ovrly_text_div">
-                                    <span class="ovrly_text1"><a href="#">rock</a></span>
-                                </div>
-                            </div>
-                            <div class="ms_box_overlay_on">
-                                <div class="ovrly_text_div">
-                                    <span class="ovrly_text1"><a href="#">rock</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+{{--            <div class="ms_genres_wrapper">--}}
+{{--                <div class="row">--}}
+{{--                    <div class="col-lg-12">--}}
+{{--                        <div class="ms_heading">--}}
+{{--                            <h1>Top Genres</h1>--}}
+{{--                            <span class="veiw_all"><a href="#">view more</a></span>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="col-lg-4">--}}
+{{--                        <div class="ms_genres_box">--}}
+{{--                            <img src="{{ 'storage/images/genrs/img1.jpg' }}" alt="" class="img-fluid"/>--}}
+{{--                            <div class="ms_main_overlay">--}}
+{{--                                <div class="ms_box_overlay"></div>--}}
+{{--                                <div class="ms_play_icon">--}}
+{{--                                    <img src="{{ 'storage/images/svg/play.svg' }}" alt="">--}}
+{{--                                </div>--}}
+{{--                                <div class="ovrly_text_div">--}}
+{{--                                    <span class="ovrly_text1"><a href="#">romantic</a></span>--}}
+{{--                                    <span class="ovrly_text2"><a href="#">view song</a></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="ms_box_overlay_on">--}}
+{{--                                <div class="ovrly_text_div">--}}
+{{--                                    <span class="ovrly_text1"><a href="#">romantic</a></span>--}}
+{{--                                    <span class="ovrly_text2"><a href="#">view song</a></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="col-lg-6">--}}
+{{--                        <div class="row">--}}
+{{--                            <div class="col-lg-4">--}}
+{{--                                <div class="ms_genres_box">--}}
+{{--                                    <img src="{{ 'storage/images/genrs/img2.jpg' }}" alt="" class="img-fluid"/>--}}
+{{--                                    <div class="ms_main_overlay">--}}
+{{--                                        <div class="ms_box_overlay"></div>--}}
+{{--                                        <div class="ms_play_icon">--}}
+{{--                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">--}}
+{{--                                        </div>--}}
+{{--                                        <div class="ovrly_text_div">--}}
+{{--                                            <span class="ovrly_text1"><a href="#">Classical</a></span>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="ms_box_overlay_on">--}}
+{{--                                        <div class="ovrly_text_div">--}}
+{{--                                            <span class="ovrly_text1"><a href="#">Classical</a></span>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-8">--}}
+{{--                                <div class="ms_genres_box">--}}
+{{--                                    <img src="{{ 'storage/images/genrs/img3.jpg' }}" alt="" class="img-fluid"/>--}}
+{{--                                    <div class="ms_main_overlay">--}}
+{{--                                        <div class="ms_box_overlay"></div>--}}
+{{--                                        <div class="ms_play_icon">--}}
+{{--                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">--}}
+{{--                                        </div>--}}
+{{--                                        <div class="ovrly_text_div">--}}
+{{--                                            <span class="ovrly_text1"><a href="#">hip hop</a></span>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="ms_box_overlay_on">--}}
+{{--                                        <div class="ovrly_text_div">--}}
+{{--                                            <span class="ovrly_text1"><a href="#">hip hop</a></span>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-8">--}}
+{{--                                <div class="ms_genres_box">--}}
+{{--                                    <img src="{{ 'storage/images/genrs/img5.jpg' }}" alt="" class="img-fluid"/>--}}
+{{--                                    <div class="ms_main_overlay">--}}
+{{--                                        <div class="ms_box_overlay"></div>--}}
+{{--                                        <div class="ms_play_icon">--}}
+{{--                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">--}}
+{{--                                        </div>--}}
+{{--                                        <div class="ovrly_text_div">--}}
+{{--                                            <span class="ovrly_text1"><a href="#">dancing</a></span>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="ms_box_overlay_on">--}}
+{{--                                        <div class="ovrly_text_div">--}}
+{{--                                            <span class="ovrly_text1"><a href="#">dancing</a></span>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4">--}}
+{{--                                <div class="ms_genres_box">--}}
+{{--                                    <img src="{{ 'storage/images/genrs/img6.jpg' }}" alt="" class="img-fluid"/>--}}
+{{--                                    <div class="ms_main_overlay">--}}
+{{--                                        <div class="ms_box_overlay"></div>--}}
+{{--                                        <div class="ms_play_icon">--}}
+{{--                                            <img src="{{ 'storage/images/svg/play.svg' }}" alt="">--}}
+{{--                                        </div>--}}
+{{--                                        <div class="ovrly_text_div">--}}
+{{--                                            <span class="ovrly_text1"><a href="#">EDM</a></span>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="ms_box_overlay_on">--}}
+{{--                                        <div class="ovrly_text_div">--}}
+{{--                                            <span class="ovrly_text1"><a href="#">EDM</a></span>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="col-lg-2">--}}
+{{--                        <div class="ms_genres_box">--}}
+{{--                            <img src="{{ 'storage/images/genrs/img4.jpg' }}" alt="" class="img-fluid"/>--}}
+{{--                            <div class="ms_main_overlay">--}}
+{{--                                <div class="ms_box_overlay"></div>--}}
+{{--                                <div class="ms_play_icon">--}}
+{{--                                    <img src="{{ 'storage/images/svg/play.svg' }}" alt="">--}}
+{{--                                </div>--}}
+{{--                                <div class="ovrly_text_div">--}}
+{{--                                    <span class="ovrly_text1"><a href="#">rock</a></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="ms_box_overlay_on">--}}
+{{--                                <div class="ovrly_text_div">--}}
+{{--                                    <span class="ovrly_text1"><a href="#">rock</a></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
             <!----Add Section Start---->
             <div class="ms_advr_wrapper ms_advr2">
                 <div class="container">

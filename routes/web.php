@@ -85,7 +85,7 @@ use Illuminate\Support\Facades\Route;
             Route::post('/create', [SingerController::class, 'store'])->name('singer.store');
             Route::get('/edit/{id}', [SingerController::class, 'edit'])->name('singer.edit');
             Route::post('/edit/{id}', [SingerController::class, 'update'])->name('singer.update');
-            Route::post('/delete', [SingerController::class, 'destroy'])->name('singer.destroy');
+            Route::get('/delete/{id}', [SingerController::class, 'destroy'])->name('singer.destroy');
         });
 
     });
@@ -104,12 +104,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PonendController::class, 'index'])->name('ponend.index');
 
 Route::middleware('AuthUser')->group(function (){
-    Route::group(['prefix' => 'ponend'], function () {
-        Route::get('/category', [PonendController::class, 'category'])->name('ponend.category');
-        Route::get('/country', [PonendController::class, 'country'])->name('ponend.country');
-        Route::get('/ambum', [PonendController::class, 'ambum'])->name('ponend.ambum');
-        Route::get('/song', [PonendController::class, 'song'])->name('ponend.song');
-        Route::get('/singer', [PonendController::class, 'singer'])->name('ponend.singer');
+    Route::group(['prefix' => 'pontend'], function () {
+        Route::get('/category/{id}', [PonendController::class, 'getPlaylistByCategory'])->name('pontend.category');
+        Route::get('/country', [PonendController::class, 'country'])->name('pontend.country');
+        Route::get('/ambum/{id}', [PonendController::class, 'getPlaylistByAlbum'])->name('pontend.ambum');
+        Route::get('/song', [PonendController::class, 'song'])->name('pontend.song');
+        Route::get('/singer/{id}', [PonendController::class, 'singer'])->name('pontend.singer');
+        Route::post('/search', [PonendController::class, 'search'])->name('pontend.search');
     });
 });
 

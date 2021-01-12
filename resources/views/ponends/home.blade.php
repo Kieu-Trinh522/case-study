@@ -17,7 +17,7 @@
                     <div class="ms_song_overlay">
                     </div>
                     <div class="ms_play_icon">
-                        <img src="{{ 'storege/images/play.svg' }}" alt="">
+                        <img src="{{ 'storage/images/play.svg' }}" alt="">
                     </div>
                 </div>
                 <div class="w_tp_song_name">
@@ -42,6 +42,7 @@
     </div>
 
 </div>
+
 
 @endforeach
 
