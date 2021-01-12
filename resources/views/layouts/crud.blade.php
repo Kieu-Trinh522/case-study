@@ -37,7 +37,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <body>
 	<!-- title -->
 	<h1>
-		<span>L</span>ogin
+		<span>C</span>RUD
 
 	</h1>
 	<!-- //title -->

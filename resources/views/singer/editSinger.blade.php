@@ -5,7 +5,7 @@
 @section('content')
 
     <div class="container">
-        <div class="card">
+        <div class="">
 
             <div class="form-group">
                 <form method="POST" action="{{ route('singer.update', $singer->id) }}" enctype="multipart/form-data">
@@ -15,11 +15,11 @@
                         <input type="text" name="singer_name" value="{{ $singer->singer_name }}" class="form-control">
                     </div>
                     <div class="form-group">
-<<<<<<< HEAD
+
                         <label for="">Dob</label>
-=======
+
                         <label for="">Singer</label>
->>>>>>> 6d7e2e9634cfbeaa30dbf8f53c1ba39e573061ae
+
                         <input type="date" name="dob" value="{{ $singer->dob }}" class="form-control">
                     </div>
                     <div class="form-group">
@@ -47,7 +47,6 @@
                         <br>
                         <br>
                         <div id="singer-image">
-                            <br>
                             <br>
                         <img src="{{url('storage/' . $singer->image)}}" width="150px" height="150px" class="img-fluid img-thumbnail">
                         </div>
