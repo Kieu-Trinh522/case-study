@@ -98,21 +98,21 @@ class CategoryController extends Controller
         return redirect()->route('category.index');
     }
 
-//    public function search(Request $request)
-//    {
-//        $search = $request->input('search');
-//        if (!$search) {
-//            return redirect()->route('category.index');
-//        }
-//        $categories = Category::where('category_name','LIKE', '%'. $search . '%')->paginate(5);
-//
-//        $playlists = Playlist::all();
-//        $country = Country::all();
-//        $ambum = Ambum::all();
-//        $singer=Singer::all();
-//        return view('category.listCategory', compact('playlists', 'categories', 'country', 'ambum','singer'));
-//
-//    }
+   public function search(Request $request)
+   {
+       $search = $request->input('search');
+       if (!$search) {
+           return redirect()->route('category.index');
+       }
+       $categories = Category::where('category_name','LIKE', '%'. $search . '%')->paginate(5);
+
+       $playlists = Playlist::all();
+       $country = Country::all();
+       $ambum = Ambum::all();
+       $singer=Singer::all();
+       return view('category.listCategory', compact('playlists', 'categories', 'country', 'ambum','singer'));
+
+   }
 
 
 }

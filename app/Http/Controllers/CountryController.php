@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Country;
 use App\Models\Playlist;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class CountryController extends Controller
 {
@@ -93,5 +94,19 @@ class CountryController extends Controller
         $country=Country::find($id);
         $country->delete();
         return redirect()->route('country.index');
+    }
+
+    public function search(Request $request)
+    {
+        $search = $request->input('search');
+        if (!$search) {
+            return redirect()->route('country.index');
+        }
+
+        $playlists = Playlist::all();
+        $countries  = Country::where('country_name','LIKE', '%'. $search . '%')->paginate(5);
+        Session::flash('search_result', true);
+        return view('country.listCountry', compact('playlists', 'countries'));
+
     }
 }

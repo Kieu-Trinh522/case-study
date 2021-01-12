@@ -255,7 +255,7 @@
                     <div class="swiper-wrapper">
 
                         @foreach($ambums as $ambum)
-<div class="swiper-slide">
+                        <div class="swiper-slide">
                             <div class="ms_rcnt_box">
                                 <div class="ms_rcnt_box_img">
                                     <img src="{{ url('storage/' . $ambum->image) }}" style="width: 200px; height: 200px" alt="">
@@ -319,7 +319,7 @@
                 <div class="ms_feature_slider swiper-container">
                     <div class="swiper-wrapper">
                         @foreach($singers as $singer)
-<div class="swiper-slide">
+                        <div class="swiper-slide">
                             <div class="ms_rcnt_box">
                                 <div class="ms_rcnt_box_img">
                                     <img src="{{ url('storage/' . $singer->image) }}" style="width: 200px; height: 200px" alt="">

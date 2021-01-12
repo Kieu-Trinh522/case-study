@@ -20,14 +20,19 @@ class PonendController extends Controller
         $singers   = Singer::all();
         // dd($ambums);
 
+
         return view('ponends.home', compact('playlists', 'categories', 'country', 'ambums', 'singers'));
+
+
     }
 
     public function getPlaylistByCategory($id)
     {
 
+
         $playlists= Playlist::where('category_id',$id)->get();
         return view('ponends.category', compact('playlists'));
+
     }
 
     public function country()
@@ -38,7 +43,9 @@ class PonendController extends Controller
 
     public function getPlaylistByAlbum($id)
     {
+
         $ambums = Playlist::where('ambum_id',$id)->get();
+
         return view('ponends.ambum',compact('ambums'));
     }
 
@@ -50,10 +57,12 @@ class PonendController extends Controller
 
     public function singer($id)
     {
+
         $ambums    = Ambum::all();
         $singers = Singer::findOrFail($id);
         $playlists=Playlist::where('singer_id',$id)->get();
         return view('ponends.singer', compact('singers', 'ambums','playlists'));
+
     }
 
     public function ponend()
@@ -69,6 +78,7 @@ class PonendController extends Controller
             return redirect()->route('ponend.index');
         }
 
+
         $playlists = Playlist::where('music_name', 'LIKE', '%'. $search . '%')
             ->paginate(5);
         $categories=Category::all();
@@ -79,6 +89,18 @@ class PonendController extends Controller
 
     }
 
+    public function play($id)
+    {
+
+
+        $playlists = Playlist::findOrFail($id);
+        $playlist  = Playlist::paginate(5);
+        $category  = Category::all();
+        $country   = Country::all();
+        $ambums    = Ambum::all();
+        $singers   = Singer::all();
+        return view('ponends.play', compact('playlists', 'playlist', 'category', 'country', 'ambums', 'singers'));
+    }
 
 
 }

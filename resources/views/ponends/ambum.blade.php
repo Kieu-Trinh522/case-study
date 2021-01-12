@@ -1,3 +1,4 @@
+
 @extends('layouts.core.master')
 @section('fe-content')
 
@@ -62,5 +63,3 @@
                 </div>
 
 @endsection
-
-
