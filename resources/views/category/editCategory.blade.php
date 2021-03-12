@@ -1,42 +1,20 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Add</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+@extends('layouts.app')
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-<body>
+@section('title', 'Edit Country')
 
-<div class="search-form">
-    <div class="search">
-        <h3>Enter a name</h3>
-        <div class="table-form">
-            <form method="post" action="{{route('category.update',$category->id)}}">
-                @csrf
-                <input value="{{$category->category_name}}" type="text" name="category_name" class="textbox" placeholder="Category name:" />
-                <input type="submit" class="form-button btn btn-primary" value="Edit">
-            </form>
-        </div>
+@section('content')
+
+    <div class="container">
+        <form method="POST" action="{{ route('category.update',$category->id) }}" enctype="multipart/form-data">
+            @csrf
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">{{ __('messages.name') }}</span>
+                <input type="text" name="category_name" value="{{ $category->category_name }}"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+            <button type="submit" class="btn btn-primary">{{ __('messages.update') }}</button>
+            <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">{{ __('messages.cancel') }}</button>
+        </form>
 
     </div>
-</div>
 
-
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-</body>
-</html>
+@endsection
