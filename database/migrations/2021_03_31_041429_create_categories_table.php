@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddAmbumsToPlaylistsTable extends Migration
+class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class AddAmbumsToPlaylistsTable extends Migration
      */
     public function up()
     {
-        Schema::table('playlists', function (Blueprint $table) {
-            $table->unsignedInteger('ambum_id')->after('country_id')->nullable();
-            $table->foreign('ambum_id')->references('id')->on('ambums');
-
+        Schema::create('categories', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('category_name');
+            $table->timestamps();
         });
     }
 
@@ -27,8 +27,6 @@ class AddAmbumsToPlaylistsTable extends Migration
      */
     public function down()
     {
-        Schema::table('playlists', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('categories');
     }
 }

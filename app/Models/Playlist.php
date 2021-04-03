@@ -14,7 +14,7 @@ class Playlist extends Model
         'singer_id',
         'category_id',
         'country_id',
-        'ambum_id',
+        'album_id',
         'image',
         'audio',
 
@@ -30,9 +30,9 @@ class Playlist extends Model
         return $this->belongsTo('App\Models\Country');
     }
 
-    public function ambum()
+    public function album()
     {
-        return $this->belongsTo('App\Models\Ambum');
+        return $this->belongsTo('App\Models\Album');
     }
 
     public function singer()

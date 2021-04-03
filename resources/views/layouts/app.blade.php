@@ -94,7 +94,7 @@
 
                                href="{{route('country.index')}}">{!! __('messages.country') !!}</a>
                                <a class="nav-link"
-                                  href="{{ route('ambums.index') }}">{!! __('messages.album') !!}</a>
+                                  href="{{ route('albums.index') }}">{!! __('messages.album') !!}</a>
                             <a class="nav-link"
                                href="{{route('singer.index')}}">{!! __('messages.singer') !!}</a>
                             <a class="nav-link"

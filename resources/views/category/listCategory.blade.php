@@ -42,7 +42,7 @@ method="post" action="{{ route('category.search') }}" enctype="multipart/form-da
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @forelse($categories as $key=>$category)
+                                @foreach($categories as $key => $category)
                                     <tr>
                                         <td>{{++$key}}</td>
                                         <td>{{$category->category_name}}</td>
@@ -53,9 +53,7 @@ method="post" action="{{ route('category.search') }}" enctype="multipart/form-da
                                                onclick="return confirm('Do you delete?')">{{ __('messages.delete') }}</a>
                                         </td>
                                     </tr>
-                                @empty
-                                    <tr>No data</tr>
-                                @endforelse
+                                @endforeach
                                 </tbody>
                             </table>
                         </div>

@@ -14,17 +14,22 @@ class CreateSingersTable extends Migration
     public function up()
     {
         Schema::create('singers', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('singer_name');
             $table->date('dob');
-            $table->unsignedBigInteger('country_id');
-            $table->foreign('country_id')->references('id')->on('countries');
             $table->string('gender');
             $table->string('description');
             $table->string('image');
             $table->timestamps();
         });
     }
+
+    // 'singer_name',
+    //     'dob',
+    //     'country_id',
+    //     'gender',
+    //     'description',
+    //     'image'
 
     /**
      * Reverse the migrations.

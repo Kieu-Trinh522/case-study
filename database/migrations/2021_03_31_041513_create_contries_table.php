@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddLevelToUsersTable extends Migration
+class CreateContriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class AddLevelToUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('level');
+        Schema::create('countries', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('country_name');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +27,6 @@ class AddLevelToUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('contries');
     }
 }

@@ -188,7 +188,7 @@
             <div class="ms_top_left">
                 <div class="ms_top_search">
                     <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0"
-                          method="post" action="{{ route('pontend.search') }}" enctype="multipart/form-data">
+                          method="post" action="{{ route('frontend.search') }}" enctype="multipart/form-data">
                         @csrf
                         <div class="input-group">
                             <input class="form-control" type="search" name="search" placeholder="Search for..." aria-label="Search"
@@ -258,7 +258,7 @@
                         <div class="swiper-slide">
                             <div class="ms_rcnt_box">
                                 <div class="ms_rcnt_box_img">
-                                    <img src="{{ url('storage/' . $ambum->image) }}" style="width: 200px; height: 200px" alt="">
+                                    <img src="{{ url('storage/' . $album->image) }}" style="width: 200px; height: 200px" alt="">
                                     <div class="ms_main_overlay">
                                         <div class="ms_box_overlay"></div>
                                         <div class="ms_more_icon">
@@ -284,7 +284,7 @@
                                     </div>
                                 </div>
                                 <div class="ms_rcnt_box_text">
-                                    <h3><a href="{{route('pontend.ambum',$ambum->id)}}">{{ $ambum->name_ambum }}</a></h3>
+                                    <h3><a href="{{route('frontend.album',$album->id)}}">{{ $ambum->name_album }}</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -348,7 +348,7 @@
                                     </div>
                                 </div>
                                 <div class="ms_rcnt_box_text">
-                                    <h3><a href="{{route('pontend.singer', $singer->id)}}">{{ $singer->singer_name }}</a></h3>
+                                    <h3><a href="{{route('frontend.singer', $singer->id)}}">{{ $singer->singer_name }}</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -399,7 +399,7 @@
                                     </div>
 
                                     <div class="w_tp_song_name">
-                                        <h3><a href="{{route('pontend.category',$category->id)}}">{{$category->category_name}}</a></h3>
+                                        <h3><a href="{{route('frontend.category',$category->id)}}">{{$category->category_name}}</a></h3>
 
                                     </div>
 

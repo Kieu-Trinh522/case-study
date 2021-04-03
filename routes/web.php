@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\AmbumController;
+use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\PlaylistController;
 use App\Http\Controllers\SingerController;
@@ -31,7 +31,7 @@ Route::get('test2', function () {
 });
 
 
-Route::middleware('AuthUser', 'AdminMiddleware', 'locale')->group(function () {
+Route::middleware('locale')->group(function () {
     Route::post('change-language', [LanguageController::class, 'changeLanguage'])->name('user.change-language');
 
     Route::group(['prefix' => 'playlists'], function () {
@@ -66,14 +66,14 @@ Route::middleware('AuthUser', 'AdminMiddleware', 'locale')->group(function () {
     });
 
 
-    Route::group(['prefix' => 'ambums'], function () {
-        Route::get('/', [AmbumController::class, 'index'])->name('ambums.index');
-        Route::get('/create', [AmbumController::class, 'create'])->name('ambums.create');
-        Route::post('/create', [AmbumController::class, 'store'])->name('ambums.store');
-        Route::get('/edit/{id}', [AmbumController::class, 'edit'])->name('ambums.edit');
-        Route::post('/edit/{id}', [AmbumController::class, 'update'])->name('ambums.update');
-        Route::get('/destroy/{id}', [AmbumController::class, 'destroy'])->name('ambums.destroy');
-        Route::post('/search', [AmbumController::class, 'search'])->name('ambums.search');
+    Route::group(['prefix' => 'albums'], function () {
+        Route::get('/', [AlbumController::class, 'index'])->name('albums.index');
+        Route::get('/create', [AlbumController::class, 'create'])->name('albums.create');
+        Route::post('/create', [AlbumController::class, 'store'])->name('albums.store');
+        Route::get('/edit/{id}', [AlbumController::class, 'edit'])->name('albums.edit');
+        Route::post('/edit/{id}', [AlbumController::class, 'update'])->name('albums.update');
+        Route::get('/destroy/{id}', [AlbumController::class, 'destroy'])->name('albums.destroy');
+        Route::post('/search', [AlbumController::class, 'search'])->name('albums.search');
     });
 
     Route::group(['prefix' => 'singer'], function () {
@@ -103,18 +103,18 @@ Route::group(['prefix' => 'user'], function () {
 });
 
 
-Route::get('/', [PonendController::class, 'index'])->name('ponend.index');
+Route::get('/', [PonendController::class, 'index'])->name('frontend.index');
 
 Route::middleware('AuthUser')->group(function () {
-    Route::group(['prefix' => 'pontend'], function () {
+    Route::group(['prefix' => 'frontend'], function () {
 
-        Route::get('/category/{id}', [PonendController::class, 'getPlaylistByCategory'])->name('pontend.category');
-        Route::get('/country', [PonendController::class, 'country'])->name('pontend.country');
-        Route::get('/ambum/{id}', [PonendController::class, 'getPlaylistByAlbum'])->name('pontend.ambum');
-        Route::get('/song', [PonendController::class, 'song'])->name('pontend.song');
-        Route::get('/singer/{id}', [PonendController::class, 'singer'])->name('pontend.singer');
-        Route::post('/search', [PonendController::class, 'search'])->name('pontend.search');
-        Route::get('/play/{id}', [PonendController::class, 'play'])->name('pontend.play');
+        Route::get('/category/{id}', [PonendController::class, 'getPlaylistByCategory'])->name('frontend.category');
+        Route::get('/country', [PonendController::class, 'country'])->name('frontend.country');
+        Route::get('/album/{id}', [PonendController::class, 'getPlaylistByAlbum'])->name('frontend.album');
+        Route::get('/song', [PonendController::class, 'song'])->name('frontend.song');
+        Route::get('/singer/{id}', [PonendController::class, 'singer'])->name('frontend.singer');
+        Route::post('/search', [PonendController::class, 'search'])->name('frontend.search');
+        Route::get('/play/{id}', [PonendController::class, 'play'])->name('frontend.play');
 
     });
 });

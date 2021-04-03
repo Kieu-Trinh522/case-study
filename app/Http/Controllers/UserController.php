@@ -46,7 +46,7 @@ public function index()
         if (Auth::attempt($credentials)) {
             Session::regenerate();
             Session::push('login',true);
-            return redirect()->route('ponend.index');
+            return redirect()->route('frontend.index');
         }
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records'

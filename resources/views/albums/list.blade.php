@@ -4,7 +4,7 @@
 
 @section('search')
 <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0"
-method="post" action="{{ route('ambums.search') }}" enctype="multipart/form-data">
+method="post" action="{{ route('albums.search') }}" enctype="multipart/form-data">
     @csrf
     <div class="input-group">
         <input class="form-control" type="search" name="search" placeholder="Search for..." aria-label="Search"
@@ -22,10 +22,10 @@ method="post" action="{{ route('ambums.search') }}" enctype="multipart/form-data
 <div class="container">
     <div class="card">
         <div class="card-header">
-            Ambum
+            Album
         </div>
         <div class="card-header">
-            <a href="{{ route('ambums.create') }}" class="btn btn-primary">{{ __('messages.add') }}</a>
+            <a href="{{ route('albums.create') }}" class="btn btn-primary">{{ __('messages.add') }}</a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -41,23 +41,23 @@ method="post" action="{{ route('ambums.search') }}" enctype="multipart/form-data
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($ambums as $key => $ambum)
+                    @foreach($albums as $key => $album)
                         <tr>
                             <td>{{ ++$key }}</td>
                             <td>
-                                {{ $ambum->name_ambum }}
+                                {{ $album->name_album}}
 
                             </td>
-                            <td>{{ $ambum->singer_ambum }}</td>
+                            <td>{{ $album->singer_album }}</td>
                             <td>
-                                <img src="{{ url('storage/' . $ambum->image) }}" height="100px"
+                                <img src="{{ url('storage/' . $album->image) }}" height="100px"
                                      width="100px">
                             </td>
-                            <td>{{ count($ambum->playlist) }}</td>
+                            <td>{{ count($album->playlist) }}</td>
                             <td>
-                                <a href="{{ route('ambums.edit', $ambum->id) }}"
+                                <a href="{{ route('albums.edit', $album->id) }}"
                                    class="btn btn-success">{{ __('messages.update') }}</a>
-                                <a href="{{ route('ambums.destroy', $ambum->id) }}"
+                                <a href="{{ route('albums.destroy', $album->id) }}"
                                    class="btn btn-danger"
                                    onclick="return confirm('Do you delete?')">{{ __('messages.delete') }}</a>
                             </td>
