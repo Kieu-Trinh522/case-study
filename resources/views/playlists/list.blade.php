@@ -56,7 +56,7 @@ method="post" action="{{ route('playlists.search') }}" enctype="multipart/form-d
                     <td>{{ $playlist->singer->singer_name }}</td>
                     <td>{{ $playlist->category->category_name }}</td>
                     <td>{{ $playlist->country->country_name }}</td>
-                    <td>{{ $playlist->ambum->name_ambum }}</td>
+                    <td>{{ $playlist->album->name_album }}</td>
                     <td>
                         <img src="{{ url('storage/' . $playlist->image) }}" height="100px"
                              width="100px">

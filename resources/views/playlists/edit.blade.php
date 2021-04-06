@@ -48,11 +48,11 @@
                 <div class="form-group">
                     <label for="">Album</label>
                     <select class="form-control" name="ambum_id">
-                        @foreach($ambum as $value)
-                            <option @if($playlist->ambum_id == $value->id)
+                        @foreach($album as $value)
+                            <option @if($playlist->album_id == $value->id)
                                 {{ "selected" }}
                           @endif
-                            value="{{ $value->id }}">{{ $value->name_ambum }}</option>
+                            value="{{ $value->id }}">{{ $value->name_album }}</option>
                 @endforeach
             </select>
         </div>

@@ -28,7 +28,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @forelse($users as $key=>$user)
+                    @foreach($users as $key => $user)
                         <tr>
                             <td>{{++$key}}</td>
                             <td>{{$user->email}}</td>
@@ -41,7 +41,7 @@
                         </tr>
                     @empty
                         <tr>No data</tr>
-                    @endforelse
+                    @endforeach
                     </tbody>
                 </table>
             </div>

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Ambum;
+use App\Models\Album;
 use App\Models\Category;
 use App\Models\Country;
 use App\Models\Playlist;
@@ -16,7 +16,7 @@ class PonendController extends Controller
         $playlists = Playlist::paginate(5);
         $categories  = Category::all();
         $country   = Country::all();
-        $ambums    = Ambum::all();
+        $ambums    = Album::all();
         $singers   = Singer::all();
         // dd($ambums);
 

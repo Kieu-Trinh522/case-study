@@ -41,10 +41,10 @@
                         </select>
                         </div>
                         <div class="form-group">
-                            <label for="">Ambum</label>
-                            <select name="ambum_id" class="form-control">
-                                    @foreach($ambum as $value)
-                                    <option value="{{ $value->id }}">{{ $value->name_ambum }}</option>
+                            <label for="">Album</label>
+                            <select name="album_id" class="form-control">
+                                    @foreach($album as $value)
+                                    <option value="{{ $value->id }}">{{ $value->name_album }}</option>
                                     @endforeach
                             </select>
                             </div>

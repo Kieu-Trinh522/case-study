@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Ambum;
+use App\Models\Album;
 use App\Models\Category;
 use App\Models\Country;
 use App\Models\Playlist;
@@ -21,19 +21,19 @@ class PlaylistController extends Controller
         $playlists = Playlist::paginate(5);
         $category  = Category::all();
         $country   = Country::all();
-        $ambum     = Ambum::all();
+        $album     = Album::all();
         $singer    = Singer::all();
 
-        return view('playlists.list', compact('playlists', 'category', 'country', 'ambum', 'singer'));
+        return view('playlists.list', compact('playlists', 'category', 'country', 'album', 'singer'));
     }
 
     public function create()
     {
         $category = Category::all();
         $country  = Country::all();
-        $ambum    = Ambum::all();
+        $album    = Album::all();
         $singer   = Singer::all();
-        return view('playlists.create', compact('category', 'country', 'ambum','singer'));
+        return view('playlists.create', compact('category', 'country', 'album','singer'));
     }
 
     public function store(Request $request)
@@ -82,9 +82,9 @@ class PlaylistController extends Controller
         $playlist = Playlist::findOrFail($id);
         $category = Category::all();
         $country  = Country::all();
-        $ambum    = Ambum::all();
+        $album    = Album::all();
         $singer   = Singer::all();
-        return view('playlists.edit', compact('playlist', 'category', 'country', 'ambum','singer'));
+        return view('playlists.edit', compact('playlist', 'category', 'country', 'album','singer'));
     }
 
     public function update(Request $request, $id)
@@ -145,10 +145,10 @@ class PlaylistController extends Controller
 
         $category = Category::all();
         $country  = Country::all();
-        $ambum    = Ambum::all();
+        $album    = Album::all();
         $singer   = Singer::all();
         Session::flash('search_result', true);
-        return view('playlists.list', compact('playlists', 'category', 'country', 'ambum','singer'));
+        return view('playlists.list', compact('playlists', 'category', 'country', 'album','singer'));
 
     }
 
