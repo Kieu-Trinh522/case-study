@@ -6,7 +6,6 @@ use App\Http\Requests\AlbumRequest;
 use App\Models\Album;
 use App\Models\Playlist;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Http\Request;
 
 class AlbumController extends Controller
 {
@@ -29,11 +28,10 @@ class AlbumController extends Controller
         $album = new Album();
         $album->fill($request->all());
 
-        if($request->hasFile('image'))
-        {
+        if ($request->hasFile('image')) {
             $image = $request->file('image');
 
-            $path  = $image->store('images', 'public');
+            $path = $image->store('images', 'public');
             $album->image = $path;
         }
 
@@ -47,7 +45,7 @@ class AlbumController extends Controller
         $album = Album::findOrFail($id);
         $playlist = Playlist::all();
 
-        return view('albums.edit', compact('ambum', 'playlist'));
+        return view('albums.edit', compact('album', 'playlist'));
     }
 
     public function update(AlbumRequest $request, $id)
@@ -55,16 +53,14 @@ class AlbumController extends Controller
         $album = Album::findOrFail($id);
         $album->fill($request->all());
 
-        if($request->hasFile('image'))
-        {
+        if ($request->hasFile('image')) {
             $currentImg = $request->file('image');
-            if($currentImg)
-            {
+            if ($currentImg) {
                 Storage::delete('/public/' . $currentImg);
             }
 
             $image = $request->file('image');
-            $path  = $image->store('images', 'public');
+            $path = $image->store('images', 'public');
             $album->image = $path;
         }
 
@@ -89,8 +85,8 @@ class AlbumController extends Controller
         }
 
         $playlists = Playlist::all();
-        $albums    = Album::where('name_album','LIKE', '%'. $search . '%')->paginate(5);
-        return view('albums.list', compact('playlists','albums'));
+        $albums = Album::where('name_album', 'LIKE', '%' . $search . '%')->paginate(5);
+        return view('albums.list', compact('playlists', 'albums'));
 
     }
 }

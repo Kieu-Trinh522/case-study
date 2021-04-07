@@ -254,7 +254,7 @@
                 <div class="ms_feature_slider swiper-container">
                     <div class="swiper-wrapper">
 
-                        @foreach($ambums as $ambum)
+                        @foreach($albums as $album)
                         <div class="swiper-slide">
                             <div class="ms_rcnt_box">
                                 <div class="ms_rcnt_box_img">
@@ -284,7 +284,7 @@
                                     </div>
                                 </div>
                                 <div class="ms_rcnt_box_text">
-                                    <h3><a href="{{route('frontend.album',$album->id)}}">{{ $ambum->name_album }}</a></h3>
+                                    <h3><a href="{{route('frontend.album',$album->id)}}">{{ $album->name_album }}</a></h3>
                                 </div>
                             </div>
                         </div>

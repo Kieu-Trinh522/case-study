@@ -9,7 +9,7 @@
                 <div class="col-lg-12">
                     <div class="ms_heading">
                         <h1>Music</h1>
-                        @foreach($ambums as $key=>$ambum)
+                        @foreach($albums as $key=>$album)
                             <div class="col-lg-4 col-md-12 padding_right40">
                                 <div class="ms_weekly_box">
                                     <div class="weekly_left">
@@ -18,7 +18,7 @@
             </span>
                                         <div class="w_top_song">
                                             <div class="w_tp_song_img">
-                                                <img src="{{ url('storage/' . $ambum->image) }}"
+                                                <img src="{{ url('storage/' . $album->image) }}"
                                                 >
                                                 <div class="ms_song_overlay">
                                                 </div>
@@ -27,7 +27,7 @@
                                                 </div>
                                             </div>
                                             <div class="w_tp_song_name">
-                                                <h3><a href="{{ route('pontend.play', $ambum->id) }}">{{ $ambum->music_name }}</a></h3>
+                                                <h3><a href="{{ route('frontend.play', $album->id) }}">{{ $album->music_name }}</a></h3>
                                                 <p>Ava Cornish</p>
                                             </div>
                                         </div>
